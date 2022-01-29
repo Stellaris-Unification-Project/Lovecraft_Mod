@@ -1,0 +1,14 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "chr_color_out_of_space_mesh"
+		file = "gfx/models/ships/other/chr_color_out_of_space.mesh"
+		
+		animation = { id = "idle"			type = "space_cloud_idle_animation" }
+		animation = { id = "attack"			type = "space_cloud_attack_animation" }
+		animation = { id = "move"			type = "space_cloud_move_animation" }
+		animation = { id = "death"			type = "space_cloud_death_animation" }
+		
+		scale = 1
+	}
+}

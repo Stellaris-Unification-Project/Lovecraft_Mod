@@ -1,0 +1,58 @@
+on_game_start = {
+	events = {
+		story.7001		#Set flags for Old One empire
+		reta_start.1
+		carcosa_game_start.1
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		cosmichorror.1	#Random Horror Events
+		story.2900		#Check player preferences
+	}
+}
+
+on_first_contact = {
+	events = {
+		story.7001		#Old One government based new contact
+		azathothawakens.2		#Azathoth first contact
+		cosmichorror.12		#Colors first contact
+	}
+}
+	
+on_custom_diplomacy = {
+	events = {
+		#cosmichorrors.7
+	}
+}
+
+empire_init_add_technologies = {
+	events = {
+		acolyte_game_start.1
+		acolyte_game_start.2
+	}
+}
+
+on_entering_system = {
+	events = {
+		story.1010
+		cosmichorror.4  #Azathoth System Arrival
+		cosmichorror.10 #Color Out of Space Event Arrival
+		cosmichorror.15 #Color Out of Space Terrorism Event
+		cosmichorror.18 #Polaris System Arrival
+	}
+}
+
+on_ship_built = {
+	events = {
+		cosmichorror.17 #Only one Color Out of Space Allowed
+	}
+
+}
+
+on_fleet_destroyed_perp = {
+	events = {
+		cosmichorror.6  #Avatar of Azathoth... dies?
+	}
+}

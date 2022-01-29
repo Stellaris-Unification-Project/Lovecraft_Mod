@@ -1,0 +1,9 @@
+# Ancient Battlefield
+ambient_object = {
+	name = "ancient_battlefield_object_nonselect"
+	entity = "ancient_battlefield_entity"
+	selectable = no
+	show_name = no
+	#tooltip = "ancient_battlefield_object_tooltip"
+	#description = "ancient_battlefield_object_desc"
+}

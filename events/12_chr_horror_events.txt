@@ -1,0 +1,1747 @@
+namespace = cosmichorror
+
+#For easy editing later
+@tier4researchreward = 24
+@tier4researchmin = 150
+@tier4researchmax = 500
+
+############################################
+##
+## 
+##  Yearly Pulse Event
+##
+##
+############################################
+
+############################################
+# 1 - Setup
+############################################
+event = {
+	id = cosmichorror.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = { id = cosmichorror.2 }
+		}
+	}
+}
+
+############################################
+# 2 - Actual pulse event
+############################################
+country_event = {
+	id = cosmichorror.2
+	hide_window = yes
+	is_triggered_only = yes	
+	
+	trigger = {
+		is_country_type = default
+	}
+	
+	immediate = {
+		random_list = {
+			25 = { #Pilgrimage to Azathoth
+				if = {
+					limit = {
+						any_system = {
+							has_star_flag = azathoth_home_system
+						}
+					}
+					country_event = { id = cosmichorror.3 days = 30 random = 5 }
+					else = {
+						random_system = {
+							limit = {
+								NOT = {
+									any_neighbor_system = {
+										exists = space_owner
+									}
+								}
+							}
+							spawn_system = { initializer = "azathoth_system_npc"}
+						}
+					}				
+				}
+			}
+			25 = { #Color Out of Space
+				country_event = { id = cosmichorror.9 days = 30 random = 5 }			
+			}
+			50 = {
+				
+			}
+		}
+	}
+}
+
+############################################
+##
+## 
+##  Pilgrimage to Azathoth
+##
+##
+############################################
+
+############################################	
+# 3 - PTA Starting Event
+############################################
+country_event = {
+	id = cosmichorror.3
+	title = cosmichorror.3.title
+	picture = GFX_evt_azathoth_1
+	show_sound = event_mystic_reveal
+	trackable = yes
+	is_triggered_only = yes	
+	fire_only_once = yes
+	desc = {
+		trigger = {
+			has_government = chr_govt_old_one
+			has_government = chr_govt_outer_god
+		}
+		text = cosmichorror.3.desc.1
+	}
+	desc = {
+		trigger = { 
+			NOT = { has_government = chr_govt_old_one }
+			NOT = { has_government = chr_govt_outer_god }
+		}
+		text = cosmichorror.3.desc.2
+	}
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = azathoth_home_system_visited }
+		NOT = { has_country_flag = finished_azathoth_pilgrimage_chain }
+		NOT = { has_country_flag = azathoth_pilgrimage_seen }
+	}
+	
+	immediate = {
+		set_country_flag = "azathoth_pilgrimage_seen"
+	}
+	
+	option = {
+		name = "cosmichorror.3.a"
+		begin_event_chain = {
+				event_chain = "azathoth_pilgrimage_chain"
+				target = this
+		}
+		hidden_effect = {
+			random_system = {
+				limit = {
+					has_star_flag = azathoth_home_system
+				}
+				save_event_target_as = azathoth_home_system_1
+				set_star_flag = azathoth_target
+			}
+		}
+		create_point_of_interest = {
+			id = cosmichorror.3.poi.1
+			name = "cosmichorror.3.poi_1"
+			desc = "cosmichorror.3.poi_1.desc"
+			event_chain = "azathoth_pilgrimage_chain"
+			location = event_target:azathoth_home_system_1
+		}
+	}
+	option = {
+		name = NOTIME
+	}	
+}
+
+############################################
+# 4 - PTA You've found Azathoth!
+############################################
+country_event = {
+	id = cosmichorror.4
+	hide_window = yes
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		owner = { 
+			NOT = {has_country_flag = "azathoth_home_system_visited"}
+		}
+		FROM = {
+			has_star_flag = azathoth_home_system
+		}
+	}
+	immediate = {
+		set_country_flag = azathoth_home_system_visited
+		if = {
+			limit = {
+				exists = owner
+				has_point_of_interest = {
+					poi = cosmichorror.3.poi.1
+				}
+			}
+			leader = {
+				set_leader_flag = azathoth_discoverer
+			}
+			remove_point_of_interest = cosmichorror.3.poi.1
+			add_event_chain_counter = { 
+				event_chain = "azathoth_pilgrimage_chain"
+				counter = "found" 
+				amount = 1 
+			}			
+		}
+		country_event = { id = cosmichorror.5 }
+	}
+}
+
+
+############################################
+# 5 - PTA Final event
+############################################
+country_event = {
+	id = cosmichorror.5
+	title = cosmichorror.5.title
+	picture = GFX_evt_azathoth_2
+	show_sound = event_mystic_reveal
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	desc = {
+		trigger = {
+			has_government = chr_govt_old_one
+			has_government = chr_govt_outer_god
+		}
+		text = cosmichorror.5.desc.1
+	}
+	desc = {
+		trigger = { 
+			NOT = { has_government = chr_govt_old_one } 
+			NOT = { has_government = chr_govt_outer_god }
+		}
+		text = cosmichorror.5.desc.2
+	}
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = finished_azathoth_pilgrimage_chain }
+		has_country_flag = azathoth_home_system_visited
+	}
+	
+	immediate = {
+		set_country_flag = finished_azathoth_pilgrimage_chain
+		end_event_chain = "azathoth_pilgrimage_chain"
+	}
+
+	#Biogenesis Research boost
+	option = {
+		name = cosmichorror.5.a
+		trigger = {
+			OR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
+		}
+		if = {
+			limit = {
+				has_tech_option = chr_tech_shoggoth_workers
+			}
+			add_tech_progress = {
+				tech = chr_tech_shoggoth_workers
+				progress = 0.6
+			}
+			else = {
+				add_research_option = chr_tech_shoggoth_workers
+				add_tech_progress = {
+					tech = chr_tech_shoggoth_workers
+					progress = 0.2
+				}
+			}
+		}
+	}
+
+	option = {
+		name = cosmichorror.5.b
+		trigger = {
+			NOT = { has_government = chr_govt_old_one }
+			NOT = { has_government = chr_govt_outer_god }
+		}
+		if = {
+			limit = {
+				has_tech_option = chr_tech_shoggoth_workers
+			}
+			add_tech_progress = {
+				tech = chr_tech_shoggoth_workers
+				progress = 0.3
+			}
+			else = {
+				add_research_option = chr_tech_shoggoth_workers
+				add_tech_progress = {
+					tech = chr_tech_shoggoth_workers
+					progress = 0.1
+				}
+			}
+		}
+	}
+}
+
+############################################
+# 6 - PTA Azathoth Awakens
+############################################
+country_event = {
+	id = cosmichorror.6
+	title = cosmichorror.6.title
+	picture = GFX_evt_azathoth_3
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes	
+	
+	desc = cosmichorror.6.desc
+	
+	trigger = {
+		is_country_type = default
+		from = { is_country_type = azathoth }
+		
+		has_country_flag = azathoth_home_system_visited
+			has_country_flag = finished_azathoth_pilgrimage_chain
+		FromFromFrom = {
+			has_fleet_flag = azathoth_fleet
+		}
+			NOT = { has_country_flag = azathoth_world_ender }
+	}
+	
+	immediate = {
+			set_country_flag = azathoth_world_ender
+	}
+
+	#The universe ends -- your cult rejoices
+	option = {
+		trigger = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+		}
+		name = "cosmichorror.6.a"
+		set_country_flag = azathoth_awakens
+		country_event = { id = cosmichorror.7 days = 1 }
+	}
+	
+	#It was all a dream of the blind god
+	option = {
+		trigger = { 
+				NOT = { has_government = chr_govt_old_one } 
+				NOT = { has_government = chr_govt_outer_god }
+		}	
+		name = "cosmichorror.6.b"
+		set_country_flag = azathoth_awakens
+		country_event = { id = cosmichorror.7 days = 1 }
+	}
+}
+
+############################################
+# 7 - PTA Destroy Azathoth System
+############################################
+country_event = {
+	id = cosmichorror.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = azathoth_awakens
+	}
+	immediate = {
+		random_system = {
+			limit = {
+				has_star_flag = azathoth_home_system
+			}
+			set_star_flag = azathoth_destroyed_system		
+			random_system_planet = {
+				save_global_event_target_as = azathoth_destroys				
+			}		
+		}		
+		country_event = { id = cosmichorror.8 }		
+	}
+}
+
+############################################
+# 8 - PTA Turn all systems into empty voids
+############################################
+country_event = {
+	id = cosmichorror.8
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = azathoth_awakens
+	}	
+	immediate = {
+		every_system = {
+			limit = {
+				NOT = { has_star_flag = azathoth_destroyed_system }
+			}
+			destroy_star_system = yes
+		}
+	country_event = { id = azathothawakens.1 }
+	}	
+
+}
+
+
+############################################
+##
+## 
+##  Color Out of Space
+##
+##
+############################################
+# 9 - COOS Starting Event
+############################################
+country_event = {
+	id = cosmichorror.9
+	title = cosmichorror.9.title
+	picture = GFX_evt_coos_1
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes	
+	
+	desc = {
+		trigger = {
+			has_government = chr_govt_old_one
+			has_government = chr_govt_outer_god
+		}
+		text = cosmichorror.9.desc.1
+	}
+	desc = {
+		trigger = { 
+			NOT = { has_government = chr_govt_old_one }
+			NOT = { has_government = chr_govt_outer_god }
+		}
+		text = cosmichorror.9.desc.2
+	}
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = color_home_system_visited }
+		NOT = { has_country_flag = finished_color_chain }
+		NOT = { has_country_flag = color_seen }		
+	}
+	
+	immediate = {
+		set_country_flag = "color_seen"
+		if = {
+			limit = {
+				any_system = {
+					has_star_flag = color_system
+				}
+			}				
+			else = {
+				random_system = {
+					limit = {
+						NOT = {
+							any_neighbor_system = {
+								exists = space_owner
+							}
+						}
+					}
+				spawn_system = { initializer = "colors_system_npc"}
+				}
+			}				
+		}
+	}			
+	
+	option = {
+		name = "cosmichorror.9.a"
+		begin_event_chain = {
+				event_chain = "color_chain"
+				target = this
+		}
+		random_owned_planet = {
+			if = {
+			limit = {
+				is_colony = yes
+				}
+			#Make non-cultist leaders lose sanity
+			planet_event = { id = cosmichorror.300 }
+			
+			#Create the blocking tile
+			planet = {
+			random_deposit = {
+				limit = { 
+					is_blocker = no
+					#is_ruined = no
+				}
+				remove_deposit = yes
+			}			
+			add_blocker = {
+				type =  tb_blasted_heath
+			} 
+		}
+	}
+	}	
+		hidden_effect = {
+			#Create three possible systems
+			random_system = {
+				limit = {
+					has_star_flag = color_system
+				}
+				save_event_target_as = color_home_system_1
+				set_star_flag = color_home_system_1
+			}
+			random_system = {
+				limit = {
+					NOR = {
+						has_star_flag = color_home_system_1
+						has_star_flag = hostile_system
+					}
+					is_pirate_system = no
+					has_owner = no
+				}
+				save_event_target_as = color_home_system_2
+				set_star_flag = color_home_system_2
+			}
+			random_system = {
+				limit = {
+					NOR = {
+						has_star_flag = color_home_system_1
+						has_star_flag = color_home_system_2
+						has_star_flag = hostile_system
+					}
+					is_pirate_system = no
+					has_owner = no
+				}
+				save_event_target_as = color_home_system_3
+				set_star_flag = color_home_system_3
+			}			
+			create_point_of_interest = {
+				id = cosmichorror.9.poi.1
+				name = "cosmichorror.9.poi_1"
+				desc = "cosmichorror.9.poi_1.desc"
+				event_chain = "color_chain"
+				location = event_target:color_home_system_1
+			}			
+			create_point_of_interest = {
+				id = cosmichorror.9.poi.2
+				name = "cosmichorror.9.poi_1"
+				desc = "cosmichorror.9.poi_1.desc"
+				event_chain = "color_chain"
+				location = event_target:color_home_system_2
+			}			
+			create_point_of_interest = {
+				id = cosmichorror.9.poi.3
+				name = "cosmichorror.9.poi_1"
+				desc = "cosmichorror.9.poi_1.desc"
+				event_chain = "color_chain"
+				location = event_target:color_home_system_3
+			}
+		}
+	}
+	option = {
+		name = NOTIME
+	}
+}	
+
+############################################
+# 10 - COOS You've found the color!
+############################################
+ship_event = {
+	id = cosmichorror.10
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			NOT = {has_country_flag = "color_home_system_visited"}
+		}
+		FROM = {
+			has_star_flag = color_system
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				exists = fleet
+			}
+			fleet = {
+				set_fleet_flag = color_discoverer
+			}
+		}
+		owner = {
+			if = {
+				limit = {
+					exists = owner
+					has_point_of_interest = {
+						poi = cosmichorror.9.poi.1
+					}
+				}
+				remove_point_of_interest = cosmichorror.9.poi.1
+				add_event_chain_counter = { 
+					event_chain = "color_chain"
+					counter = "found" 
+					amount = 1 
+				}			
+			}
+			if = {
+				limit = {
+					exists = owner
+					has_point_of_interest = {
+						poi = cosmichorror.9.poi.2
+					}
+				}
+				remove_point_of_interest = cosmichorror.9.poi.2			
+			}
+			if = {
+				limit = {
+					exists = owner
+					has_point_of_interest = {
+						poi = cosmichorror.9.poi.3
+					}
+				}
+				remove_point_of_interest = cosmichorror.9.poi.3			
+			}
+			country_event = { id = cosmichorror.11 }
+		}
+	}
+}
+
+############################################
+# 11 - COOS Discovery Event
+############################################
+country_event = {
+	id = cosmichorror.11
+	title = cosmichorror.11.title
+	picture = GFX_evt_coos_2
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes	
+	
+	desc = {
+		trigger = {
+			has_government = chr_govt_old_one
+			has_government = chr_govt_outer_god
+		}
+		text = cosmichorror.11.desc.1
+	}
+	desc = {
+		trigger = { 
+			NOT = { has_government = chr_govt_old_one } 
+			NOT = { has_government = chr_govt_outer_god }
+		}
+		text = cosmichorror.11.desc.2
+	}
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = color_home_system_visited }
+		NOT = { has_country_flag = finished_color_chain }
+	}
+	
+	immediate = {
+		set_country_flag = finished_color_chain
+		set_country_flag = color_home_system_visited
+		end_event_chain = "color_chain"
+	}
+
+	#Resource Reward
+	option = {
+		name = FASCINATING
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = @tier4researchreward
+			min = @tier4researchmin
+			max = @tier4researchmax
+		}
+	}
+}
+
+############################################
+# 12 - COOS First Contact Event
+############################################
+# First Contact Colors
+# Originally action.25
+country_event = {
+	id = cosmichorror.12
+	title = "cosmichorror.12.title"
+	desc = "cosmichorror.12.desc"
+	#picture = GFX_evt_star_chart
+	picture = GFX_evt_coos_2
+	show_sound = advisor_notification_alien_vessel_encountered
+	location = FROMFROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = color }
+		is_country_type = default
+		is_ai = no
+		NOT = { has_country_flag = color_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = color_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_COLOR"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "progress.4.a" #This changes everything.
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_COLOR"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+############################################
+# 13 - COOS Investigation
+############################################
+### Color Out of Space Investigation Trigger
+# Triggered by special_project = INVESTIGATE_COLOR
+# Formerly story.500
+country_event = {
+	id = cosmichorror.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { is_country_type = color }
+			establish_communications_no_message = ROOT
+		}
+		country_event = { id = cosmichorror.14 days = 5 }
+	}
+}
+
+
+############################################
+# 14 - COOS Investigation Result
+############################################
+# Triggered by cosmichorror.13
+# Formerly story.501
+country_event = {
+	id = cosmichorror.14
+	title = cosmichorror.14.title
+	desc = cosmichorror.14.desc
+	picture = GFX_evt_coos_3
+	show_sound = event_alien_nature
+	location = from
+
+	is_triggered_only = yes
+	#Discovery of the Color Out of Space terror weapon
+	option = {
+		name = INTERESTING
+		#Effect
+		if = {
+			limit = {
+				NOT = { has_technology = chr_tech_coos_weapon_1 }
+			}
+		give_technology = {
+			tech = chr_tech_coos_weapon_1
+		} 
+		break = yes
+	}
+		if = {
+			limit = {
+				has_technology = chr_tech_coos_weapon_1
+			}
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier4researchreward
+				min = @tier4researchmin
+				max = @tier4researchmax
+			}
+			break = yes
+		}
+	}
+}
+
+############################################
+# 15 - COOS Terror Check
+############################################
+### A color enters another system owned by
+### another faction. The color then acts
+### as an automatic terrorist unit and 
+### randomly chooses a habited planet
+### and infects the soil.
+### Triggered by 11_chr_on_actions on_entering_system
+ship_event = {
+	id = cosmichorror.15
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ship_size = chr_color_out_of_space_pc
+		exists = fleet
+		fleet = {
+			NOT = { has_fleet_flag = color_terror_prepared }
+		}
+	}
+	immediate = {
+		solar_system = {
+			random_system_planet = {
+				#Attack only colonies
+				#No self terorrism
+				limit = {
+					is_colony = yes
+					owner = {
+						NOT = { is_same_value = root.owner }
+					}
+				}
+			save_event_target_as = color_terror_target
+			}
+		}
+		if = {
+			limit = {
+				exists = event_target:color_terror_target
+			}
+			fleet = { set_fleet_flag = color_terror_prepared }
+			event_target:color_terror_target = { set_planet_flag = color_terror_targeted }	
+			owner = { country_event = { id = cosmichorror.16 days = 1 } }
+		}
+	}
+}
+
+
+############################################
+# 16 - COOS Terror Attempt
+############################################
+# Triggered by cosmichorror.15
+country_event = {
+	id = cosmichorror.16
+	title = cosmichorror.16.title
+	desc = cosmichorror.16.desc
+
+	picture = GFX_evt_coos_3
+	show_sound = event_alien_nature
+	location = from
+
+	immediate = {
+		every_owned_ship = {
+			limit = { fleet = { has_fleet_flag = color_terror_prepared } }
+		}
+		random_planet_within_border = {
+			limit = {
+				has_planet_flag = color_terror_targeted
+			}	
+			save_event_target_as = planet
+			solar_system = {
+				save_event_target_as = system
+			}
+		}		
+		set_country_flag = relic_well_allowed
+		owner = { country_event = { id = action_strange_effigy.5 days = 200 } }
+	}
+	
+	is_triggered_only = yes
+	#Policy Check
+	option = {
+		trigger = {
+			NOT = { has_policy_flag = color_terrorism }
+		}
+		name = "cosmichorror.16.c"		
+		custom_tooltip = "cosmichorror.16.c.tooltip"
+
+		#Cancel Effect
+		every_owned_ship = {
+			limit = { is_ship_size = chr_color_out_of_space_pc }		
+		fleet = { remove_fleet_flag = color_terror_prepared }
+		}
+		random_planet_within_border = {
+			limit = {
+				has_planet_flag = color_terror_targeted
+			}
+			remove_planet_flag = color_terror_targeted
+		}
+	}
+	#Attack?
+	option = {
+		trigger = {
+			has_policy_flag = color_terrorism
+		}	
+		name = "cosmichorror.16.a"
+		custom_tooltip = cosmichorror.16.a.tooltip		
+		
+		#Is this the right planet? Let's find it
+		every_owned_ship = {
+			limit = { fleet = { has_fleet_flag = color_terror_prepared } }
+			fleet = {
+				remove_fleet_flag = color_terror_prepared
+				destroy_fleet = this
+			}
+		}
+		random_planet_within_border = {
+			limit = {
+				has_planet_flag = color_terror_targeted
+			}
+			
+			#Make non-cultist leaders lose sanity
+			if = {
+				limit = {
+					exists = leader
+					leader = {
+						NOR = { 
+							has_trait = chr_leader_trait_sanity_loss_minor
+							has_trait = chr_leader_trait_sanity_loss_major
+							has_trait = chr_leader_trait_sanity_loss_extreme
+						} 
+					}
+					OWNER = {
+						NOR = { 
+							has_government = chr_govt_old_one
+							has_government = chr_govt_outer_god
+						}
+					}
+				}
+				leader = {
+					add_trait = chr_leader_trait_sanity_loss_minor
+				}											
+			}
+			#Create the blocking tile
+			random_deposit = {
+				limit = { 
+					is_blocker = no
+					#is_ruined = no
+				}
+				remove_deposit = yes
+			}
+			add_blocker = {
+				type = tb_blasted_heath
+			}
+			remove_planet_flag = color_terror_targeted				
+		}
+	}
+	#Cancel?
+	option = {
+		name = "cosmichorror.16.b"
+		#Effect
+		every_owned_ship = {
+			limit = { is_ship_size = chr_color_out_of_space_pc }
+		fleet = { remove_fleet_flag = color_terror_prepared }
+		}
+		random_planet_within_border = {
+			limit = {
+				has_planet_flag = color_terror_targeted
+			}
+			remove_planet_flag = color_terror_targeted
+		}		
+	}	
+}
+
+############################################
+# 17 - Color Out of Space is Built
+############################################
+ship_event = {
+	id = cosmichorror.17
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ship_size = chr_color_out_of_space_pc
+		exists = OWNER
+		OWNER = {
+			is_country_type = default
+			is_ai = no
+		}
+	}
+
+	immediate = {
+		owner = {
+			#Setup a counter
+			set_variable = {
+				which = coos_ship_count
+				value = 0
+			}
+		
+			#How many colors out of space do we have?
+			every_owned_ship = {
+				limit = {
+					is_ship_size = chr_color_out_of_space_pc
+				}
+				owner = {
+					change_variable = {
+						which = coos_ship_count
+						value = 1
+					}
+				}
+			}
+		}
+	
+			#We can't have more than one
+		if = {
+			limit = {
+				owner = {
+					check_variable = {
+						which = coos_ship_count
+						value > 1
+					}
+				}
+			}
+			
+			#So let's destroy ourselves here.
+			reduce_hp_percent = 100
+			#Throw in some refunded minerals
+			owner = { 
+				add_monthly_resource_mult = {
+					resource = minerals
+					value = 12
+					min = 500
+					max = 500
+				}
+			}
+			#But, you accidentally made your governor a little insane
+			if = {
+				limit = {
+					ORBIT = {
+						exists = leader
+						leader = {
+							NOR = { 
+								has_trait = chr_leader_trait_sanity_loss_minor
+								has_trait = chr_leader_trait_sanity_loss_major
+								has_trait = chr_leader_trait_sanity_loss_extreme
+							} 
+						}
+						OWNER = {
+							NOR = { 
+								has_government = chr_govt_old_one
+								has_government = chr_govt_outer_god
+							}
+						}
+					}					
+				}
+				ORBIT = {
+					leader = {
+						add_trait = chr_leader_trait_sanity_loss_minor
+					}
+				}
+			}
+			#But, you accidentally poisoned your own soil
+			if = {
+				limit = {
+					exists = ORBIT
+					ORBIT = { is_colony = yes }
+				}
+				ORBIT = {
+					random_deposit = {
+						limit = { 
+							is_blocker = no
+							#is_ruined = no
+						}
+						remove_deposit = yes
+					}
+					add_blocker = {
+						type = tb_blasted_heath
+					}
+				}
+				#Let the player know we messed their stuff up
+				if = {
+					limit = {
+						OWNER = { 
+							NOT = { has_special_project = COLOR_ERROR_01  }
+						}
+					}
+					# Trigger Error
+					OWNER = { country_event = { id = cosmichorror.41198 } }
+					enable_special_project = {
+						name = "COLOR_ERROR_01"
+						#location = THIS
+						OWNER = OWNER
+					}
+				}
+			}
+		}		
+			
+		#Do you have the instruction manual ready?
+		if = {
+			limit = {
+				OWNER = { 
+					NOT = { has_special_project = COLOR_MANUAL  }
+				}
+			}
+			# Trigger Manual
+			OWNER = { country_event = { id = cosmichorror.41199 } }
+			enable_special_project = {
+				name = "COLOR_MANUAL"
+				#location = THIS
+				OWNER = OWNER
+			}
+		}
+	}
+}
+
+
+############################################
+#
+#
+# Polaris Events
+#
+#
+############################################
+# 18 - POL You've found Polaris!
+############################################
+ship_event = {
+	id = cosmichorror.18
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			NOT = {has_country_flag = "polaris_system_visited"}
+		}
+		FROM = {
+			has_star_flag = polaris_system
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				exists = fleet
+			}
+			fleet = {
+				set_fleet_flag = polaris_discoverer
+			}
+		}
+		owner = {
+			country_event = { id = cosmichorror.19 }
+		}
+	}
+}
+
+############################################
+# 19 - POL Discovery Event
+############################################
+country_event = {
+	id = cosmichorror.19
+	title = cosmichorror.19.title
+	picture = GFX_evt_coos_2
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes	
+	
+	desc = {
+		trigger = {
+			has_government = chr_govt_old_one
+			has_government = chr_govt_outer_god
+		}
+		text = cosmichorror.19.desc.1
+	}
+	desc = {
+		trigger = { 
+			NOT = { has_government = chr_govt_old_one } 
+			NOT = { has_government = chr_govt_outer_god }
+		}
+		text = cosmichorror.19.desc.2
+	}
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = polaris_system_visited }
+	}
+	
+	immediate = {
+		set_country_flag = polaris_system_visited
+	}
+
+	#Resource Reward
+	option = {
+		name = FASCINATING
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = @tier4researchreward
+			min = @tier4researchmin
+			max = @tier4researchmax
+		}
+	}
+}
+
+
+
+##############################################
+# 41198 Color Error 01 - Only 1 ship at a time
+##############################################
+country_event = {
+	id = cosmichorror.41198
+	hide_window = no
+	is_triggered_only = yes
+	picture = GFX_evt_unknown_ships
+	show_sound = event_structural_collapse
+
+	title = cosmichorror.41198.name
+
+	desc = {
+		text = cosmichorror.41198.desc
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+
+###########################################
+# 41199 Color Manual - Let's figure this out
+###########################################
+country_event = {
+	id = cosmichorror.41199
+	hide_window = no
+	is_triggered_only = yes
+	picture = GFX_evt_coos_5
+	show_sound = event_crystal_ship
+
+	title = cosmichorror.41199.name
+
+	desc = {
+		text = cosmichorror.41199.desc
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+############################################
+##
+## 
+##  Leader Sanity Loss Events
+##
+##
+############################################
+############################################
+# 300 - SANE Apply Accumulative Sanity Loss (Planet)
+############################################
+
+planet_event = {
+	id = cosmichorror.300
+	title = cosmichorror.300.title
+	picture = GFX_evt_sanity_loss
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	desc = {
+		trigger = { leader = { NOT = {
+				has_trait = chr_leader_trait_sanity_loss_extreme
+				has_trait = chr_leader_trait_sanity_loss_major
+				has_trait = chr_leader_trait_sanity_loss_minor
+				} 
+			}
+		}
+		text = cosmichorror.300.desc.1
+	}
+	desc = {
+		trigger = { leader = { has_trait = chr_leader_trait_sanity_loss_major } }
+		text = cosmichorror.300.desc.2
+	}	
+	desc = {
+		trigger = { leader = { has_trait = chr_leader_trait_sanity_loss_major } }
+		text = cosmichorror.300.desc.3
+	}	
+	desc = {
+		trigger = { leader = { has_trait = chr_leader_trait_sanity_loss_extreme } }
+		text = cosmichorror.300.desc.4
+	}
+	
+	trigger = {
+		owner = { 
+			is_country_type = default
+			NOT = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
+		}
+		exists = leader
+	}
+	
+	immediate = {
+		leader = { save_event_target_as = officer }
+		save_event_target_as = planet
+	}
+	
+	#Lost to Madness -- Dies
+	option = {
+		name = UNFORTUNATE
+		trigger = {
+			leader = { has_trait = chr_leader_trait_sanity_loss_extreme }
+		}
+		leader = { remove_trait = chr_leader_trait_sanity_loss_extreme }
+		kill_leader = {
+			show_notification = no
+		}
+	}
+	
+	#Extreme Sanity Loss
+	option = {
+		name = UNFORTUNATE
+		trigger = {
+			leader = { has_trait = chr_leader_trait_sanity_loss_major }
+		}
+		leader = {
+			remove_trait = chr_leader_trait_sanity_loss_major
+			add_trait = chr_leader_trait_sanity_loss_extreme
+		}
+		planet_event = { id = cosmichorror.304 days = 1440 random = 60 }
+	}
+	
+	#Major Sanity Loss
+	option = {
+		name = UNFORTUNATE
+		trigger = {
+			leader = { has_trait = chr_leader_trait_sanity_loss_minor }
+		}
+		leader = {
+			remove_trait = chr_leader_trait_sanity_loss_minor
+			add_trait = chr_leader_trait_sanity_loss_major
+		}
+		planet_event = { id = cosmichorror.304 days = 1440 random = 60 }			
+	}
+	
+	#Minor Sanity Loss
+	option = {
+		name = UNFORTUNATE
+		trigger = {
+			leader = {
+				NOR = { 
+					has_trait = chr_leader_trait_sanity_loss_minor
+					has_trait = chr_leader_trait_sanity_loss_major
+					has_trait = chr_leader_trait_sanity_loss_extreme
+				} 
+			}
+		}
+		leader = {
+			add_trait = chr_leader_trait_sanity_loss_minor
+		}
+		planet_event = { id = cosmichorror.304 days = 1440 random = 60 }	
+	}
+	
+}
+
+############################################
+# 301 - SANE Apply Accumulative Sanity Loss (Fleet)
+############################################
+
+ship_event = {
+	id = cosmichorror.301
+	title = cosmichorror.301.title
+	picture = GFX_evt_sanity_loss
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	desc = {
+		trigger = { leader = { NOT = {
+				has_trait = chr_leader_trait_sanity_loss_extreme
+				has_trait = chr_leader_trait_sanity_loss_major
+				has_trait = chr_leader_trait_sanity_loss_minor
+				} 
+			}
+		}
+		text = cosmichorror.301.desc.1
+	}
+	desc = {
+		trigger = { leader = { has_trait = chr_leader_trait_sanity_loss_major } }
+		text = cosmichorror.301.desc.2
+	}	
+	desc = {
+		trigger = { leader = { has_trait = chr_leader_trait_sanity_loss_major } }
+		text = cosmichorror.301.desc.3
+	}	
+	desc = {
+		trigger = { leader = { has_trait = chr_leader_trait_sanity_loss_extreme } }
+		text = cosmichorror.301.desc.4
+	}
+	
+	trigger = {
+		owner = { 
+			is_country_type = default
+			NOT = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
+		}
+		exists = leader
+		exists = fleet
+		fleet = {
+			NOT = { has_fleet_flag = "onewindow_thanks" }
+		}
+	}
+	
+	immediate = {
+		leader = { save_event_target_as = officer }
+		FROMFROM = {
+			save_event_target_as = system		
+		}
+		fleet = {
+			set_fleet_flag = "onewindow_thanks"
+			fleet_event = { id = cosmichorror.411 days = 1 }		
+		}
+	}
+	
+	#Lost to Madness -- Change factions
+	option = {
+		name = UNFORTUNATE
+		trigger = {
+			leader = { has_trait = chr_leader_trait_sanity_loss_extreme }
+		}
+		leader = { remove_trait = chr_leader_trait_sanity_loss_extreme }
+		
+		create_country = {
+			name = "Lost to Madness"
+			type = default
+			species = owner_species
+			ethos = {
+				ethic = ethic_xenophobe
+				ethic = ethic_fanatic_spiritualist
+			}
+			flag = {
+				icon = {
+					category = "cosmichorrors"
+					file = "flag_chr_14.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = madness_empire
+			}
+		}
+		fleet = { set_owner = last_created_country }
+		#leader = { assign_leader = last_created_country }
+		kill_leader = {
+			show_notification = no
+		}
+		last_created_country = {
+			set_faction_hostility = { set_hostile = yes }
+			establish_communications_no_message = root.owner
+		}
+
+	}
+	
+	#Extreme Sanity Loss
+	option = {
+		name = UNFORTUNATE
+		trigger = {
+			leader = { has_trait = chr_leader_trait_sanity_loss_major }
+		}
+		leader = {
+			remove_trait = chr_leader_trait_sanity_loss_major
+			add_trait = chr_leader_trait_sanity_loss_extreme
+		}
+		fleet = { fleet_event = { id = cosmichorror.303 days = 1440 random = 60 }	}
+	}
+	
+	#Major Sanity Loss
+	option = {
+		name = UNFORTUNATE
+		trigger = {
+			leader = { has_trait = chr_leader_trait_sanity_loss_minor }
+		}
+		leader = {
+			remove_trait = chr_leader_trait_sanity_loss_minor
+			add_trait = chr_leader_trait_sanity_loss_major
+		}
+		fleet = { fleet_event = { id = cosmichorror.303 days = 1440 random = 60 }	}			
+	}
+	
+	#Minor Sanity Loss
+	option = {
+		name = UNFORTUNATE
+		trigger = {
+			leader = {
+				NOR = { 
+					has_trait = chr_leader_trait_sanity_loss_minor
+					has_trait = chr_leader_trait_sanity_loss_major
+					has_trait = chr_leader_trait_sanity_loss_extreme
+				} 
+			}
+		}
+		leader = {
+			add_trait = chr_leader_trait_sanity_loss_minor
+		}
+		fleet = { fleet_event = { id = cosmichorror.303 days = 1440 random = 60 } }		
+	}
+	
+}
+
+###########################################################
+# 302 - Extreme sanity loss / madness
+###########################################################
+ship_event = {
+	id = cosmichorror.302
+	title = cosmichorror.301.title
+	picture = GFX_evt_sanity_loss
+	location = ROOT
+	
+	is_triggered_only = yes
+
+	desc = {
+		trigger = { leader = { NOT = { has_trait = chr_leader_trait_sanity_loss_extreme } } }
+		text = cosmichorror.301.desc.3
+	}
+	desc = {
+		trigger = { leader = { has_trait = chr_leader_trait_sanity_loss_extreme } }
+		text = cosmichorror.301.desc.4
+	}
+	
+	trigger = {
+		owner = { 
+			is_country_type = default
+			NOT = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
+		}
+		fleet = {
+			exists = leader
+			NOT = { has_fleet_flag = "onewindow_thanks" }
+		}
+	}
+	
+	
+	immediate = {
+		leader = { save_event_target_as = officer }
+		fleet = {
+			set_fleet_flag = "onewindow_thanks"
+			fleet_event = { id = cosmichorror.411 days = 1 }
+		}
+		FROMFROM = {
+			save_event_target_as = system		
+		}
+	}
+	
+	#Lost to Madness -- Change factions
+	option = {
+		name = UNFORTUNATE
+		trigger = {
+			leader = { has_trait = chr_leader_trait_sanity_loss_extreme }
+		}
+		leader = { remove_trait = chr_leader_trait_sanity_loss_extreme }
+		
+		create_country = {
+			name = "Lost to Madness"
+			type = default
+			species = owner_species
+			ethos = {
+				ethic = ethic_xenophobe
+				ethic = ethic_fanatic_spiritualist
+			}
+			flag = {
+				icon = {
+					category = "cosmichorrors"
+					file = "flag_chr_14.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = madness_empire
+			}
+		}
+		fleet = {
+			set_owner = last_created_country
+			#assign_leader = event_target:officer
+		}
+		last_created_country = {
+			set_faction_hostility = { set_hostile = yes }
+			establish_communications_no_message = root.owner
+		}
+		leader = {
+			kill_leader = {	show_notification = no }
+		}
+	}
+	
+	#Extreme Sanity Loss
+	option = {
+		name = UNFORTUNATE
+		trigger = {
+			NOT = { leader = { has_trait = chr_leader_trait_sanity_loss_extreme } }
+		}
+		#Remove minor sanity loss
+		if = {
+			limit = { leader = {	has_trait = chr_leader_trait_sanity_loss_minor } }
+			leader = { remove_trait = chr_leader_trait_sanity_loss_minor }
+		}
+		#Remove major sanity loss
+		if = {
+			limit = { leader = {	has_trait = chr_leader_trait_sanity_loss_major } }
+			leader = { remove_trait = chr_leader_trait_sanity_loss_major }
+		}
+		#Give extreme sanity loss
+		leader = { add_trait = chr_leader_trait_sanity_loss_extreme }
+		fleet = { fleet_event = { id = cosmichorror.303 days = 1440 random = 60 } }
+	}	
+}
+
+############################################
+# 303 - Sanity returns over time (Fleet)
+############################################
+fleet_event = {
+	id = cosmichorror.303
+	title = cosmichorror.303.title
+	desc = cosmichorror.303.desc
+	picture = GFX_evt_oldone_hall
+	show_sound = event_alien_nature
+	
+	#hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		exists = leader
+	}
+	
+	immediate = {
+		leader = { save_event_target_as = officer }
+		fleet = {
+			set_fleet_flag = "onewindow_thanks"
+			fleet_event = { id = cosmichorror.411 days = 1 }
+		}
+		FROM = {
+			save_event_target_as = system		
+		}	
+	}
+	
+	#Sanity Recovery
+	option = {
+		name = GOOD
+		#Remove minor sanity loss
+		if = {
+			limit = { leader = {	has_trait = chr_leader_trait_sanity_loss_minor } }
+			leader = { remove_trait = chr_leader_trait_sanity_loss_minor }
+		}
+		#Remove major sanity loss
+		if = {
+			limit = { leader = {	has_trait = chr_leader_trait_sanity_loss_major } }
+			leader = { remove_trait = chr_leader_trait_sanity_loss_major }
+			leader = { add_trait = chr_leader_trait_sanity_loss_minor }
+			fleet_event = { id = cosmichorror.303 days = 1080 random = 60 }				
+		}
+		#Remove extreme sanity loss
+		if = {
+			limit = { leader = {	has_trait = chr_leader_trait_sanity_loss_extreme } }
+			leader = { remove_trait = chr_leader_trait_sanity_loss_extreme }
+			leader = { add_trait = chr_leader_trait_sanity_loss_major }
+			fleet_event = { id = cosmichorror.303 days = 1440 random = 60 }
+		}
+	}	
+}
+
+
+############################################
+# 304 - Sanity returns over time (Planet)
+############################################
+planet_event = {
+	id = cosmichorror.304
+	title = cosmichorror.304.title
+	desc = cosmichorror.304.desc
+	picture = GFX_evt_oldone_hall
+	show_sound = event_alien_nature
+	
+	#hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		exists = leader
+		leader = {
+			OR = {
+				has_trait = chr_leader_trait_sanity_loss_minor
+				has_trait = chr_leader_trait_sanity_loss_major
+				has_trait = chr_leader_trait_sanity_loss_extreme
+			}
+		}
+	}
+	
+	immediate = {
+		leader = { save_event_target_as = officer }
+		save_event_target_as = planet	
+	}
+	
+	#Sanity Recovery
+	option = {
+		name = GOOD
+		#Remove minor sanity loss
+		if = {
+			limit = { leader = {	has_trait = chr_leader_trait_sanity_loss_minor } }
+			leader = { remove_trait = chr_leader_trait_sanity_loss_minor }
+		}
+		#Remove major sanity loss
+		if = {
+			limit = { leader = {	has_trait = chr_leader_trait_sanity_loss_major } }
+			leader = { remove_trait = chr_leader_trait_sanity_loss_major }
+			leader = { add_trait = chr_leader_trait_sanity_loss_minor }
+			planet_event = { id = cosmichorror.304 days = 1080 random = 60 }				
+		}
+		#Remove extreme sanity loss
+		if = {
+			limit = { leader = {	has_trait = chr_leader_trait_sanity_loss_extreme } }
+			leader = { remove_trait = chr_leader_trait_sanity_loss_extreme }
+			leader = { add_trait = chr_leader_trait_sanity_loss_major }
+			planet_event = { id = cosmichorror.304 days = 1440 random = 60 }
+		}
+	}	
+}
+
+
+############################################
+# 411 - Keep it down, will ya?
+#       This keeps our windows limited
+#       to just one notification when using
+#       ship scope
+############################################
+fleet_event = {
+	id = cosmichorror.411
+	title = OK
+	desc = OK
+	location = from #A scope to the object that is relevant to the event that player can move to. For example, the planet where event is happening
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_fleet_flag = "onewindow_thanks"
+	}
+	immediate = {
+		remove_fleet_flag = "onewindow_thanks"
+	}
+}
+
+############################################
+# 69691 - DEBUG
+############################################
+country_event = {
+	id = cosmichorror.69691
+	title = "Debug"
+	picture = GFX_evt_azathoth_1
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes	
+	desc = "Debug"
+
+	option = {
+		name = OK
+	}
+}

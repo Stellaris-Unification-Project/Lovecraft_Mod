@@ -1,0 +1,735 @@
+namespace = buildempire
+
+#Build Star-Spawn of Cthulhu
+country_event = {
+	id = buildempire.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+			has_country_flag = Story2900
+			has_country_flag =  CosmicSpawnComplete
+	}
+	immediate = {
+		if = {
+		### Spawn Star-Spawn of Cthulhu
+			limit = {
+				NOR = {
+					any_country = {
+						species_portrait = cthulhu
+					}
+				}
+			}
+		random_system = {
+				limit = { 
+					#NOR = { has_owner = yes } 
+					NOR = {
+						any_neighbor_system = {
+							any_neighbor_system = {
+								any_neighbor_system = {
+									exists = space_owner
+								}
+								exists = space_owner
+							}
+							exists = space_owner
+						}
+						exists = space_owner
+					}					
+				}
+				spawn_system = { initializer = random_empire_init_01 }
+			}
+		}
+	}
+}	
+
+#Build The Yellow Kingdom
+country_event = {
+	id = buildempire.2
+	hide_window = yes
+	is_triggered_only = yes
+		
+		trigger = {
+			has_country_flag = Story2900
+			has_country_flag = CosmicSpawnComplete
+		}
+		### Spawn Hastur
+		immediate = {
+			random_system = {
+				limit = { 
+					#NOR = { has_owner = yes } 
+					NOR = {
+						any_neighbor_system = {
+							any_neighbor_system = {
+								any_neighbor_system = {
+									exists = space_owner
+								}
+								exists = space_owner
+							}
+							exists = space_owner
+						}
+						exists = space_owner
+					}					
+				}
+			spawn_system = { initializer = random_empire_init_02 }
+		}
+	}	
+}
+
+#Build The Elder Things
+country_event = {
+	id = buildempire.3
+	hide_window = yes
+	is_triggered_only = yes
+
+		trigger = {
+			has_country_flag = Story2900
+			has_country_flag = CosmicSpawnComplete
+		}
+		immediate = {
+		### Spawn Elder Things
+		if = {
+			limit = {
+				NOR = {
+					any_country = {
+						species_portrait = elderthing
+					}
+				}
+			}
+			random_system = {
+				limit = {
+					#NOR = { has_owner = yes }
+					NOR = {
+						any_neighbor_system = {
+							any_neighbor_system = {
+								any_neighbor_system = {
+									exists = space_owner
+								}
+								exists = space_owner
+							}
+							exists = space_owner
+						}
+						exists = space_owner
+					}
+				}	
+			}				
+		}
+	spawn_system = { initializer = random_empire_init_03 }
+	}
+}	
+
+#Build The Esoteric Order of Dagon
+country_event = {
+	id = buildempire.4
+	hide_window = yes
+	is_triggered_only = yes
+
+		trigger = {
+			has_country_flag = Story2900
+			has_country_flag = CosmicSpawnComplete
+		}
+		immediate = {
+		### Spawn Dagon
+		if = {
+			limit = {
+				NOR = {
+					any_country = {
+						species_portrait = dagon
+					}
+				}
+			}
+			random_system = {
+				limit = {
+					#NOR = { has_owner = yes }
+					NOR = {
+						any_neighbor_system = {
+							any_neighbor_system = {
+								any_neighbor_system = {
+									exists = space_owner
+								}
+								exists = space_owner
+							}
+							exists = space_owner
+						}
+						exists = space_owner
+					}
+				}	
+			}
+			spawn_system = { initializer = random_empire_init_04 }
+		}
+	}	
+}
+
+#Build The Great Race of Yith
+country_event = {
+	id = buildempire.5
+	hide_window = yes
+	is_triggered_only = yes
+
+		trigger = {
+			has_country_flag = Story2900
+			has_country_flag = CosmicSpawnComplete
+		}	
+		immediate = {
+		### Spawn Great Race of Yith
+		if = {
+			limit = {
+				NOR = {
+					any_country = {
+						species_portrait = yith
+					}
+				}
+			}
+			random_system = {
+				limit = { 
+					#NOR = { has_owner = yes }
+					NOR = {
+						any_neighbor_system = {
+							any_neighbor_system = {
+								any_neighbor_system = {
+									exists = space_owner
+								}
+								exists = space_owner
+							}
+							exists = space_owner
+						}
+						exists = space_owner
+					}
+				}
+				spawn_system = { initializer = random_empire_init_05 }
+			}
+		}
+		#No Forced Leader -- They elect leaders
+	
+	}
+}
+
+#Build The Crawling Chaos
+country_event = {
+	id = buildempire.6
+	hide_window = yes
+	is_triggered_only = yes
+
+		trigger = {
+			has_country_flag = Story2900
+			has_country_flag = CosmicSpawnComplete
+		}
+		immediate = {	
+		### Spawn Nyarlathotep
+		if = {
+			limit = {
+				NOR = { any_country = {	species_portrait = nyarlathotep	}
+						any_country = {	species_portrait = huntinghorror }
+				}
+			}
+			random_system = {
+				limit = { 
+					#NOR = { has_owner = yes }
+					NOR = {
+						any_neighbor_system = {
+							any_neighbor_system = {
+								any_neighbor_system = {
+									exists = space_owner
+								}
+								exists = space_owner
+							}
+							exists = space_owner
+						}
+						exists = space_owner
+					}
+				}
+				spawn_system = { initializer = random_empire_init_06 }
+			}
+		}
+	
+	}
+}
+
+
+#Build Gatekeepers of Yog-Sothoth
+country_event = {
+	id = buildempire.7
+	hide_window = yes
+	is_triggered_only = yes
+
+		trigger = {
+			has_country_flag = Story2900
+			has_country_flag = CosmicSpawnComplete
+		}
+		immediate = {	
+		### Spawn Yog-Sothoth
+		if = {
+			limit = {
+				NOR = { any_country = {	species_portrait = shoggoth	}
+						any_country = {	species_portrait = yog-sothoth }
+				}
+			}
+			random_system = {
+				limit = { 
+					#NOR = { has_owner = yes }
+					NOR = {
+						any_neighbor_system = {
+							any_neighbor_system = {
+								any_neighbor_system = {
+									exists = space_owner
+								}
+								exists = space_owner
+							}
+							exists = space_owner
+						}
+						exists = space_owner
+					}
+				}
+				spawn_system = { initializer = random_empire_init_01 }
+			}
+		}
+	}
+}
+
+
+#Build Azathoth System
+country_event = {
+	id = buildempire.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+		trigger = {
+			has_country_flag = Story2900
+			has_country_flag = CosmicSpawnComplete
+		}	
+		immediate = {
+		### Spawn Azathoth's System
+		if = {
+			limit = {
+				NOR = { any_system = { has_star_flag = azathoth_home_system	}
+				}
+			}
+			random_system = {
+				limit = { 
+					#NOR = { has_owner = yes }
+					NOR = {
+						any_neighbor_system = {
+							any_neighbor_system = {
+								any_neighbor_system = {
+									exists = space_owner
+								}
+								exists = space_owner
+							}
+							exists = space_owner
+						}
+						exists = space_owner
+					}
+				}
+				spawn_system = { initializer = random_empire_init_02 }
+			}
+		}
+	}
+}
+
+
+#Build Polaris System
+country_event = {
+	id = buildempire.9
+	hide_window = yes
+	is_triggered_only = yes
+	
+		trigger = {
+			has_country_flag = Story2900
+			has_country_flag = CosmicSpawnComplete
+		}	
+		immediate = {
+		### Spawn Polaris System
+		if = {
+			limit = {
+				NOR = { any_system = {	has_star_flag = polaris_system	}
+				}
+			}
+			random_system = {
+				limit = { 
+					#NOR = { has_owner = yes }
+					NOR = {
+						any_neighbor_system = {
+							any_neighbor_system = {
+								any_neighbor_system = {
+									exists = space_owner
+								}
+								exists = space_owner
+							}
+							exists = space_owner
+						}
+						exists = space_owner
+					}
+				}
+				spawn_system = { initializer = random_empire_init_03 }
+			}
+		}
+	}
+}
+
+
+#Build Intergalactic Mi-Go Empire
+country_event = {
+	id = buildempire.10
+	hide_window = yes
+	is_triggered_only = yes
+
+		trigger = {
+			has_country_flag = Story2900
+			has_country_flag = CosmicSpawnComplete
+		}	
+		immediate = {
+		### Spawn Mi-Go
+		if = {
+			limit = {
+				NOR = { any_country = {	species_portrait = migo	}}
+			}
+			random_system = {
+				limit = { 
+					#NOR = { has_owner = yes }
+					NOR = {
+						any_neighbor_system = {
+							any_neighbor_system = {
+								any_neighbor_system = {
+									exists = space_owner
+								}
+								exists = space_owner
+							}
+							exists = space_owner
+						}
+						exists = space_owner
+					}
+				}
+				spawn_system = { initializer = random_empire_init_04 }
+			}
+		}
+	}
+}
+
+
+
+
+#Add Leaders
+country_event = {
+	id = buildempire.99
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#Add Cthulhu
+		every_country = {
+			limit = { 
+				has_country_flag = add_cthulhu
+			}
+			country_event = { id = buildempire.2901 }
+		}
+
+		#Add Hastur
+		every_country = {
+			limit = { 
+				has_country_flag = add_hastur
+			}
+			country_event = { id = buildempire.2902 }
+		}				
+		
+		#Add Dagon
+		every_country = {
+			limit = { 
+				has_country_flag = add_dagon
+			}
+			country_event = { id = buildempire.2904 }
+		}
+	
+		#Add Nyarlathotep
+		every_country = {
+			limit = { 
+				has_country_flag = add_nyarlathotep
+			}
+			country_event = { id = buildempire.2905 }
+		}	
+	
+		#Add Yog-Sothoth
+		every_country = {
+			limit = { 
+				has_country_flag = add_yog-sothoth
+			}
+			country_event = { id = buildempire.2906 }
+		}
+
+		#Add Grah'n
+		every_country = {
+			limit = { 
+				has_country_flag = add_elderthing
+			}
+			country_event = { id = buildempire.2903 }
+		}		
+	
+	}
+}
+
+
+#Add Cthulhu
+country_event = {
+	id = buildempire.2901
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#Kill all exisiting leaders
+		every_owned_leader = {
+			#kill_leader = { type = scientist show_notification = no }
+			#kill_leader = { type = governor show_notification = no }
+			kill_leader = { type = ruler show_notification = no }
+		}
+		#Add new Cthulhu
+		create_species = {
+			name = "Great Old One"
+			plural = "Great Old Ones"
+			adjective = "Great Old Onelike"
+			class = "PLA_CHR"
+			portrait = "cthulhu_oldone"
+			#homeworld = THIS
+			traits = {
+				trait = "chr_trait_strange_aeons"
+				trait = "chr_trait_cosmic_horrors"
+			}
+		}		
+		create_leader = {
+			class = ruler #scientist governor
+			species = owner
+			name = "Cthulhu"
+			skill = 1
+			set_age = 90000
+			traits = {
+				trait = trait_ruler_world_shaper
+				trait = trait_ruler_warlike
+			}
+		}
+		assign_leader = last_created_leader
+		remove_country_flag = add_cthulhu
+	}
+}
+
+
+#Add Hastur
+country_event = {
+	id = buildempire.2902
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#Kill all exisiting leaders
+		every_owned_leader = {
+			#kill_leader = { type = scientist show_notification = no }
+			#kill_leader = { type = governor show_notification = no }
+			kill_leader = { type = ruler show_notification = no }
+		}
+
+		#Add new Hastur species
+		create_species = {
+			name = "Great Old One"
+			plural = "Great Old Ones"
+			adjective = "Great Old Onelike"
+			class = "PLA_CHR"
+			portrait = "hastur_oldone"
+			#homeworld = THIS
+			traits = {
+				trait = "chr_trait_strange_aeons"
+				trait = "chr_trait_cosmic_horrors"
+			}
+		}
+		#Add Hasturian leader
+		create_leader = {
+			class = ruler #scientist governor
+			species = owner_main_species
+			name = "Hastur the Unspeakable"
+			skill = 1
+			set_age = 90000
+			traits = {
+				trait = trait_ruler_recruiter
+				trait = trait_ruler_warlike
+			}
+		}
+		assign_leader = last_created_leader
+		remove_country_flag = add_hastur
+	}
+}
+
+
+#Add Elder Things
+country_event = {
+	id = buildempire.2903
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#Kill all exisiting leaders
+		every_owned_leader = {
+			#kill_leader = { type = scientist show_notification = no }
+			#kill_leader = { type = governor show_notification = no }
+			kill_leader = { type = ruler show_notification = no }
+		}
+		#Add new Elder Thing		
+		create_leader = {
+			class = ruler #scientist governor
+			species = owner_main_species
+			name = "Grah'n"
+			skill = 1
+			set_age = 90000
+			traits = {
+				trait = trait_ruler_charismatic
+				trait = trait_ruler_champion_of_the_people
+			}
+		}
+		assign_leader = last_created_leader
+		remove_country_flag = add_elderthing
+	}
+}
+
+
+#Add Dagon
+country_event = {
+	id = buildempire.2904
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#Kill all exisiting leaders
+		every_owned_leader = {
+			#kill_leader = { type = scientist show_notification = no }
+			#kill_leader = { type = governor show_notification = no }
+			kill_leader = { type = ruler show_notification = no }
+		}
+		#Add new Dagon		
+		create_species = {
+			name = "Great Deep One"
+			plural = "Great Deep One"
+			adjective = "Great Deep Onelike"
+			class = "PLA_CHR"
+			portrait = "dagon_plain"
+			#homeworld = THIS
+			traits = {
+				trait = "chr_trait_strange_aeons"
+				trait = "chr_trait_cosmic_horrors"
+			}
+		}
+		random_list = {
+			50 = {
+			create_leader = {
+					class = ruler #scientist governor
+					species = owner_main_species
+					name = "Father Dagon"
+					skill = 1
+					set_age = 90000
+					traits = {
+						trait = trait_ruler_world_shaper
+						trait = trait_ruler_fertility_preacher
+					}
+				}
+			}
+			50 = {
+				create_leader = {
+					class = ruler #scientist governor
+					species = owner_main_species
+					name = "Mother Hydra"
+					skill = 1
+					set_age = 90000
+					traits = {
+						trait = trait_ruler_world_shaper
+						trait = trait_ruler_fertility_preacher
+					}
+				}
+			}
+		}
+		assign_leader = last_created_leader
+		remove_country_flag = add_dagon
+	}
+}
+
+#Add Nyarlathotep
+country_event = {
+	id = buildempire.2905
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#Kill all exisiting leaders
+		every_owned_leader = {
+			#kill_leader = { type = scientist show_notification = no }
+			#kill_leader = { type = governor show_notification = no }
+			kill_leader = { type = ruler show_notification = no }
+		}
+		#Add new Nyarlathotep
+		create_species = {
+			name = "Outer God"
+			plural = "Outer Gods"
+			adjective = "Outer Godlike"
+			class = "PLA_CHR"
+			portrait = "nyarlathotep"
+			#homeworld = THIS
+			traits = {
+				trait = "chr_trait_strange_aeons"
+				trait = "chr_trait_cosmic_horrors"
+			}
+		}
+		create_leader = {
+			class = ruler #scientist governor
+			species = owner_main_species
+			name = "Nyarlathotep"
+			skill = 1
+			set_age = 90000
+			traits = {
+				trait = trait_ruler_deep_connections
+				trait = trait_ruler_industrialist
+			}
+		}
+		assign_leader = last_created_leader
+		remove_country_flag = add_nyarlathotep
+	}
+}
+
+#Add Yog-Sothoth
+country_event = {
+	id = buildempire.2906
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#Kill all exisiting leaders
+		every_owned_leader = {
+			#kill_leader = { type = scientist show_notification = no }
+			#kill_leader = { type = governor show_notification = no }
+			kill_leader = { type = ruler show_notification = no }
+		}
+		#Add new Yog-Sothoth
+		create_species = {
+			name = "Transcosmic Entity"
+			plural = "Transcosmic Entities"
+			adjective = "Transcosmic"
+			class = "PLA_CHR"
+			portrait = "yog-sothoth"
+			#homeworld = THIS
+			traits = {
+				trait = "chr_trait_strange_aeons"
+				trait = "chr_trait_cosmic_horrors"
+			}
+		}
+		create_leader = {
+			class = ruler #scientist governor
+			species = owner_main_species
+			name = "Yog-Sothoth"
+			skill = 1
+			set_age = 90000
+			traits = {
+				trait = trait_ruler_home_in_the_sky
+				trait = trait_ruler_eye_for_talent
+			}
+		}
+		assign_leader = last_created_leader
+		remove_country_flag = add_yog-sothoth
+	}
+}

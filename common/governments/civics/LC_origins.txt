@@ -1,0 +1,102 @@
+origin_spawn_of_an_old_one = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_syncretic_evolution.dds"
+	picture = GFX_spawn_of_old_one
+
+	possible = {
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+			OR = {
+				value = ethic_fanatic_spiritualist
+				value = ethic_spiritualist
+			}
+		}
+	}
+	
+	description = civic_tooltip_origin_spawn_of_an_old_one_effects
+	advanced_start = yes
+	max_once_global = yes
+	
+	random_weight = {
+		base = 10
+	}
+}
+origin_carcosa = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_syncretic_evolution.dds
+	picture = GFX_carcosa
+
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	has_secondary_species = {
+		title = city_species
+	}
+	modifier = {
+		country_trade_attractiveness = 0.45
+		planet_sensor_range_add = 3
+	}
+	description = civic_tooltip_origin_carcosa_effects
+	max_once_global = yes
+
+	random_weight = {
+		base = 10
+	}
+}
+
+origin_humans_defeated = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_syncretic_evolution.dds
+	picture = GFX_humans_defeated
+
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_pacifist
+			}
+		}
+	}
+	modifier = {
+		all_technology_research_speed = 0.4
+		ship_weapon_damage = 0.25
+		army_damage_mult = 0.25		
+	}
+	initializers = {
+		sol_system_initializer
+	}
+	description = civic_tooltip_origin_humans_defeated_effects
+	max_once_global = yes
+
+	random_weight = {
+		base = 10
+	}
+}
+
+origin_far_future = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_syncretic_evolution.dds
+	picture = GFX_shadow_out_of_time
+
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_fanatic_materialist
+				value = ethic_materialist
+			}
+		}
+	}
+	
+	modifier = {
+	pop_resettlement_cost_mult = -0.3
+	pop_growth_from_immigration = 0.3
+	pop_amenities_usage_mult = -0.2
+	pop_citizen_happiness = 0.3
+	}
+	random_weight = {
+		base = 10
+	}
+}

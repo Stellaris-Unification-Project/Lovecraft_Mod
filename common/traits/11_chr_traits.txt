@@ -1,0 +1,206 @@
+#######################
+# Cosmic Horror Traits
+#######################
+
+chr_trait_strange_aeons = {
+	cost = 6
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOLOGICAL ROBOT LITHOID MACHINE PRESAPIENT OTHER }
+	icon =  "gfx\interface\icons\traits\trait_strange_aeon.dds"
+	immortal_leaders = yes
+	opposites = { "trait_venerable" "trait_enduring" "trait_fleeting"}
+}
+chr_trait_disguised_horrors = {
+	cost = 1
+	potential_crossbreeding_chance = 0.75
+	allowed_archetypes = { BIOLOGICAL LITHOID ROBOT MACHINE PRESAPIENT OTHER}
+	icon = "gfx/interface/icons/traits/trait_disguised_horrors.dds"
+	modifier = { 
+		pop_political_power = 0.2 
+		pop_citizen_happiness = -0.15 
+		}
+	opposites = { "chr_trait_cosmic_horrors"}
+}
+chr_trait_abnormal_matter = {
+	cost = 2
+	potential_crossbreeding_chance = 0.5
+	allowed_archetypes = { BIOLOGICAL LITHOID ROBOT MACHINE PRESAPIENT OTHER}
+	icon = "gfx/interface/icons/traits/trait_abnormal_matter.dds"
+	modifier = { 
+		pop_environment_tolerance = 0.1
+		pop_ethics_shift_speed_mult = 0.25
+	}
+	
+	opposites = { "chr_trait_cosmic_horrors"}
+}
+chr_trait_cosmic_horrors = {
+	cost = -2
+	potential_crossbreeding_chance = 1
+	allowed_archetypes = { BIOLOGICAL LITHOID ROBOT MACHINE PRESAPIENT OTHER}
+	icon = "gfx/interface/icons/traits/trait_cosmic_horrors.dds"
+	modifier = { 
+		pop_happiness = -0.05
+		pop_growth_speed_reduction = 0.2
+		army_damage_mult = 0.15
+}
+	opposites = { "trait_charismatic" "trait_repugnant" "chr_trait_disguised_horrors"}
+}
+chr_trait_shadows_out_of_time = {
+	cost = 4
+	potential_crossbreeding_chance = 1
+	allowed_archetypes = { BIOLOGICAL LITHOID ROBOT MACHINE PRESAPIENT OTHER }
+	icon = "gfx/interface/icons/traits/trait_shadows_out_of_time.dds"
+	modifier = {
+		leader_skill_levels = 2
+		pop_environment_tolerance = 0.15
+		planet_migration_all_mult = 0.1
+		pop_resettlement_cost_mult = -0.35
+		pop_growth_speed = 0.1	
+	}
+	opposites = { "trait_talented" "trait_sedentary" "trait_nomadic" "trait_rapid_breeders" "trait_slow_breeders" "trait_adaptive" "trait_extremely_adaptive" "chr_trait_abnormal_matter"}
+}
+chr_trait_shoggoth = {
+	cost = 0
+	potential_crossbreeding_chance = 1
+	allowed_archetypes = { BIOLOGICAL LITHOID ROBOT MACHINE PRESAPIENT OTHER}
+	icon = "gfx/interface/icons/traits/trait_shoggoth_worker.dds"
+	initial = no
+	modification = no
+	
+	modifier = {
+		planets_engineering_research_produces_mult = -0.1
+		planets_physics_research_produces_mult = -0.1
+		planets_society_research_produces_mult = -0.1
+		planets_energy_produces_mult  = -0.15
+		planets_alloys_produces_mult  = 0.1
+		planets_food_produces_mult = 0.1
+	}
+}
+hidden_tentacles = {
+	cost = 5
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT OTHER }
+	icon = "gfx/interface/icons/traits/traits_tentacles.dds"
+	modification = yes
+
+	modifier = {
+		pop_environment_tolerance = 0.05
+		pop_amenities_usage_organic_mult = -0.1
+		pop_happiness = 0.25
+	}
+}
+
+detachable_limbs = {
+	cost = 2
+	potential_crossbreeding_chance = 1
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT OTHER }
+	icon = "gfx/interface/icons/traits/trait_detachable_limb.dds"
+	modifier = {
+	planets_physics_research_produces_mult = 0.15
+	army_damage_mult = 0.1
+	planet_pop_assembly_mult = 0.15
+	}
+}
+
+chr_trait_infectious_tech = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/trait_infectious_tech.dds"
+	potential_crossbreeding_chance = 1
+	allowed_archetypes = { COSMIC BIOLOGICAL }
+	modifier = {
+		intel_encryption_add = 2
+		planets_physics_research_produces_mult =  0.1
+		planets_engineering_research_produces_mult = 0.1
+		add_base_country_intel = 2
+	}
+}
+
+chr_trait_incorporeal = {
+	icon = "gfx/interface/icons/traits/trait_incorporeal.dds"
+	cost = 2
+	potential_crossbreeding_chance = 1
+	allowed_archetypes = { COSMIC PRESAPIENT BIOLOGICAL }
+	modifier = {
+		intel_encryption_add = 1
+		pop_political_power = 0.25
+	}
+}
+
+chr_trait_plasma = {
+	cost = 2
+	icon = "gfx/interface/icons/traits/trait_plasma.dds"
+	potential_crossbreeding_chance = 1
+	allowed_archetypes = { COSMIC PRESAPIENT BIOLOGICAL }
+	modifier = {
+		army_damage_mult = 0.25
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+}
+
+chr_trait_aura = {
+	cost = 3
+	icon = "gfx/interface/icons/traits/trait_aura.dds"
+	potential_crossbreeding_chance = 1
+	allowed_archetypes = { COSMIC PRESAPIENT BIOLOGICAL }
+	modifier = {
+		pop_political_power = -0.2
+		army_attack_damage_mult = 0.25
+		pop_growth_speed = 0.15
+	}
+}
+
+chr_minion_glamour = {
+	cost = 4
+	icon = "gfx/interface/icons/traits/trait_glamour.dds"
+	potential_crossbreeding_chance = 1
+	allowed_archetypes = { COSMIC PRESAPIENT BIOLOGICAL }
+	modifier = {
+		intel_encryption_add = 3
+		pop_political_power = +1
+		planet_artisans_consumer_goods_produces_mult = 0.2
+	}
+}
+
+#########################
+# Sanity Loss Traits
+#########################
+
+chr_leader_trait_sanity_loss_minor = {
+	cost = 1
+	modification = no
+	initial = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_sanity_loss_minor.dds"
+	modifier = {
+		leader_age = -5
+		species_leader_exp_gain = -0.1
+	}
+	leader_trait = all
+	leader_class = { admiral scientist general governor }
+}
+
+chr_leader_trait_sanity_loss_major = {
+	cost = 1
+	modification = no
+	initial = no
+	icon = "gfx\interface\icons\traits\leader_traits\sanity_loss_major.dds"
+	modifier = {
+		leader_age = -15
+		species_leader_exp_gain = -0.3
+	}
+	leader_trait = all
+	leader_class = { admiral scientist general governor }
+}
+
+chr_leader_trait_sanity_loss_extreme = {
+	cost = 1
+	modification = no
+	initial = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_sanity_loss_extreme.dds"
+	modifier = {
+		leader_age = -30
+		species_leader_exp_gain = -0.6
+	}
+	leader_trait = all
+	leader_class = { admiral scientist general governor }
+}

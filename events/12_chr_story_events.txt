@@ -1,0 +1,547 @@
+namespace = story
+
+###################################
+#
+# Sanity Loss Mechanic Gate
+#
+###################################
+
+ship_event = {
+	id = story.1010
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
+		}
+		FROM = { has_star_flag = cosmichorror_system }
+	}
+	
+	immediate = {
+		#Apply Accumulative Sanity Loss
+		if = { 
+			limit = { 
+				FROM = {
+					NOT = { has_star_flag = azathoth_home_system }
+				}
+			}
+		ship_event = { id = cosmichorror.301 }
+		}
+		
+		#Apply EXTREME SANITY LOSS
+		if = { 
+			limit = { 
+				FROM = {
+					has_star_flag = azathoth_home_system
+				}
+			}
+		ship_event = { id = cosmichorror.302 }
+		}
+	}
+}
+
+#Necronomicon Startup Flags / Buffs
+country_event = {
+	id = story.2899
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_country_flag = Story2900 }
+	}
+	
+	immediate = {
+		set_country_flag = Story2900
+		
+		#Give shoggoths races their technologies
+		if = { 
+			limit = { 
+				species_portrait = shoggoth
+			}
+			give_technology = {
+				tech = chr_tech_coos_weapon_1
+			}
+			give_technology ={
+				tech = chr_tech_shoggoth_workers
+			#break = yes
+			}
+		}
+	}
+}
+
+#Necronomicon
+country_event = {
+	id = story.2900
+	title = story.2900.title
+	picture = GFX_evt_necronomicon
+	show_sound = event_alien_nature
+
+	#trigger = { always = yes }
+	#hide_window = no
+	is_triggered_only = yes	
+	
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = Story2900 }
+			NOT = { has_global_flag = CosmicHorrors_ON }
+			NOT = { has_global_flag = CosmicHorrors_OFF }
+			NOT = { has_government = chr_govt_old_one }
+			NOT = { has_government = chr_govt_outer_god }
+		}
+		text = story.2900.desc.1
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = Story2900 }
+			NOT = { has_global_flag = CosmicHorrors_ON }
+			NOT = { has_global_flag = CosmicHorrors_OFF }
+			has_government = chr_govt_old_one
+			has_government = chr_govt_outer_god
+		}
+		text = story.2900.desc.2
+	}
+	
+	#Welcome to the update
+	desc = {
+		trigger = {
+			has_country_flag = Story2900
+			NOT = { has_global_flag = CosmicHorrors_ON }
+			NOT = { has_global_flag = CosmicHorrors_OFF }
+		}
+		text = story.2900.desc.3
+	}
+	
+	trigger = {
+		is_ai = no
+		#NOT = { has_country_flag = Story2900 }
+		NOT = { has_global_flag = CosmicHorrors_ON }
+		NOT = { has_global_flag = CosmicHorrors_OFF }
+	}
+	
+	immediate = {
+		hidden_effect = { country_event = { id = story.2899 } }
+	}
+	
+	#Summon All
+	option = {
+		name = story.2900.option.1
+		custom_tooltip = story.2900.option.1.tooltip
+		
+		#Add horrors
+		trigger = {
+		NOT = { has_country_flag = CosmicSpawnComplete }
+		}
+		set_global_flag = CosmicHorrors_ON
+		set_country_flag = CosmicSpawnComplete
+		hidden_effect = { country_event = { id = buildempire.1 } }
+		hidden_effect = { country_event = { id = buildempire.2 } }
+		hidden_effect = { country_event = { id = buildempire.4 } }
+		hidden_effect = { country_event = { id = buildempire.6 } }
+		hidden_effect = { country_event = { id = buildempire.7 } }
+		hidden_effect = { country_event = { id = buildempire.5 } }
+		hidden_effect = { country_event = { id = buildempire.3 } }
+		hidden_effect = { country_event = { id = buildempire.10 } } #MiGo
+		hidden_effect = { country_event = { id = buildempire.99 } } #Fix Leaders
+		hidden_effect = { country_event = { id = buildempire.8 } } #Azathoth System		
+		hidden_effect = { country_event = { id = buildempire.9 } } #Polaris System		
+	}
+	
+	#Summon 5 Cosmic Horrors
+	option = {
+		name = story.2900.option.2
+		custom_tooltip = story.2900.option.2.tooltip
+		
+		trigger = {
+			NOT = { has_country_flag = CosmicSpawnComplete }
+		}
+		
+		set_global_flag = CosmicHorrors_ON
+		set_country_flag = CosmicSpawnComplete
+		
+		hidden_effect = { country_event = { id = buildempire.8 } } #Azathoth System		
+		hidden_effect = { country_event = { id = buildempire.9 } } #Polaris System	
+		
+		hidden_effect = {
+			random_list = {
+				#No Yith / Elder Things / Mi-Go
+				25 = {
+					country_event = { id = buildempire.1 }
+					country_event = { id = buildempire.4 } 
+					country_event = { id = buildempire.6 } 
+					country_event = { id = buildempire.7 } 
+					country_event = { id = buildempire.2 } 
+
+					country_event = { id = buildempire.99 }  #Fix Leaders
+				}
+				#No Nyarlathotep / Yog-Sothoth / Cthulhu
+				25 = {
+					country_event = { id = buildempire.3 } 
+					country_event = { id = buildempire.5 } 
+					country_event = { id = buildempire.4 } 
+					country_event = { id = buildempire.10 } 
+					country_event = { id = buildempire.2 } 
+				
+					country_event = { id = buildempire.99 }  #Fix Leaders
+				}
+				#No Cthulhu / Hastur / Mi-Go
+				25 = {
+					country_event = { id = buildempire.6 } 
+					country_event = { id = buildempire.4 } 
+					country_event = { id = buildempire.5 } 
+					country_event = { id = buildempire.7 } 
+					country_event = { id = buildempire.3 } 	
+
+					country_event = { id = buildempire.99 }  #Fix Leaders
+				}
+				#No Dagon / Hastur / Mi-Go
+				25 = {
+					country_event = { id = buildempire.1 } 
+					country_event = { id = buildempire.5 } 
+					country_event = { id = buildempire.6 } 
+					country_event = { id = buildempire.7 } 
+					country_event = { id = buildempire.3 } 
+				
+					country_event = { id = buildempire.99 } #Fix Leaders
+				}
+			}
+		}
+	}	
+
+	#Summon 3 Cosmic Horrors
+	option = {
+		name = story.2900.option.3
+		custom_tooltip = story.2900.option.3.tooltip
+		
+		trigger = {
+			NOT = { has_country_flag = CosmicSpawnComplete }
+		}
+
+		set_global_flag = CosmicHorrors_ON
+		set_country_flag = CosmicSpawnComplete
+
+		hidden_effect = { country_event = { id = buildempire.8 } } #Azathoth System
+		hidden_effect = { country_event = { id = buildempire.9 } } #Polaris System			
+		
+		hidden_effect = {
+			random_list = {
+				#Cthulhu Dagon Hastur
+				20 = {
+					country_event = { id = buildempire.1 } 
+					country_event = { id = buildempire.4 } 
+					country_event = { id = buildempire.2 } 
+
+					country_event = { id = buildempire.99 }  #Fix Leaders
+				}
+				#Dagon Hastur Yog-sothoth
+				20 = {
+					country_event = { id = buildempire.4 } 
+					country_event = { id = buildempire.2 } 
+					country_event = { id = buildempire.7 } 
+				
+					country_event = { id = buildempire.99 }  #Fix 	Leaders					
+				}
+				#Hastur Yog-sothoth Nyarlathotep
+				20 = {
+					country_event = { id = buildempire.2 } 
+					country_event = { id = buildempire.7 } 
+					country_event = { id = buildempire.6 } 	
+			
+					country_event = { id = buildempire.99 }  #Fix Leaders
+				}
+				#Yog-sothoth Nyarlathotep Yith
+				20 = {
+					country_event = { id = buildempire.7 } 
+					country_event = { id = buildempire.6 } 	
+					country_event = { id = buildempire.5 } 	
+			
+					country_event = { id = buildempire.99 }  #Fix Leaders			
+				}
+				#Nyarlathotep Yith Elder Things
+				10 = {
+					country_event = { id = buildempire.6 } 	
+					country_event = { id = buildempire.5 } 	
+					country_event = { id = buildempire.3 } 
+
+					country_event = { id = buildempire.99 }  #Fix Leaders
+				}
+				#Yith Elder Things MiGo
+				10 = { 	
+					country_event = { id = buildempire.5 } 	
+					country_event = { id = buildempire.3 } 
+					country_event = { id = buildempire.10 } 
+
+					country_event = { id = buildempire.99 }  #Fix Leaders
+				}
+			}
+		}
+	}
+	
+	#Events Only
+	option = {
+		name = story.2900.option.4
+		custom_tooltip = story.2900.option.4.tooltip
+		
+		trigger = {
+			NOT = { has_country_flag = CosmicSpawnComplete }
+		}
+
+		hidden_effect = { country_event = { id = buildempire.8 } } #Azathoth System			
+		hidden_effect = { country_event = { id = buildempire.9 } } #Polaris System
+		
+		set_global_flag = CosmicHorrors_ON
+		set_country_flag = CosmicSpawnComplete		
+	}
+	
+	#Burn the book
+	option = {
+		name = story.2900.option.5
+		custom_tooltip = story.2900.option.5.tooltip
+		
+		trigger = {
+			NOT = { has_country_flag = CosmicSpawnComplete }
+		}
+		set_global_flag = CosmicHorrors_OFF
+		set_country_flag = CosmicSpawnComplete
+	}
+	
+	#Loading a save file with the game but missing the new global flags
+	#Enable events
+	option = {
+		name = story.2900.option.6
+		custom_tooltip = story.2900.option.6.tooltip
+		
+		trigger = {
+			has_country_flag = CosmicSpawnComplete
+			NOT = { has_global_flag = CosmicHorrors_ON }
+			NOT = { has_global_flag = CosmicHorrors_OFF }
+		}
+
+		hidden_effect = { country_event = { id = buildempire.8 } } #Azathoth System			
+		hidden_effect = { country_event = { id = buildempire.9 } } #Polaris System		
+		
+		set_global_flag = CosmicHorrors_ON
+	}
+	
+	#Loading a save file with the game but missing the new global flags	
+	#Disable events
+	option = {
+		name = story.2900.option.7
+		custom_tooltip = story.2900.option.7.tooltip
+		
+		trigger = {
+			has_country_flag = CosmicSpawnComplete
+			NOT = { has_global_flag = CosmicHorrors_ON }
+			NOT = { has_global_flag = CosmicHorrors_OFF }
+		}
+		
+		set_global_flag = CosmicHorrors_OFF
+	}	
+}
+
+
+
+#Too Many Countries -- EXTERMINATION!
+#country_event {
+#	id = story.2909
+#	hide_window = yes
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		from = { destroy_country = yes }
+#	}
+#}
+
+
+#### Setup OldOne first contact dialog
+first_contact = {
+	id = story.7001
+	
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { 
+			has_government = chr_govt_old_one
+			has_government = chr_govt_outer_god
+		}
+		NOT = {	has_country_flag = Story7
+				has_country_flag = Story1
+				has_country_flag = Story2}
+	}
+
+	immediate = {
+	set_country_flag = Story1
+	set_country_flag = Story2
+	set_country_flag = Story3 
+	set_country_flag = Story4 
+	set_country_flag = Story5 
+	set_country_flag = Story6 
+	set_country_flag = Story7
+	set_country_flag = StoryFirstOldOne
+	}
+}
+
+
+### 1 - Old Ones encounter microbial, simple plant life
+ country_event = {
+	id = story.1000
+	title = story.1.name
+	desc = {
+		text = story.1.desc.oldone 
+	}
+
+	picture = GFX_evt_oldone_hall
+	show_sound = event_alien_nature
+
+	is_triggered_only = yes
+
+	trigger = {
+			has_country_flag = Story1OldOne
+			has_country_flag = Story2OldOne
+			has_country_flag = Story3
+			has_country_flag = Story4
+			has_country_flag = Story5
+			has_country_flag = Story6
+			has_country_flag = Story7OldOne
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = first_alien_life } }
+			set_country_flag = first_alien_life
+		}
+		set_country_flag = StoryFirstOldOne
+		set_country_flag = Story1
+		set_country_flag = Story1OldOne
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+### 2 - Old Ones Meet Spacers
+country_event = {
+	id = story.2000
+	title = story.2.name
+	desc = {
+		#trigger = { has_country_flag = StoryFirstOldOne }
+		text = story.2.desc.oldone
+	}
+	# Followup
+	desc = {
+		trigger = { has_country_flag = Story1OldOne }
+		text = story.2.desc.followup.oldone
+	}
+	picture = GFX_evt_oldone_city
+	show_sound = event_alien_nature
+#	location = from
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_government = chr_govt_old_one 
+			has_government = chr_govt_outer_god
+		}
+		NOT = {
+			has_country_flag = Story2OldOne
+			has_country_flag = Story3OldOne
+			has_country_flag = Story4OldOne
+			has_country_flag = Story5OldOne
+			has_country_flag = Story6OldOne
+			has_country_flag = Story7OldOne
+			has_country_flag = Story8
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = StoryFirst } }
+			set_country_flag = StoryFirst
+			set_country_flag = StoryFirstOldOne
+		}
+		if = {
+			limit = { NOT = { has_country_flag = first_alien_life } }
+			set_country_flag = first_alien_life
+		}
+		set_country_flag = Story2OldOne
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+
+#### 7 Old Ones First Contact Dialog
+first_contact =  {
+	id = story.7001
+	title = story.7.name
+	picture = GFX_evt_oldone_city
+	show_sound = event_alien_nature
+	# Old Ones
+	desc = {
+		trigger = { has_country_flag = StoryFirstOldOne }
+		text = story.7.desc.oldone
+	}
+	# Followup 6
+	desc = {
+		trigger = { has_country_flag = Story6 }
+		text = story.7.desc.oldonefollowup6
+	}
+	# Followup 1-2-3-4-5
+	desc = {
+		trigger = {
+			OR = {
+				has_country_flag = Story1
+				has_country_flag = Story2
+				has_country_flag = Story3
+				has_country_flag = Story4
+				has_country_flag = Story5
+			}
+		}
+		text = story.7.desc.oldonefollowup12345
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+		has_government = chr_govt_old_one
+		has_government = chr_govt_outer_god
+		}
+		NOT = { has_country_flag = Story7OldOne }
+		FROM = {
+			NOT = {
+				has_country_flag = radical_cult
+				is_country_type = fallen_empire
+				has_relation_flag = { flag = no_coms who = root }
+				has_country_flag = day_0
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = Story7OldOne
+		set_country_flag = Story7
+		set_country_flag = has_encountered_other_empire
+		if = {
+			limit = { NOT = { has_country_flag = StoryFirst } }
+			set_country_flag = StoryFirst
+			remove_country_flag = StoryFirstOldOne
+		}
+		if = {
+			limit = { NOT = { has_country_flag = first_alien_life } }
+			set_country_flag = first_alien_life
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}

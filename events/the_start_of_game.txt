@@ -1,0 +1,63 @@
+namespace = acolyte_game_start
+
+### Empire init - add technologies
+country_event = {
+	id = acolyte_game_start.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { limit = { has_civic = civic_acolytes_to_the_worms } 
+				give_technology = { message = no tech = chr_tech_weaponized_wormspeak_chants }
+				give_technology = { message = no tech = chr_tech_wormspeak_chants}
+	}
+}
+}
+
+global_event = {
+	id = effigy_spawn.1
+	hide_window = yes
+	fire_only_once = yes
+
+	immediate = {
+		random_system = {
+			if = {
+				set_star_flag = effigy_1
+				limit = {
+					NOT = {
+						starting_system = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = carcosa_game_start.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {limit = { has_origin = origin_carcosa }
+		capital_scope = {
+			add_deposit = d_carcosa
+		} 
+	}
+	}
+}
+
+country_event = {
+	id = acolyte_game_start.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_origin = origin_spawn_of_an_old_one }
+			give_technology = {
+				tech = chr_tech_cosmic_worms
+			}
+		}
+	}
+}

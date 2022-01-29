@@ -1,0 +1,159 @@
+
+# Azathoth's Body
+ship_section_template = {
+	key = "azathoth_section"
+	ship_size = god_azathoth
+	fits_on_slot = mid
+	entity = "god_azathoth_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_07"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_09"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_10"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_11"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_12"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	large_utility_slots = 3
+}
+
+# Colors Section
+ship_section_template = {
+	key = "chr_color_out_of_space_section"
+	ship_size = chr_color_out_of_space
+	fits_on_slot = mid
+	entity = "space_cloud_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	
+	small_utility_slots = 1
+	medium_utility_slots = 1
+	large_utility_slots = 1
+}
+
+
+# Colors Section for Players
+ship_section_template = {
+	key = "chr_color_out_of_space_section_2"
+	ship_size = chr_color_out_of_space_pc
+	fits_on_slot = mid
+	entity = "space_cloud_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 250
+		}
+	}
+	small_utility_slots = 1
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 2
+}

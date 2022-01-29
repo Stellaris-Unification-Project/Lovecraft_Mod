@@ -1,0 +1,95 @@
+# Azathoth
+god_azathoth = {
+	entity = god_azathoth_entity
+	graphical_culture = no
+	is_space_object = yes
+	max_speed = 0.0
+	rotation_speed = 0.03
+	collision_radius = 100
+	acceleration = 0.6
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 500
+		ship_weapon_range_mult = 100000
+	}	
+	max_hitpoints = 5000000
+	size_multiplier = 2000
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 100
+	
+	is_space_station = yes	
+	icon_frame = 10
+	
+	class = shipclass_military_station	
+	is_designable = no
+}
+
+#Colors Out of Space
+chr_color_out_of_space = {
+	entity = chr_color_out_of_space_entity
+	graphical_culture = no
+	is_space_object = yes
+	max_speed = 1.8
+	rotation_speed = 0.1
+	acceleration = 0.3
+	modifier = {
+		ship_evasion_mult = 1
+		ship_armor_add = 7
+	}
+	max_hitpoints = 1500
+	size_multiplier = 1
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	icon_frame = 10
+	class = shipclass_military
+	is_designable = no
+}
+
+#Colors Out of Space
+chr_color_out_of_space_pc = {
+	entity = chr_color_out_of_space_entity
+	graphical_culture = no
+	max_speed = 250
+	collision_radius = @corvette_collision_radius
+	acceleration = 0.3
+	rotation_speed = 0.1
+	modifier = {
+		ship_evasion_mult = 1
+		ship_armor_add = 7
+	}
+	max_hitpoints = 4000
+	size_multiplier = 2
+	formation_priority = 1
+	fleet_slot_size = 3
+	is_space_object = yes
+	components_add_to_cost = yes
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 2
+	is_space_station = no
+	icon_frame = 10
+	base_buildtime = 180
+	is_civilian = no	
+	construction_type = starbase_shipyard
+	class = shipclass_military
+	enable_default_design = yes
+	default_behavior = default
+	enable_3dview_in_ship_browser = yes
+	is_designable = yes
+	prerequisites = { "chr_tech_coos_weapon_1" }	
+	min_upgrade_cost = {
+		alloys = 1
+	}
+	resources = {
+		category = ships
+		upkeep = {
+			energy = 10
+		}
+	}
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}

@@ -1,0 +1,224 @@
+﻿### Cosmic Horrors Name List
+PLA_CHR = {
+	selectable = { always = yes }
+	randomized = no
+	
+	ship_names = {
+
+		generic = {
+			"Master of Crabs" "Serpent-Bearded Byatis" "Pale Beast" "Sound of Deep Waters" "Widow in the Woods" "Inhabitant of the Lake" "Demon Bird-God"
+			"Bird-God of Balsagoð" "Dark One" "Shining Hunter" "Wendigo" "Spawn of the Forgotten" "Grey" "Great Ghoul" "Lord of Zul-Bha-Sair"
+			"Charnel God" "She-Daemon of the Shadows" "Wolf-Thing" "White Worm" "Stalker in the Snows" "He Who Hunts" "Lupine One" "Crocodile God"
+			"Death Reborn" "Lost One" "Whiteness" "Shining One"	"Demon-God of Xuthal" "Goat God" "Watery Dweller" "Doom of Shaggai" "Worm that Gnaws"
+			"Worm-God" "Lord of Thule" "Twin Obscenities" "Dweller in the Depths" "Matriarch of Swarms" "Sky-Devil" 
+		}
+
+		corvette = {
+			"Mortician God" "She Whose Hand Embalms" "Lord of Lizards" "Lord of the Volcano" "White God" "God of Yekub" "River Abomination"
+			"Lord of the Black Lake" "Monster in the Moon" "Kraken Within" "Zombifying Essence" "Haunter of the Red Abyss" "Shatterer"
+			"Oceanic Horror" "Terror of the Hominids"
+		}
+		
+		destroyer = {
+			"Bringer of Pestilence" "Dark Water God" "Destroying Eye" "Waiting Dark" "God of the Labyrinth" "Twice-Invoked" "Green Tentacled God"
+			"God of Cykranosh" "Harbinger of Doom" "Cancer God" "God-Beast"	"Toad-God" "Lord of Pain" "Yig's Terrifying Son" "Dweller of the Depths"
+			"Leech of the Aeons" "Blood of the Ancients"
+		}
+		
+		cruiser = {
+			"Doom of Sarnath" "Chaugnar Faugn" "Horror from the Hills" "Feeder" "A Seed of Azathoth" "Aether Anemone" "Forgotten Old One" "God of the Black Stone"
+			"Supreme Unknown" "Scourge of Yaksh" "Twin Spawn of Cthulhu" "Great One" "Leviathan of Diseases" "Greater-than-Gods" "Lord of Terror"
+			"Demon-God of Elder Night" "Father of Serpents"
+		}
+		
+		battleship = {
+			"Devourer of Stars"  "Living Flame" "Burning One" "Call of Cthulhu"	"Destroyer God" "Unspeakable" "He Who is Not to be Named"
+			"King in Yellow" "Peacock King"	"Twin Blasphemies"
+		}
+		
+		science = {
+			"Herald of S'glhuo" "Master of the Runes" "Dream Daemon" "Lord of Dead Dreams" "Shadow of the Night" "Elder One" "Pharol the Black"
+			"Crystalloid Intellect" "Seeker in the Skies" "Fallen Wisdom" "Sleeper of N'kai" "Sleeper of Ravermos"
+			"Keeper of Secrets" "Dark Stalker"
+		}
+		
+		colonizer = {
+			"Many-Mother" "Star-Seed" "Mate of Othuyeg" "Cthulhu's Mate"
+			"Xothic Matriarch" "Mistress of Darkness" "Bride of Cthulhu"
+			"Heart of the Ages" "Great Horned Mother"
+			"Black Glory of Creation" "Mother and Father to All"
+			"Hermaphroditic God"
+
+		}
+		
+		constructor = {
+			"Builder of the Nile" "Creator of Equilibrium" "Builder Beneath"
+			"Maker of Illusions" "Bender of Unreality" "Lord of Whirling Vortices"
+		}
+		
+		mining_station = {
+			"Burrower from the Bluff" "Dweller on the Gulf"
+			#Dhumin
+		}
+		research_station = { }
+		observation_station = {
+			"Eidolon of the Blind" "Blind God of the Moon"
+			"Eye of Z'ylsm" "Eye of Wicked Sight"
+		}
+		
+		transport = {
+			"Corrupter of Flesh" "God of the Red Flux" "Eater of the Insane"
+			"Eater of Dreams" "Contagion" "Ravenous One"
+			"Devourer of Souls"	"He Who Devours All"
+			"Ever-Consuming" "Masters of the Sea"
+		}
+		
+		military_station_small = {}
+		
+		military_station_medium = {}
+
+		military_station_large = {
+			"Guardian of the Key" "Dead One" "Watery Gates"
+			"Ivory Throne" "Master of the Endless Void"
+			"Dread One"
+		}
+		
+	}
+
+	fleet_names = {
+		random_names = {
+			"Spinners in the Darkness" "Terrors of the Night"
+			"Legless Horrors" "Masters of the Void" "Faceless Ones"
+		}
+		#sequential_name = "%O% Strike Force"
+	}
+	
+	army_names = {
+		generic = { 
+			sequential_name = "%O% Cultists"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Horrors"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Sacrifices"
+		}
+		
+		clone_army = {
+			sequential_name = "%O% Faceless"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Automatons"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Dreamwalkers"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Unknown Horrors"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Engineered Horrors"
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				Abbith Aldebaran Algol Arcturus Argo Navis Baalblo Yifne
+				Bel-Yarnak Byldha Bzlah-ech'ya Celaeno Coma Berenices
+				"Corona Borealis" Cykranosh  Etx'ag Fomalhaut Glloesh-Vho
+				Glyu-Uho Gnarr-Kthun G'nug-Tha Haddath Hchab Hyades
+				K'gil'mnon Korvaz Kr'llyand Ktynga K'yi-Lih Kynarth
+				Kythanil L'gy'hx Mirkalu Mthura Nyil-yath Rho
+				Ogntlach Pherkard Phphun Pleiades Pnidleethon
+				Polaris Ptharg Q'in Rhylkos Rigel Sargas Shaggai
+				Shonhi Shumath-Ghun "Sigma Octantis" Syrgoth
+				Thuban Thuggon Thyoph Tindalos Tond Trifid Nebula
+				Urakhu Vega Vhoorl Vix'ni-Aldru V'zath Wezen
+				"World of Seven Suns" Wu'unaya Xandra Xecorra
+				Xentilx Xicotl Xithor Xoth Yaddith Yadoth
+				Yaksh "Yamil Zacra" Yarnak Yekub Yilla
+				Yith Yl'glhuh Ylidiomph Ymar Yuggoth Zaoth Zylkarlor
+				Z'ylsm
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+
+		names1 = {
+			weight = 40
+			full_names = {
+				Aphoom-Zhah Arwassa Basatan Bugg-Shash Byatis Dzéwà "Etepsed Egnis" Ghisguth 		
+				Golothess Groth-Golka Gwarloth Han Hastalÿk Iod Ithaqua Janai'ngo Juk-Shabb
+				Canoosut Kaunuzoth K'nar'st Kurpannga Lam Morddoth Mortilgh Ngirrth'lu
+				Raandaii-B'nk Ragnalla Raphanasuan Rhagorthua Rhan-Tegoth Rh'Thulla
+				Shathak Aylith Ei'lor Idh-yaa  Istasha Lythalia Nctosa Nctolhu
+			}
+			first_names = {
+				Hypnos Shub-Niggurath Nodens Azathoth
+				Tulzscha Ubbo-Sathla Yog-sothoth Abhoth Nyarlathotep Tulzscha Ubbo-Sathla
+				Chaugnar Faugn Tsathogghua Hastur Bokrug Dagon Cthugha Ghatanothoa Cthulhu
+				Shudde M'ell Rhan-Tegoth Zhar Atlach-Nacha Y'Golonac Ithaqua Yig
+			}
+		}
+		
+		names2 = {
+			weight = 40
+			full_names = {
+				Thog Toth Th'rygh Tulushuggua Turua Vibur Vile-Oct Xalafu Xcthol
+				Xinlugash Xitalu Yegg-Ha Y'golonac Yhagni Yhashtur Y'lla Yorith
+				Ysbaddaden Ythogtha Yug-Sithurath Zathog Zhar Lloigor Zindarak
+				Zoth-Ommog Zstylzhemghi Zystulhemgni Zushakon Z'toggua Zvilpogghua
+				Perse Scathach Ut'Ulls-Hr'Her Vhuzompha
+			}
+		}
+		
+		names3 = {
+			weight = 40
+			full_names = {
+				Rlim Shaikorth Saaitii Sebek Sedmelluq Shaurash-Ho Sheb-Teth
+				Shista Shlithneth Sho-Gath Shterot "Shudde M'ell" Amon-Gorloth Shuy-Nihl
+				Sthanee S'tya-Yg'Nalle Sammanus Swarog Thanaroa Tharapithia
+				Bokrug Coatlicue Coinchenn Ghadamon Gi-Hoveg Gol-goroth Gurathnaka Haiogh-Yai
+				Hnarqu Khal'kru Kthaw'keth Xotli Xoxiigghua Yig
+			}
+
+		}
+		
+		names4 = {
+			weight = 40
+			full_names = {
+				Arwassa Atlach-Nacha B'gnu-Thun Cynthoglys Dythalla Eihort Ghatanothoa Thoa
+				Lexur'iga-serr'roth "M'basui Gwandu" Mnomquah Nyaghoggua Nycrama Nyogtha
+				Ob'mbu Oorn Othuum Othuyeg Ptar-Axtlan Gzxtyos Kag'Naru Kassogtha Klosmiebhyx Lythalia Mormo Mynoghra
+				Alala Ctoggha Glaaki Gleeth Gloon Gur'la-ya "Crom Cruach"
+				Pharol Psuchawrl Q'yth-az Sfatlicllp Volgna-Gath Gsarthotegga
+				Vulthoom 'Ymnar
+			}
+		}
+		
+		names5 = {
+			weight = 1
+			full_names = {
+				"Baoht Z'uqqa-Mogg" Cthaat Cyäegha Gobogeg Gog-Hoor H'chtelegoth
+				Quyagen Rhogog Rokon Tsathoggua Zhothaqqua Sadagowah Uizilcapac
+				Voltiyig Vthyarilops Yog-Sapha Abholos Ammutseba Cthaeghya Cthugha Cthulhu Gtuhanai Hastur Zukala-Koth
+				Krang Nssu-Ghahnb Nug Yeb Ayi'g Cthylla Hziulquoigmnzhah Ziulquag-Manzah M'Nagalah Northot "Quachil Uttaus"
+			}
+		}
+		
+	}
+}

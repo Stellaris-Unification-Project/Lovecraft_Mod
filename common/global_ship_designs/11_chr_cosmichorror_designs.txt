@@ -1,0 +1,145 @@
+# Azathoth Form
+ship_design = {
+	name = "Avatar of Azathoth"
+	ship_size = god_azathoth
+	hide_size = no
+	
+	section = {
+		template = "azathoth_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_09"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_10"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_11"
+			template = "LARGE_ED_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_12"
+			template = "LARGE_ED_WEAPON"
+		}	
+	}
+}
+
+
+# Space Cloud
+ship_design = {
+	name = "Color Entity"
+	ship_size = chr_color_out_of_space
+	#hide_size = yes
+	hide_size = no
+
+	section = {
+		template = "chr_color_out_of_space_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_ED_WEAPON"
+			#template = "LARGE_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_ED_WEAPON"
+			#template = "SMALL_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_ED_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_ED_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "SMALL_ED_WEAPON"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="SHIP_THRUSTER_1"
+}
+
+
+# Space Cloud PC
+global_ship_design = {
+	name = "Color Out of Space"
+	ship_size = chr_color_out_of_space_pc
+	#hide_size = yes
+	hide_size = no
+
+	section = {
+		template = "chr_color_out_of_space_section_2"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_ED_WEAPON"
+			#template = "LARGE_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_ED_WEAPON"
+			#template = "SMALL_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_ED_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_ED_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "SMALL_ED_WEAPON"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="SHIP_THRUSTER_1"
+
+}	

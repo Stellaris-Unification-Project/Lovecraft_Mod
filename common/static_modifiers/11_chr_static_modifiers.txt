@@ -1,0 +1,10 @@
+shoggoth_workers = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_shoggoths.dds"
+	icon_frame = 2
+}
+well_effect = {
+	country_unity_produces_mult = 0.25
+	pop_happiness = 0.25
+	army_morale = 0.50
+	planet_crime_add = -50
+}

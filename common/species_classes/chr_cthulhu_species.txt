@@ -1,0 +1,24 @@
+PLA_CHR = {
+		#Cosmic Horrors
+		possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+		archetype = BIOLOGICAL
+		randomized = yes
+		portraits = {
+			"cthulhu"
+			"hastur"
+			"dagon"
+			"nyarlathotep"
+			"elderthing"
+			"yith"
+			"migo"
+			"yog-sothoth"
+			"shoggoth"
+			"huntinghorror"
+			"flyingpolyp"
+		}
+	graphical_culture = cosmichorrors_01
+	move_pop_sound_effect = "event_alien_nature" #"molluscoid_pops_move"
+	resources = {
+	}
+	
+}

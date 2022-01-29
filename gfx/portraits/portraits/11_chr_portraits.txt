@@ -1,0 +1,482 @@
+portraits = {
+	
+	#Cthulhu
+	cthulhu_plain =         {  texturefile = "gfx/portraits/cthulhu_plain.dds"}
+    cthulhu_green1 =        {  texturefile = "gfx/portraits/cthulhu_green1.dds"}
+    cthulhu_green2 =        {  texturefile = "gfx/portraits/cthulhu_green2.dds"}
+    cthulhu_purple =        {  texturefile = "gfx/portraits/cthulhu_purple.dds"}
+    cthulhu_red =           {  texturefile = "gfx/portraits/cthulhu_red.dds"}
+	cthulhu_pop_plain =     {  texturefile = "gfx/portraits/cthulhu_pop_plain.dds"}
+    cthulhu_pop_green =     {  texturefile = "gfx/portraits/cthulhu_pop_green.dds"}
+    cthulhu_pop_purple =    {  texturefile = "gfx/portraits/cthulhu_pop_purple.dds"}
+    cthulhu_pop_red =       {  texturefile = "gfx/portraits/cthulhu_pop_red.dds"}
+
+	#Female Cthulhu Variants
+	cthylla_plain =         {  texturefile = "gfx/portraits/cthylla_plain.dds"}
+    cthylla_green =         {  texturefile = "gfx/portraits/cthylla_green.dds"}
+    cthylla_violet =        {  texturefile = "gfx/portraits/cthylla_violet.dds"}
+    cthylla_blue =          {  texturefile = "gfx/portraits/cthylla_blue.dds"}
+	cthylla_pop_blue =      {  texturefile = "gfx/portraits/cthylla_pop_blue.dds"}
+    cthylla_pop_green =     {  texturefile = "gfx/portraits/cthylla_pop_green.dds"}
+    cthylla_pop_violet =    {  texturefile = "gfx/portraits/cthylla_pop_violet.dds"}
+    cthylla_pop_red =       {  texturefile = "gfx/portraits/cthylla_pop_red.dds"}	
+	
+	#Hastur
+	hastur_plain =		    {  texturefile = "gfx/portraits/hastur_plain.dds"}
+	hastur_red =		    {  texturefile = "gfx/portraits/hastur_red.dds"}
+	hastur_yellow =		    {  texturefile = "gfx/portraits/hastur_yellow.dds"}
+	hastur_pop =		    {  texturefile = "gfx/portraits/hastur_pop.dds"}
+	hastur_pop_grey =	    {  texturefile = "gfx/portraits/hastur_pop_grey.dds"}
+	hastur_pop_yellow =	    {  texturefile = "gfx/portraits/hastur_pop_yellow.dds"}
+	hastur_pop_darkyellow = {  texturefile = "gfx/portraits/hastur_pop_darkyellow.dds"}
+	
+	#Dagon
+	dagon_plain =		    {  texturefile = "gfx/portraits/dagon.dds"}
+	dagon_bluered =		    {  texturefile = "gfx/portraits/dagon_bluered.dds"}
+	dagon_green =		    {  texturefile = "gfx/portraits/dagon_green.dds"}
+	dagon_red =		   	    {  texturefile = "gfx/portraits/dagon_red.dds"}
+	
+	#Elder Things
+	elderthing_plain =	    {  texturefile = "gfx/portraits/elderthing_plain.dds"}
+	elderthing_green1 =	    {  texturefile = "gfx/portraits/elderthing_green1.dds"}
+	elderthing_green2 =	    {  texturefile = "gfx/portraits/elderthing_green2.dds"}
+	elderthing_violet =	    {  texturefile = "gfx/portraits/elderthing_violet.dds"}
+	elderthing_red =	    {  texturefile = "gfx/portraits/elderthing_red.dds"}
+	elderthing_blue =	    {  texturefile = "gfx/portraits/elderthing_blue.dds"}
+	elderthing_white =	    {  texturefile = "gfx/portraits/elderthing_white.dds"}
+	elderthing_black =	    {  texturefile = "gfx/portraits/elderthing_black.dds"}
+	
+	#Shoggoths
+	shoggoth_plain = 	    { texturefile = "gfx/portraits/shoggoth_plain.dds"}
+	shoggoth_red =  	    { texturefile = "gfx/portraits/shoggoth_red.dds"}
+	shoggoth_blue = 	    { texturefile = "gfx/portraits/shoggoth_blue.dds"}
+	
+	#Yith
+	yith_plain =		    { texturefile = "gfx/portraits/yith_plain.dds"}
+	yith_red = 			    { texturefile = "gfx/portraits/yith_red.dds"}
+	yith_purple = 		    { texturefile = "gfx/portraits/yith_purple.dds"}
+	yith_aquamarine = 	    { texturefile = "gfx/portraits/yith_aquamarine.dds"}
+	yith_grey = 		    { texturefile = "gfx/portraits/yith_grey.dds"}
+	
+	#Flying Polyps
+	flyingpolyp = 		    { texturefile = "gfx/portraits/flyingpolyp.dds"}
+	flyingpolyp_red = 		    { texturefile = "gfx/portraits/flyingpolyp_red.dds"}
+	flyingpolyp_green = 		    { texturefile = "gfx/portraits/flyingpolyp_green.dds"}
+	flyingpolyp_yellow = 		    { texturefile = "gfx/portraits/flyingpolyp_yellow.dds"}
+	flyingpolyp_purple = 		    { texturefile = "gfx/portraits/flyingpolyp_purple.dds"}
+
+	#Nyarlathotep
+	nyarlathotep =		    { texturefile = "gfx/portraits/nyarlathotep.dds"}
+	nyarlathotep_black =	{ texturefile = "gfx/portraits/nyarlathotep_black.dds"}
+    nyarlathotep_pink =     { texturefile = "gfx/portraits/nyarlathotep_pink.dds"}
+	nyarlathotep_blue =		{ texturefile = "gfx/portraits/nyarlathotep_blue.dds"}
+	
+	#Mi-Go
+	migo =					{ texturefile = "gfx/portraits/migo.dds"}	
+	migo_blue =				{ texturefile = "gfx/portraits/migo_blue.dds"}	
+	migo_yellow =			{ texturefile = "gfx/portraits/migo_yellow.dds"}	
+	migo_red =				{ texturefile = "gfx/portraits/migo_red.dds"}	
+	migo_green =			{ texturefile = "gfx/portraits/migo_green.dds"}	
+	
+	#Yog-Sothoth
+	yog-sothoth =			{ texturefile = "gfx/portraits/yog-sothoth.dds"}
+	yog-sothoth_blue =		{ texturefile = "gfx/portraits/yog-sothoth_blue.dds"}
+	yog-sothoth_red =		{ texturefile = "gfx/portraits/yog-sothoth_red.dds"}
+	
+	#Hunting Horror
+	huntinghorror =			{ texturefile = "gfx/portraits/huntinghorror.dds"}
+	huntinghorror_blue =	{ texturefile = "gfx/portraits/huntinghorror_blue.dds"}
+	huntinghorror_brown =	{ texturefile = "gfx/portraits/huntinghorror_brown.dds"}
+	huntinghorror_purple =	{ texturefile = "gfx/portraits/huntinghorror_purple.dds"}
+}		
+
+portrait_groups = {
+ hastur = {
+     default = hastur_plain #The picture used in the horrors creator when selecting appearance
+     game_setup = { #Portraits added here will be the possible leader selection in the horrors creator
+       add = {
+        # trigger = {
+        #   ruler = { gender = male }
+        # }
+         portraits = {
+			hastur_plain
+			hastur_red
+			hastur_yellow
+			hastur_pop
+			hastur_pop_grey
+			hastur_pop_yellow
+			hastur_pop_darkyellow
+         }
+       }
+     }  
+     #pop scope
+     pop = { #for a specific pop (Such as on a planet)
+       add = {
+         portraits = {
+			hastur_pop_grey
+         }		 
+       }
+     }
+     #leader scope
+     leader = { #scientists, generals, admirals, governor
+       add = {
+         portraits = {
+			hastur_pop
+			hastur_pop_yellow
+			hastur_pop_darkyellow
+         }
+       }
+     }
+     #leader scope
+     ruler = { #New rulers selected from here
+		add = {
+         portraits = {
+			hastur_plain
+			hastur_red
+			hastur_yellow
+         }
+		 }
+       }
+	  
+    }
+ cthulhu = {
+     default = cthulhu_green1 #The picture used in the horrors creator when selecting appearance
+     game_setup = { #Portraits added here will be the possible leader selection in the horrors creator
+       add = {
+        trigger = {
+          ruler = { gender = male }
+		}
+         portraits = {
+			cthulhu_green1
+			cthulhu_plain
+			cthulhu_green2
+			cthulhu_purple
+			cthulhu_red
+			cthulhu_pop_plain
+			cthulhu_pop_green
+			cthulhu_pop_purple
+			cthulhu_pop_red
+         }
+       }	   
+	   
+       add = {
+        trigger = {
+          ruler = { gender = female }
+		}
+        portraits = {
+          cthylla_plain
+		  cthylla_green
+		  cthylla_violet
+		  cthylla_blue
+          cthylla_pop_blue
+		  cthylla_pop_red
+		  cthylla_pop_violet
+		  cthylla_pop_green
+        }
+       }
+     }  
+    #pop scope
+    pop = { #for a specific pop (Such as on a planet)
+		add = {
+			portraits = {
+				cthylla_pop_green
+				cthylla_pop_violet
+				cthylla_pop_blue
+				cthylla_pop_red
+				cthulhu_pop_plain
+				cthulhu_pop_green
+				cthulhu_pop_purple
+				cthulhu_pop_red
+			}
+       }
+    }
+     #leader scope
+     leader = { #scientists, generals, admirals, governor
+       add = {
+        trigger = {
+          gender = male
+		}
+         portraits = {
+			cthulhu_pop_green
+			cthulhu_pop_purple
+			cthulhu_pop_red
+         }
+       }
+       add = {
+        trigger = {
+          gender = female
+		}
+         portraits = {
+			cthylla_pop_green
+			cthylla_pop_violet
+			cthylla_pop_blue
+         }
+       }
+     }
+     #leader scope
+     ruler = { #New rulers selected from here
+		add = {
+			trigger = {
+			ruler = { gender = male }
+			}
+         portraits = {
+			cthulhu_green1
+			cthulhu_green2
+			cthulhu_red
+			cthulhu_purple
+			cthulhu_plain
+         }
+		}
+		add = {
+        trigger = {
+          ruler = { gender = female }
+        }
+         portraits = {
+			cthylla_green
+			cthylla_plain
+			cthylla_blue
+			cthylla_violet
+         }
+		 }
+       }
+     }
+ dagon = {
+     default = dagon_plain #The picture used in the horrors creator when selecting appearance
+     game_setup = { #Portraits added here will be the possible leader selection in the horrors creator       
+	   add = {
+         portraits = {
+			dagon_plain
+			dagon_green
+			dagon_bluered
+			dagon_red
+         }
+       }
+     }  
+     #pop scope
+     pop = { #for a specific pop (Such as on a planet)
+       add = {
+         portraits = {
+			dagon_plain
+			dagon_green
+			dagon_bluered
+			dagon_red
+         }
+       }
+     }
+     #leader scope
+     leader = { #scientists, generals, admirals, governor
+       add = {
+         portraits = {
+			dagon_plain
+			dagon_green
+			dagon_bluered
+			dagon_red
+         }
+       }
+     }
+     #leader scope
+     ruler = { #New rulers selected from here
+		add = {
+         portraits = {
+			dagon_plain
+			dagon_green
+			dagon_bluered
+			dagon_red
+         }
+		 }
+       }
+     }
+ elderthing = {
+     default = elderthing_plain #The picture used in the horrors creator when selecting appearance
+     game_setup = { #Portraits added here will be the possible leader selection in the horrors creator
+       add = {
+         portraits = {
+			elderthing_plain
+			elderthing_green1
+			elderthing_green2
+			elderthing_violet
+			elderthing_red
+			elderthing_blue
+			elderthing_white
+			elderthing_black
+         }
+       }
+     }  
+     #pop scope
+     pop = { #for a specific pop (Such as on a planet)
+       add = {
+         portraits = {
+			elderthing_plain
+			elderthing_green1
+			elderthing_green2
+			elderthing_violet
+			elderthing_red
+			elderthing_blue
+			elderthing_white
+			elderthing_black
+         }
+       }
+     }
+     #leader scope
+     leader = { #scientists, generals, admirals, governor
+        add = {
+			portraits = {
+				elderthing_plain
+				elderthing_green1
+				elderthing_green2
+				elderthing_violet
+				elderthing_red
+				elderthing_blue
+				elderthing_white
+				elderthing_black
+			}
+		}
+	}
+     #leader scope
+    ruler = { #New rulers selected from here
+		add = {
+			portraits = {
+				elderthing_plain
+				elderthing_green1
+				elderthing_green2
+				elderthing_violet
+				elderthing_red
+				elderthing_blue
+				elderthing_white
+				elderthing_black
+			}
+		}
+    }
+}
+
+	yith = {
+		default = yith_plain
+		game_setup = { #Portraits added here will be the possible leader selection in the horrors creator
+			add = {
+				portraits = {
+					yith_plain
+					yith_red
+					yith_purple
+					yith_grey
+					yith_aquamarine
+				}
+			}
+		}
+	}
+	 
+	shoggoth = {
+		default = shoggoth_plain
+		game_setup = { #Portraits added here will be the possible leader selection in the horrors creator
+		add = {
+			portraits = {
+				shoggoth_plain
+				shoggoth_red
+				shoggoth_blue
+			}
+		}
+	   }
+	}
+	
+	yog-sothoth = {
+		default = yog-sothoth
+		game_setup = { #Portraits added here will be the possible leader selection in the horrors creator
+		add = {
+			portraits = {
+				yog-sothoth
+				yog-sothoth_blue
+				yog-sothoth_red
+			}
+		}
+	   }
+	}		
+	nyarlathotep = {
+		default = nyarlathotep
+		game_setup = { #Portraits added here will be the possible leader selection in the horrors creator
+		add = {
+			portraits = {
+				nyarlathotep
+				nyarlathotep_black
+				nyarlathotep_blue
+				nyarlathotep_pink
+			}
+		}
+	   }
+	}
+
+
+	migo = {
+		default = migo
+		game_setup = { #Portraits added here will be the possible leader selection in the horrors creator
+		add = {
+			portraits = {
+				migo
+				migo_blue
+				migo_red
+				migo_yellow
+				migo_green
+			}
+		}
+	   }
+	}	
+	
+	huntinghorror = {
+		default = huntinghorror
+		game_setup = { #Portraits added here will be the possible leader selection in the horrors creator
+		add = {
+			portraits = {
+				huntinghorror
+				huntinghorror_blue
+				huntinghorror_brown
+				huntinghorror_purple
+			}
+		}
+	   }
+	}	
+	
+	flyingpolyp = {
+		default = flyingpolyp
+		game_setup = { #Portraits added here will be the possible leader selection in the horrors creator
+		add = {
+			portraits = {
+				flyingpolyp
+				flyingpolyp_red
+				flyingpolyp_green
+				flyingpolyp_yellow
+				flyingpolyp_purple
+			}
+		}
+	   }
+	}
+
+	#For Hastur Population
+	hastur_pop = {
+		default = hastur_pop
+		game_setup = {
+			add = {
+				portraits = {
+					hastur_pop
+				}
+			}
+		}
+	}
+	hastur_oldone = {
+		default = hastur_plain
+		game_setup = {
+			add = {
+				portraits = {
+					hastur_plain
+				}
+			}
+		}
+	}
+	cthulhu_oldone = {
+		default = cthulhu_green1
+		game_setup = {
+			add = {
+				portraits = {
+					cthulhu_green1
+				}
+			}
+		}
+	}	
+}

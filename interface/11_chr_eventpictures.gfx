@@ -1,0 +1,117 @@
+spriteTypes = {	
+	spritetype = {
+		name = GFX_strange_effigy
+		textureFile = gfx/interface/icons/relics/strange_idol.jpg
+		alwaysTransparent = yes
+	}
+	spritetype = {
+		name = GFX_well_water
+		textureFile = gfx/interface/icons/relics/well_water.png
+		alwaysTransparent = yes
+	}
+	spritetype = {
+		name = GFX_shadow_out_of_time
+		textureFile = "gfx/event_pictures/shadow_out_of_time.dds"
+		alwaysTransparent = yes
+	}
+
+	spritetype = {
+		name = "GFX_humans_defeated"
+		textureFile = "gfx/event_pictures/humans_defeated.jpg"
+		alwaysTransparent = yes
+
+	}
+	spritetype = {
+		name = "GFX_carcosa"
+		texturefile = "gfx/event_pictures/carcosa_sky.dds"
+	}
+	
+	spritetype = {
+		name = GFX_spawn_of_old_one
+		texturefile = "gfx/event_pictures/necronomicon.dds"
+		masking_texture = gfx/interface/situation_log/event_mask.dds
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_oldone_city"
+		texturefile = "gfx/event_pictures/oldone_city.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent =  yes	
+	}
+
+	spriteType = {
+		name = "GFX_evt_necronomicon"
+		texturefile = "gfx/event_pictures/necronomicon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes	
+	}
+
+	spriteType = {
+		name = "GFX_evt_oldone_hall"
+		texturefile = "gfx/event_pictures/oldone_hall.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+
+	spriteType = {
+		name = "GFX_evt_oldone_cult"
+		texturefile = "gfx/event_pictures/oldone_cult.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_sanity_loss"
+		texturefile = "gfx/event_pictures/sanity_loss.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_azathoth_1"
+		texturefile = "gfx/event_pictures/azathoth_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}	
+	spriteType = {
+		name = "GFX_evt_azathoth_2"
+		texturefile = "gfx/event_pictures/azathoth_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}	
+	spriteType = {
+		name = "GFX_evt_azathoth_3"
+		texturefile = "gfx/event_pictures/azathoth_3.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}	
+	spriteType = {
+		name = "GFX_evt_coos_1"
+		texturefile = "gfx/event_pictures/coos_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}	
+	spriteType = {
+		name = "GFX_evt_coos_2"
+		texturefile = "gfx/event_pictures/coos_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}	
+	spriteType = {
+		name = "GFX_evt_coos_3"
+		texturefile = "gfx/event_pictures/coos_3.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}	
+	spriteType = {
+		name = "GFX_evt_coos_4"
+		texturefile = "gfx/event_pictures/coos_4.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}		
+	spriteType = {
+		name = "GFX_evt_coos_5"
+		texturefile = "gfx/event_pictures/coos_5.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}	
+}

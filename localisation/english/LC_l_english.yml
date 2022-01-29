@@ -1,0 +1,553 @@
+﻿l_english:
+
+####################################
+# Dig Sites
+####################################
+site_effigy: "Rumored Digsite"
+effigy_digsite_desc: "A digsite that has rumors of violence and secrets, deep within the ground."
+strange_effigy.1.name: "Strange Rumors"
+strange_effigy.1.desc: "We've heard strange rumors of a planet, and something on said planet, which could hold a very dangerous secret. While we don't know where they come from, we do know that there must be at least some truth to these rumors."
+strange_effigy.2.name: "A Way In"
+strange_effigy.2.desc: "We found an entrance, but to where we do not know. Shall we do in and see?"
+strange_effigy.201.a: "And AWAY WE GO!"
+strange_effigy.3.name: "A confusing maze, and a violent dance."
+strange_effigy.3.desc: "We have found a maze, where there is a beckoning path, yet a dance is also beckoning. "
+strange_effigy.3.a: "May we resist it with all our might."
+strange_effigy.4.name: "An Altar"
+strange_effigy.4.desc: "An altar, and shall we see what it is. A little idol stays there, very peculiar. It's so interesting, and as we get closer the beckon to dance and give into carnal sin becomes stronger and stronger."
+cosmichorror.relic.title: "A Strange Relic"
+cosmichorror.relic.desc: "We have reexamined the site of the original blasted heath, and we have examined some of the water in a reservoir nearby, and realized that it has incredible scientific potential."
+
+####################################
+# Relics
+####################################
+r_strange_effigy: "Strange Effigy"
+r_strange_effigy_desc: "A strange effigy, radiating with volatile power. Since we cannot get a camera to capture the idol, this is the closest we've got to a visual descriptor of it."
+r_water_of_well: "Water of the well"
+r_water_of_well_desc: "Water deep from the well located at the crashed site of the meteor."
+well_effect: ""
+
+####################################
+# Origins
+####################################
+chr_cosmic_worms: "Cosmic Worms"
+chr_cosmic_worms_desc: "Ancient beings of rough and coarse material. Angry and intelligent, they come with violent intentions for those who intend harm upon us."
+chr_tech_cosmic_worms: "Cosmic Harness"
+chr_tech_cosmic_worms_desc: "The creation of harnesses that can allow us to breed and control the cosmic worms for our own intentions."
+
+origin_spawn_of_an_old_one: "Spawn of an Old One"
+origin_spawn_of_an_old_one_desc: "An old one created us. It had to leave long ago, further than anyone remembers. Yet, they left behind gifts for us to reap the benefits of."
+civic_tooltip_origin_spawn_of_an_old_one_effects: "Start with §G Cosmic Harness §! technology, allowing us to control and create cosmic worms, ancient beings of extraordinary power."
+
+origin_carcosa: "Carcosa"
+origin_carcosa_desc: "Start in carcosa, a city wide planet filled to the brim with fantastical creatures and different species."
+city_species: "City Species"
+civic_tooltip_origin_carcosa_effects: "Start with an extra species and §G +45% §! trade attractiveness and §G +3 §! planet sensor range."
+
+origin_humans_defeated: "Humans Defeated"
+origin_humans_defeated_desc: "Your race has defeated the humans. While before you hid beneath the surface, ever plotting, your kind rose up and took over! The humans have been slaughtered and you are free!"
+civic_tooltip_origin_humans_defeated_effects: "Start in the §G Sol System §!, gain a §G 40% §! bonus to all research, and ship and army damage is given a §G 25% §! bonus."
+
+origin_far_future: "Far Future"
+origin_far_future_desc: "Facing the destruction of your race, the surviving members teleported into the far future using their telepathic abilities, and took on hosts closest resembling their original species. They took on to and evolved their tech, giving them the ability to go to space and colonize beyond the stars."
+####################################
+# Civics
+####################################
+civic_beacon_of_madness: "Beacon Of Madness"
+civic_beacon_of_madness_desc: "This society is a attraction for the religious and for fanatic cultism"
+
+
+civic_unethical_scientists: "Unethical Scientists"
+civic_unethical_scientists_desc: "Wellbeing and safety are remote concepts to this species' persuit of knowledge. They will conduct vivisection and amputation without anesthetic and trespass upon alien worlds to mine whatever they please."
+
+
+civic_acolytes_to_the_worms: "Acolytes To The Worms"
+civic_acolytes_to_the_worms_desc: "We studied the ancient worm, the scratch from within our minds. The one that tells us there is something wrong when we are safe, and the one that  knows the storm before it comes"
+acolytes_to_the_worms_effects: " Influence Production: §G 50% §! \nUnity Production: §G +25% §! \nStart With Technologies: §M Wormspeak Chants §! and §M Weaponized Wormspeak §! "
+
+####################################
+# Species Classes
+####################################
+ PLA_CHR: "Cosmic Horrors"
+ PLA_CHR_desc: "Species Class has no effect on your Empire, but Cosmic Horror-class Species may consider other Horrors to be less alien than other Species Classes."
+ PLA_CHR_plural: "Cosmic Horrors"
+ PLA_CHR_insult_01: "monster"
+ PLA_CHR_insult_plural_01: "monsters"
+ PLA_CHR_compliment_01: "Old One"
+ PLA_CHR_compliment_plural_01: "Old Ones"
+ PLA_CHR_spawn: "spawn"
+ PLA_CHR_spawn_plural: "spawn"
+ PLA_CHR_sound_01: "growling"
+ PLA_CHR_sound_02: "gurgling"
+ PLA_CHR_sound_03: "burbling"
+ PLA_CHR_sound_04: "gnashing"
+ PLA_CHR_sound_05: "bubbling"
+ PLA_CHR_organ: "viscera"
+ PLA_CHR_mouth: "maw"
+ PLA_CHR_hand: "tentacle"
+ PLA_CHR_ear: "statocyst"
+ PLA_CHR_tooth: "tooth"
+ PLA_CHR_fossil: "fossil"
+ PLA_CHR_remnant: "remnants"
+ PLA_CHR_organ_plural: "organs"
+ PLA_CHR_hand_plural: "tentacles"
+ PLA_CHR_ear_plural: "statocysts"
+ PLA_CHR_tooth_plural: "teeth"
+ PLA_CHR_fossil_plural: "fossils"
+ PLA_CHR_remnant_plural: "remnants"
+ 
+ #############################
+ # Cthulhu Traits
+ #############################
+ # SPECIES
+ 
+hidden_tentacles: "Hidden Tentacles"
+hidden_tentacles_desc: "Tentacles that; while not visible to the naked eye, are very still present and operable."
+ 
+detachable_limbs: "Detachable Limbs"
+detachable_limbs_desc: "This species has limbs that can be detatched while still fuctional."
+ 
+chr_trait_strange_aeons: "Strange Aeons"
+chr_trait_strange_aeons_desc: "That is not dead which can eternal lie, And with strange aeons, even death may die. -H.P. Lovecraft"
+ 
+chr_trait_cosmic_horrors: "Cosmic Horrors"
+chr_trait_cosmic_horrors_desc: "There is no language for such abysms of shrieking and immemorial lunacy, such eldritch contradictions of all matter, force, and cosmic order. -H.P. Lovecraft"
+ 
+chr_trait_shoggoth: "Protoplasmic Labor"
+chr_trait_shoggoth_desc: "Amorphous masses capable of generating organs at will prove useful in situations involving manual labor, but prove disastrous in laboratory environments."
+ 
+chr_trait_shadows_out_of_time: "Shadows Out of Time"
+chr_trait_shadows_out_of_time_desc: "Body snatchers most loathesome, these beings are capable of transferring consciousness into native species and switching bodies for a time."
+ 
+chr_trait_disguised_horrors: "Disguised Horrors"
+chr_trait_disguised_horrors_desc: "Through carefully concocted deceptions low and high-tech, this horrorible race has coaxed others into a false sense of security by masking their true forms." 
+
+chr_trait_abnormal_matter: "Abnormal Matter"
+chr_trait_abnormal_matter_desc: "These creatures are composed of unnatural matter allowing them to modify their bodies to improve survivability through prolonged effort."
+
+chr_trait_infectious_tech: "Infectious Tech"
+chr_trait_infectious_tech_desc: "These creatures can move in and out of technology at a short range."
+
+chr_trait_incorporeal: "Incorporeal"
+chr_trait_incorporeal_desc: "The skin is not skin, and the flesh is made out of shadow."
+
+chr_trait_plasma: "Plasmatic Skin"
+chr_trait_plasma_desc: "Skin made out of plasma, with the flesh made out of highly conductive material."
+
+chr_trait_aura: "Aura"
+chr_trait_aura_desc: "An aura is created when your species is around. It is always there, yet it never seems to affect the physical world."
+
+chr_minion_glamour: "Glamour"
+chr_minion_glamour_desc: "A psychic magic possesed by this species that can control and adjust the image of little things, like hair color."
+
+##############################
+# LEADER Traits
+############################## 
+
+chr_leader_trait_sanity_loss_minor: "Sanity Loss (Minor)"
+chr_leader_trait_sanity_loss_minor_desc: "Exposing oneself to something gruesome, unnatural, or supernatural can shave a few years off one's life."
+chr_leader_trait_sanity_loss_major: "Sanity Loss (Major)"
+chr_leader_trait_sanity_loss_major_desc: "This character is now gripped by intense phobias and hallucinations."
+chr_leader_trait_sanity_loss_extreme: "Sanity Loss (Extreme)"
+chr_leader_trait_sanity_loss_extreme_desc: "A series of violent mental disorders has riddled this character almost uncontrollable."
+ 
+ 
+#############################
+# Cthulhu Technology
+#############################
+ 
+ chr_tech_shoggoth_workers: "Protoplasm Biogenesis"
+ chr_tech_shoggoth_workers_desc: "Formless protoplasm able to mock and reflect all forms and organs and processes - viscous agglutinations of bubbling cells - rubbery fifteen-foot spheroids infinitely plastic and ductile - slaves of suggestion, builders of cities - more and more sullen, more and more intelligent, more and more amphibious, more and more imitative! Great God! What madness made even those blasphemous Old Ones willing to use and carve such things?\"\n\n-H.P. Lovecraft, \"At the Mountains Of Madness\""
+ 
+ chr_tech_shoggoth_warriors: "Shoggoth Warriors"
+ chr_tech_shoggoth_warriors_desc: "Behavioral biologists have proposed weaponizing our abyssal protoplasmic workers by empowering the spontaneous organ-building entities to grow sharpened teeth and claws under careful supervision for use in warfare."
+ 
+ chr_tech_coos_weapon_1: "Weaponized Colour Entity"
+ chr_tech_coos_weapon_1_desc: "Your civilization has created a device to manipulate the Color Out of Space using psionic energies. A color can be used as a weapon of terror against other civilizations."
+ 
+ chr_worm_army: "Harnessed Worm Army"
+ chr_worm_army_desc: "The worm has been weaponized. It writhes within our brethren's minds, making them stronger and faster. The no longer look as our bretheren do"
+ 
+ chr_tech_weaponized_wormspeak_chants: "Weaponized Wormspeak"
+ chr_tech_weaponized_wormspeak_chants_desc: "We weaponize the wormspeak. It makes us stronger, faster, scarier, and less afraid."
+ 
+ chr_tech_wormspeak_chants: "Wormspeak Chants"
+ chr_tech_wormspeak_chants_desc: " We study the ancient worm, the scratch from within our minds. The one that tells us there is something wrong when we are safe, and the one that  knows the storm before it comes"
+
+ chr_shoggoth_army: "Shoggoth Terrors"
+ chr_shoggoth_army_desc: "A horde of terrible, indescribable things vaster than any subway train-shapeless congeries of protoplasmic bubbles, faintly self-luminous, and with myriads of temporary eyes forming and un-forming as pustules of greenish light."
+ 
+ SHOGGOTH_POP_SPECIES_1: "Shoggoth"
+ SHOGGOTH_POP_SPECIES_DESC: "\"Formless protoplasm able to mock and reflect all forms and organs and processes - viscous agglutinations of bubbling cells - rubbery fifteen-foot spheroids infinitely plastic and ductile - slaves of suggestion, builders of cities - more and more sullen, more and more intelligent, more and more amphibious, more and more imitative! Great God! What madness made even those blasphemous Old Ones willing to use and carve such things?\"\n\n-H.P. Lovecraft, \"At the Mountains Of Madness\""
+ 
+ chr_buildable_shoggoth_pop_1: "Shoggoth Worker"
+ chr_buildable_shoggoth_pop_1_desc: "Formless protoplasmic beasts of suggestion able to mock and reflect all forms and organs and processes."
+ 
+ ### Ship Localization Tech
+ CLOUD_DARK_MATTER_REACTOR: "Dark Matter Reactor"
+ CLOUD_ZERO_POINT_REACTOR: "Zero Point Reactor"
+ CLOUD_ANTIMATTER_REACTOR: "Antimatter Reactor"
+ CLOUD_COLD_FUSION_REACTOR: "Cold Fusion Reactor"
+ CLOUD_FUSION_REACTOR: "Fusion Reactor"
+ CLOUD_FISSION_REACTOR: "Fission Reactor"
+ CLOUD_THRUSTER_1: "Basic Thrusters"
+ CLOUD_THRUSTER_2: "Better Thrusters"
+ CLOUD_THRUSTER_3: "Advanced Thrusters"
+ CLOUD_THRUSTER_4: "Zero Point Thrusters"
+ CLOUD_THRUSTER_5: "Dark Matter Thrusters"
+ COMBAT_COMPUTER_CLOUD_BASIC: "Basic Computers"
+ COMBAT_COMPUTER_CLOUD_ADVANCED: "Advanced Computers"
+ COMBAT_COMPUTER_CLOUD_SAPIENT: "Sapient Computers"
+ COMBAT_COMPUTER_CLOUD_AUTONOMOUS: "Autonomous Computers"
+ COMBAT_COMPUTER_CLOUD_PRECOG: "Precognicient Computers"
+
+ #############################
+ # Cthulhu Ethics
+ #############################
+ chr_govt_old_one: "Old One"
+ chr_govt_old_one_desc: "A malignant deity that drives others to madness."
+ 
+ chr_govt_outer_god: "Outer God"
+ chr_govt_outer_god_desc: "A great malignant deity that exists outside this universe. It uses its avatar to pervert our universe."
+ 
+ #############################
+ # Cosmic Horror Personalities
+ #############################
+ personality_chr_cosmic_indifference: "Cosmic Indifference"
+ personality_chr_cosmic_indifference_desc: "Theirs is an existence unmoved by time and space. Through their senses, other species are insignificant in intergalactic existence."
+ 
+ personality_chr_cosmic_terrors: "Cosmic Terrors"
+ personality_chr_cosmic_terrors_desc: "Theirs is an existence unmoved by time and space. Through their senses, other species are pests to be exterminated from intergalactic existence."
+ 
+ personality_chr_scientific_slavers: "Scientific Slavers"
+ personality_chr_scientific_slavers_desc: "Unable to maintain their decadence through their own appendages, these -things- rely upon slaves, whether generated through biogenesis or through force, for their survival."
+ 
+ #############################
+ # Cosmic Horrors System
+ #############################
+ chr_cthulhu_system_NAME: "Twenty-Third Nebula"
+ chr_cthulhu_system_DESC: "Supposed birthplace of Cthulhu.\n\nHomeworld - Size 20\n\n2 Orbiting Black Holes\n3 random planets\n$system_initializer_DESC$"
+ 
+ chr_hastur_system_NAME:  "Aldebaran"
+ chr_hastur_system_DESC:  "Homeworld of Hastur.\n\nHomeworld - Size 20\n1 Gigantic Red Star\n3 random planets\n\n$system_initializer_DESC$"
+ 
+ chr_elderthing_system_NAME: "Hydra Pyxlis"
+ chr_elderthing_system_DESC: "Last known location of the Elder Things.\n\nHomeworld - Size 20\n1 Red Star\n1 Blue Star\n1 Yellow star\n3 random planets\n$system_initializer_DESC$"
+
+ pc_carcosa: "Carcosa"
+ pc_carcosa_desc: "Along the shore the cloud waves break, The twin suns sink behind the lake, the shadows lengthen in Carcosa." 
+ pc_carcosa_adj: "Carcosian"
+ mod_pc_carcosa_habitability: "Carcosian Preference"
+ trait_pc_carcosa_preference: "Carcosian Preference"
+ trait_pc_carcosa_preference_desc: "A preference for the dry savannah climate of Carcosa."
+ 
+ #############################
+ # Cosmic Horrors Definitions
+ #############################
+ name_list_PLA_CHR: "Cosmic Horrors" 
+ FLAG_CATEGORY_cosmichorrors: "Cosmic Horrors"
+ 
+ EMPIRE_DESIGN_cthulhu_empire: "Star-Spawn of Cthulhu"
+ EMPIRE_DESIGN_cthulhu_empire_desc: "From the tentacle-spawned protoplasm of a transformed world writhing in madness, Cthulhu awakens."
+ 
+ EMPIRE_DESIGN_hastur_empire: "The Yellow Kingdom"
+ EMPIRE_DESIGN_hastur_empire_desc: "Garbed in yellow tattered rags, a noxious "king" congregates for a dark mass to conquer the stars."
+ 
+ EMPIRE_DESIGN_dagon_empire: "The Esoteric Order of Dagon"
+ EMPIRE_DESIGN_dagon_empire_desc: "With a great crack, the world drowned in blood and watery depths. From its sunken corpse, Father Dagon and his deciples wrought upon its flooded surface and rebirthed a new age of the Deep Ones."
+ 
+ EMPIRE_DESIGN_elderthing_empire: "The Society of Elder Things"
+ EMPIRE_DESIGN_elderthing_empire_desc: "Vast galleries and museums decorate this reflective sapient species' megalopolises. Once thought exctinct after discovery of this species' remains in the Mountains of Madness, the Elder Thing society remained in-tact due to extra-dimensional travel. "
+ 
+ EMPIRE_DESIGN_yith_empire: "The Great Race of Yith"
+ EMPIRE_DESIGN_yith_empire_desc: "The Great Race of Yith has existed, exists, and, quite possibly might always exist. To the untrained observer, the Yith are classified as latticed and conical spore-breeding creatures from the Cretaceous period of Earth's history. When in fact, their true form remains a mystery, as it is within their power to not only transfer their consciousnesses across space and time, but to also possess the bodies of other species."
+ 
+ EMPIRE_DESIGN_nyarlathotep_empire: "The Crawling Chaos"
+ EMPIRE_DESIGN_nyarlathotep_empire_desc: "Young minds shamble in the streets in a frenzy to feast their eyes upon creations and inventions most profound at the latest lecture. Their thirst for knowledge leads them, but little do they know that their charismatic lecturer's true intent is to perverse curiosity... into submission.\n\nNyarlathotep uses seemingly mortal avatars to fool mortal races into bondage for inexplicably vile schemes."
+ 
+ EMPIRE_DESIGN_yogsothoth_empire: "The Gatekeepers of Yog-Sothoth"
+ EMPIRE_DESIGN_yogsothoth_empire_desc: "Amorphous mass of iridescent spheres. In its reflective lens, the extra-dimensional organism fields views of every being that was, is, and will be. Space and time are irrelevant for Yog-Sothoth.\n\nThe great spheres shine upon the fifth dimension and glide to meet and nurture the fate of a chosen cult. Yog-Sothoth is the Gate. Yog-Sothoth is the Key. All are one in  Yog-Sothoth."
+ 
+ 
+ EMPIRE_DESIGN_migo_empire: "Intergalactic Mi-Go Empire"
+ EMPIRE_DESIGN_migo_empire_desc: "Fungoid crustacean-like beings that have entered the galaxy for purposes unknown. They have been known to put mining outposts on sentient worlds, cut native species to pieces, and place their brains in apparatuses capable of simplistic digital communcation.\n\nStudies have been inconclusive as to their exact origins. However, based on their abnormal matter, it is safe to assume that the Mi-Go might be transdimensional beings."
+ 
+ PLA_CHR_CITY_GRAPHICS: "City Appearance"
+ PLA_CHR_CITY_GRAPHICS_NAME: "Non-Euclidean City"
+ PLA_CHR_SHIP_GRAPHICS: "Ship Appearance"
+ PLA_CHR_SHIP_GRAPHICS_NAME: "Cosmic Horrors"
+
+ 
+ #############################
+ # Flavor Text
+ #############################
+ START_SCREEN_CTHULHU: "On this planet of space-age intelligent life-forms, Cthulhu, dead and dreaming, awakes.\n\nWithin hours, the oceans boil. The mentally insane are twisted into blashemic monstrosities, and normal individuals turn to repeatedly attempt suicide over and over again. Within days, as billions lose their sanity, things from graves return to life deformed and muttering ancient words and syllables. Tentacles sprout from the ground, and all they touch are twisted in their influence. Within a week, millions die as the species turns upon itself in its hunger and delerium. \n\nAs the last of the species transforms into a froathing pool of slime, the non-euclidean architecture of the Great Old Ones rises from the crust of the world and the Star-Spawn rise from the spires."
+ 
+ START_SCREEN_HASTUR: "From distant, long-dead stars, ripples of violence feed a current in a hidden infinity that is uniquely belonging to old gods. On this occasion, it is the extinction of a vast peaceful civilization transformed into mad cannibals by a weaponized disease. Mangled bodies litter a dozen crumbling worlds. Innocents leap from the tallest spires to meet their landing in the afterlife. Children are ravenously devoured in their beds by their own mothers.These streams of violence flow into entropy personified. This violence now births the Great Old One Hastur's children like a great retching upon the surface of Carcosa. The blood-curdling cries of the space-faring monsters, the Byakhee, reverberate in the air as a new Yellow King is crowned to spread The Yellow Sign."
+
+ START_SCREEN_DAGON: "Governments of Earth ceaselessly plundered underwater cities and slaughtered the Deep Ones. For centuries their kind had bided their time. Given to their own devices, humans were to destroy themselves.Then that inhuman, defeaning, world-ending crack dyed the world with indigo pools that crashed and swathed over man and monster alike. Countless frantic voices called out as bodies crunched under the weight of unfathomable waves. The last human being's lungs flooded. Alien silence reigned. Black skies stormed. Land vanished. The void below thrived with kingdoms most foul.Father Dagon does not rise, but the world of dead men falls beneath him. The age of the Deep Ones has begun."
+ 
+ START_SCREEN_ELDERTHING: "Visions of stone cities scattered to ruin fill the exhibition hall in the old museum. Reflecting upon the past, the Elder Things' numerous appendages hang solemnly in mourning on a day of rememberence. Never again would they attempt to mold life from inorganic matter so carelessly as they had with the shoggoths. Framed poetry depicted how colonization of other worlds through solar sailing had failed as the shoggoths consumed scientists.Carved statues familiarize the visitors with the The Great Resurgence. A massive model of a sort of hole boring technology that pierced the ether looms above. A portrait with a grand epic-quality depicts the few survivors bursting through a cosmic portal only to gape in awe at a new three-sunned skyline. Your ruler paces in the museum with his barrel-shaped consorts, contempating the future of his species."
+
+ START_SCREEN_YITH: "A deluge of amnesia has recently washed the collective minds of the Yith, leaving a large gap of memory between the Polyp Wars and the Great Migration. How the councils cleared the path to the new world will forever remain a mystery to the common Yith.What is clear, however, is the severe limitation of powers that has come with these recent events. The ability to possess other minds has become limited and clunky. As researchers frantically search for the root of the problem, the Great Race of Yith faces its greatest challenge yet -- survival."
+
+
+ START_SCREEN_NYARLATHOTEP: "After losing so many to the great line that followed in the wake of Nyarlathotep, witchhunts ensued to destroy the great pharoah. Upon losing one of his avatars to the machinations of the native species, Nyarlathotep rose up from its own ruin a returned deity.Bored of the creatures that inhabited the world, within the hour Nyarlathotep summoned the hunting horrors from across time and space. Teeth, wings, and serpentine fury tore into the innocents and guilty alike -- tearing the world's population asunder."
+ 
+ 
+ START_SCREEN_YOGSOTHOTH: "The Shoggoths had toiled tirelessly after achieving independence from their creators, and through their many-limbed protoplasmic spantaneous organ-spawning forms, they also freed the last endevour of their founding species -- an imprisoned summoned Avatar of Yog-Sothoth. Upon its arrival, the form of Yog-Sothoth so resembled the Shoggoths that they took Yog-Sothoth as their personal savior for the times to come. Yog-Sothoth welcomed them to the Gate. The Shoggoths understood that Yog-Sothoth was the Key to all things."
+
+ START_SCREEN_MIGO: "Outwardly, the MiGo appear unknowable. Through otherwordly matter, they permeate into this galaxy and can, through great strain, modify their own coporeal structure to inhabit many worlds. As a ruler of this galactic colony, you understand the great purpose. Your species is but a small branch of the great outer dimensional empire. Prove your worth by exploiting the species of this galaxy. Their biology, minerals, and knowledge must be collected for the masters. Go forth and take sovereignty in their name."
+
+
+ 
+####################
+# Events
+#################### 
+
+#SANE Sanity Loss Events
+############################################
+
+#Accumulative Sanity Loss (Planet Scope)
+ cosmichorror.300.title: "Sanity Loss"
+#Minor
+ cosmichorror.300.desc.1: "[officer.GetName] has gazed upon something most abnormal on Planet [planet.GetName] and suffered a loss of sanity."
+#Major
+ cosmichorror.300.desc.2: "[officer.GetName] has gazed upon something most abnormal on Planet  [planet.GetName]. Considering recent events, these supernatural events have gripped [officer.GetName] with phobias and great unease."
+ cosmichorror.300.desc.3: "[officer.GetName] has gazed upon something most abnormal on Planet  [planet.GetName]. Considering recent events, these supernatural events have riddled [officer.GetName] with mental disorders rendering [officer.GetHerHim] nearly uncontrollable. It would be wise to keep [officer.GetHerHim] away from any more of these horrible sights."
+ cosmichorror.300.desc.4: "[officer.GetName] has been lost to madness. With sardonic laughter and unsteady movements, you see [officer.GetHerHim] turn off [officer.GetHerHis] communication uplink."
+
+#Accumulative Sanity Loss (Fleet Scope)
+ cosmichorror.301.title: "Sanity Loss"
+#Minor
+ cosmichorror.301.desc.1: "[officer.GetName] has gazed upon something most abnormal in the [system.GetName] system and suffered a loss of sanity."
+#Major
+ cosmichorror.301.desc.2: "[officer.GetName] has gazed upon something most abnormal in the [system.GetName] system. Considering recent events, these supernatural events have gripped [officer.GetName] with phobias and great unease."
+ cosmichorror.301.desc.3: "[officer.GetName] has gazed upon something most abnormal in the [system.GetName] system. Considering recent events, these supernatural events have riddled [officer.GetName] with mental disorders rendering [officer.GetHerHim] nearly uncontrollable. It would be wise to keep [officer.GetHerHim] away from any more of these horrible sights."
+ cosmichorror.301.desc.4: "[officer.GetName] has been lost to madness. With sardonic laughter and unsteady movements, you see [officer.GetHerHim] turn off [officer.GetHerHis] communication uplink."
+
+#Sanity Recovery (Fleet Scope)
+ cosmichorror.303.title: "Sanity Recovery"
+ cosmichorror.303.desc: "[officer.GetName] has regained some sense of place within the  [system.GetName] system and recovered some sanity."
+
+#Sanity Recovery (Planet Scope)
+ cosmichorror.304.title: "Sanity Recovery"
+ cosmichorror.304.desc: "[officer.GetName] has regained some sense of place on Planet  [system.GetName] and recovered some sanity."
+
+#PILGRIMAGE OF AZATHOTH
+############################################
+#Event Chain
+ azathoth_pilgrimage_chain_title: "Pilgrimage to Azathoth"
+ azathoth_pilgrimage_chain_desc: "Dare we follow down the path laid in blood?"
+ cosmichorror.3.poi_1: "Bloody starmap destination"
+ cosmichorror.3.poi_1.desc: "Using knowledge both occult and soundly scientific, we have plotted the final abyssal destiny of the bloody starmap."
+
+#Initial event
+ cosmichorror.3.title: "Pilgrimage to Azahtoth"
+ cosmichorror.3.desc.1: "A necromancer's recent acquisition of a mummified alien carcass revealed a strange discovery. Upon reanimating the mummy, the necromancer was pulverized into paste. By means of blood and entrails, a most unnatural map of the stars was painted across formerly blank walls. Upon its discovery by local enforcers, the pharaohic being attempted to kill again, but was permanently silenced. The starmap remains. Upon laying hands on the blood starmap, cult leaders feel the presence of dreamlands and strange musical instruments. They believe that perhaps this is the fabled pilgrimage to Kadeth -- and -- to Azathoth."
+ cosmichorror.3.desc.2: "A museum curator's recent acquisition of a mummified alien carcass revealed a strange discovery. Upon successfully deciphering aloud an inscription upon its sarcophagus, the curator was astonished at the mummy's sudden reanimation, and then equally as astonished as he was pulverized into paste. By means of blood and entrails, a most unnatural map of the stars was painted across formerly clean museum walls. Upon its discovery by local law enforcement, the pharaohic being attempted to kill again, but was permanently silenced. The starmap remains with a bloody eye at its heart -- still dripping with ichor of an innocent."
+ cosmichorror.3.a: "Follow the map."
+#Final event
+ cosmichorror.5.title: "Pilgrimage to Azathoth"
+ cosmichorror.5.desc.1: "This colossal being writhes with flailing tentacles passing through dimensions with each mad swipe. Named by our diviners as The Blind Idiot God, it is seemingly incapable of communication, whether by choice or by actual inability is unclear.\n\nOur seers have begun rituals in celebration of this great discovery."
+ cosmichorror.5.desc.2: "A colossal blind writhing mass seemingly incapable of communication looms over entire systems with its cosmic proportions. It seems to exhibit brain-wave patterns similar to common dream patterns on our homeworld, yet all these waves match outer-spectrum radiation patterns circumferencing the colossal creature and extending in all directions from its origin.\n\nOur scientists recommend extreme caution."
+ cosmichorror.5.a: "Cultists Celebrate"
+ cosmichorror.5.b: "Worrying news."
+ 
+ cosmichorror.6.title: "Azathoth Awakens"
+ cosmichorror.6.desc: "Unchained from the sleeping corporeal mass fettered to our universe, the Blind Idiot God Azathoth melts between spaces to be seen everywhere at once by all beings. Within minutes, a looming open eye seeps into the vision of all species as if burned onto their retinas with a hot branding iron used on cattle designated for slaughter. In the following hours, from the center of the galaxy a thick noxious tidal wave of extradimensional entropy manifests as colossal claws that begin to grope, pierce, and crush celestial objects as if they were glass ornaments. On the outer rim, spindly appendages the size of dozens of systems inhale entire worlds into gnashing mandibles with consuming force resembling the most powerful of only theorized black holes. The Old Ones and Outer Gods have fled this plane of existence. It is only a matter of time until the end. As many turn to scream in horror, no sounds can come. All vibrations across space have ceased at the coming of Azathoth Awakened."
+ cosmichorror.6.a: "Iä Azathoth cf'ayak'vulgtmm, vugtlagln vulgtmm."
+ cosmichorror.6.b: "Nothing can be done." 
+ 
+#Special Projects
+#############################################
+#Investigate Azathoth
+ azathoth.2.title: "Colossal Encounter [From.From.From.GetName]"
+ azathoth.2.desc: "A colossal cosmic being in the §Y[From.From.From.GetName]§! System was discovered. This has been flagged as §Y[From.GetName]§! until we can learn more about them.\n\nWe should proceed with unprecedented caution..."
+ 
+ INVESTIGATE_AZATHOTH: "Investigate [Prev.From.GetName]"
+ INVESTIGATE_AZATHOTH_DESC: "Our researchers' curiosity cannot be contained. There is a magnetic obession to learn every minute detail about the colossal cosmic entity code-named §Y[Prev.From.GetName]§!."
+ azathoth.4.title: "Azathoth"
+ azathoth.4.desc.1: "Bubbling at the center of all infinity, the great blind daemon, "§YAzathoth§!" reigns beyond time and space. Its horrible tendrils throb to the beat of unseen drummers and flutists. It is theorized by your starseers that the possibilty exists that all of creation itself is conceived from the dreams of this sleeping mass. Entreated with the visage of what is believed by your seers and mystics as the avatar of this, THE creator, god of the universe itself, your overjoyed cultists immediately turn to killing one another in blood-born celebration."
+ azathoth.4.desc.2: "Bubbling at the center of all infinity, the great blind daemon, "§YAzathoth§!" reigns beyond time and space. Its horrible tendrils throb to the beat of unseen drummers and flutists. Madmen had taken to the streets before to proclaim its existence as the great dream-god. All of creation is simply a vision that this blind mass conceived in dreams. The horrible realization that this perverse abomination actually EXISTS and could possibly be THE creator of the universe and all life itself has robbed many of the will to go on living."
+ azathoth.4.a: "Cultists Celebrate"
+ azathoth.4.b: "Reports of Mass Suicide." 
+
+#Special Projects
+#############################################
+#Investigate Azathoth
+ azathoth.2.title: "Colossal Encounter [From.From.From.GetName]"
+ azathoth.2.desc: "A colossal cosmic being in the §Y[From.From.From.GetName]§! System was discovered. This has been flagged as §Y[From.GetName]§! until we can learn more about them.\n\nWe should proceed with unprecedented caution..."
+ 
+#COLOUR OUT OF SPACE
+############################################
+#Event Chain
+
+ cosmichorror.9.title: "A strange occurance"
+ cosmichorror.9.desc.1: "From a rural region most remote, an asteroid pierced the soil not long ago. A regular occurance, naturally, yet under these circumstances the stars were not right in the sky.\n\nTrees have begun to curl and move without wind and the vegetation and wildlife have desaturated into twisted versions of their former selves. Before long, these frightful entities waste into dust as if robbed of their very essence.\n\nOur seers have divined possible paths to seek out this otherwordly destructive force."
+ cosmichorror.9.desc.2: "From a rural region most remote, an asteroid pierced the soil not long ago. A regular occurance, naturally, yet under these circumstances the stars were not right in the sky.\n\nTrees have begun to curl and move without wind and the vegetation and wildlife have desaturated into twisted versions of their former selves. Before long, these frightful entities waste into dust as if robbed of their very essence.\n\nResearchers have identified a return signature from the asteroid's origin, and by following potential leads, it's possible to seek out this otherwordly destructive force."
+ cosmichorror.9.a: "Investigate Further"
+ 
+ cosmichorror.11.title: "Cosmic Colour Entity"
+ cosmichorror.11.desc.1: "This otherworldly messenger from unformed realms is a shade outside our known color spectrum. Our psions, while enamored with this newly discovered forbidden eldritch knowledge, have considered grand possibilities. Those being -- of course -- harnessing this terrible power."
+ cosmichorror.11.desc.2: "This otherworldly messenger from unformed realms is a shade outside our known color spectrum. Our researchers, while burdened with forbidden eldritch knowledge that leaves chills down their backs, have considered foolish possibilities. Those being -- of course -- harnessing this monstrous power."
+ 
+ cosmichorror.12.title: "Outside the Spectrum"
+ cosmichorror.12.desc: "A miasmic cosmic color entity in the §Y[From.From.From.GetName]§! System was discovered. This has been flagged as §Y[From.GetName]§! until we can learn more about them."
+ 
+ cosmichorror.14.title: "Colour Out of Space"
+ cosmichorror.14.desc: "So simply named, "§YThe Color Out of Space§!" is a non-humanoid meteorite-based extraterrestrial. This magnetic meteor slowly evaporates when exposed to air, produces massive heat, attracts lightning, and damages silicon compounds.\n\nWithin the meteors, fragile globules contain the color. The color itself is neither gas nor plasma and seemingly escapes most testing as if it is not part of the same plane of existence as ourselves.\n\nWhen a color is exposed to a natural environment, it causes seemingly positive mutagenic properties. In time, these changes result in bloated organisms, mutations in populations, disgusting crop yields, and a sweeping graying of the land that kills many once-thriving life forms." 
+ 
+ cosmichorror.16.title: "Initiate Colour Attack"
+ cosmichorror.16.desc: "Your psions stand ready to sow the seed of the color entity on Planet §Y[planet.GetName]§! in the §Y[system.GetName]§! System."
+ cosmichorror.16.a: "Initiate"
+ cosmichorror.16.a.tooltip: "Planet §Y[planet.GetName]§! will have a random tile replaced with a blasted heath tile blocker."
+ cosmichorror.16.b: "Cancel"
+ cosmichorror.16.c: "Disengage"
+ cosmichorror.16.c.tooltip: "Current policies disallow the terrorist capabilities of your color entities."
+ 
+ #Event Chain
+ 
+ color_chain_title: "Colour Out of Space"
+ color_chain_desc: "Where did the entity come from? We should investigate further."
+ cosmichorror.9.poi_1: "Possible origin"
+ cosmichorror.9.poi_1.desc: "Did it come from here?"
+
+ #Special Projects
+ 
+ INVESTIGATE_COLOR: "Investigate [Prev.From.GetName]"
+ INVESTIGATE_COLOR_DESC: "Our researchers' curiosity cannot be contained. There is a magnetic obession to learn every minute detail about the cosmic entity code-named §Y[Prev.From.GetName]§!."
+
+ COLOR_MANUAL: "Color Entity Manipulation"
+ COLOR_MANUAL_DESC: "Special operations require the color terrorism policy enabled. When those policies are in effect, under strict control, we can covertly guide a single color entity towards colonized star systems. Therein, the entities can devestate the soil of other nations. Attempts have been tried -- and failed -- at managing multiple colors at once, but it is highly advised to manage operations only involving a single entity."
+ 
+ COLOR_ERROR_01: "Entity Escaped"
+ COLOR_ERROR_01_DESC: "A color entity escaped during production into our own colony and devestated local soil. Be more careful in the future and keep color entities as few as possible."
+ 
+ cosmichorror.41198.name: "A Grave Mistake"
+ cosmichorror.41198.desc: "While duplication was successful, our psions failed to harness control over two cosmic color entities at once. The second entity found its way into our soil. The greying took hold quickly, and it has spread a blasted heath upon our colony."
+ 
+ cosmichorror.41199.name: "Entity Operations Guide"
+ cosmichorror.41199.desc: "After successful duplication of the cosmic color entity, our researchers have prepared an operations manual of sorts for perusal at your discretion in the situation log."
+
+#Policies
+ policy_chr_color_policy: "Color Out of Space"
+ policy_chr_color_policy_desc: "Disallow or allow psionic terrorism operations involving Color extraterrestrial entities."
+
+ color_outlawed: "Outlaw Color Terror"
+ color_outlawed_name: "Outlaw Color Terrorism" 
+ color_outlawed_desc: "Ban the utilization of the colors as terrorist weapons against other civilizations.\n\n§GHappiness bonus for pacifist empires.§!" 
+ 
+ color_terrorism: "Color Terrorism"
+ color_terrorism_name: "Allow Color Terrorism" 
+ color_terrorism_desc: "Allows terrorism attacks using the Colors Out of Space to sow seeds of disaster on other planets.\n\n§GHappiness loss for pacifist empires.§!" 
+ 
+#Tile Blocker
+
+ tb_blasted_heath: "Blasted Heath"
+ tb_blasted_heath_desc: "Grey desolation sprawls like a great spot eaten by acid in the woods and fields."
+ 
+
+#POLARIS
+############################################
+ cosmichorror.19.title: "Sinister Star"
+ cosmichorror.19.desc.1: "The dark counsel of the Pole Star recounts its rhyme, and our seers chant aloud.\nSlumber, watcher, till the spheres,\nSix and twenty thousand years\nHave revolv'd, and I return\nTo the spot where now I burn.\nOther stars anon shall rise\nTo the axis of the skies;\nStars that soothe and stars that bless\nWith a sweet forgetfulness:\nOnly when my round is o'er\nShall the past disturb thy door."
+ cosmichorror.19.desc.2: "Hideous and unnatural, the newly discovered star creeps silently across the viewscreen. From within its churning flames a sea of a thousand eyes gaze back at us. A scientist stammers in protest. Yet, in the coming days, no research can explain this demonic pole star."
+ 
+ azathoth_section: "Azathothian"
+ chr_color_out_of_space_section: "The Colors"
+ Great: "Greatian"
+ Elder: "Eldaer"
+ pc_infernal_star: "Infernal Star"
+ pc_infernal_star_desc: "An infernal violent star with great potential"
+ shoggoth_workers: "Shoggoth Workers"
+ shoggoth_workers_desc: "The workers of the Shoggoth empire."
+ chr_color_out_of_space_section_2: "There are out of space entities in this system."
+ sc_void: "A grand void"
+ Debug: "Debug Me"
+ story.2.desc.followup.oldone: "Glassy remains of ancient beings are in the skies." 
+
+#NECRONOMICON
+#############################################
+#Beginning settings for the mod
+ story.2900.title: "Necronomicon Discovered"
+ story.2900.desc.1: "Through dreams most dark, your species has uncovered the location of a forbidden tome your people have loathsomely titled \"Necronomicon\". Within, it depicts rites of summoning the Old Ones."
+ story.2900.desc.2: "Following [Root.GetRulerTitle] [Root.GetRulerName]'s inexorable rise to power, the loathsomely titled \"Necronomicon\" has been claimed. As it falls into the outstretched vile clutches of [Root.GetRulerName], it is within their power to call other Old Ones to this plane of existence."
+ story.2900.desc.3: "The Necronomicon has gotten heavier as of late. Almost as if the number of pages has swelled. Upon further research, our leading experts have determined that new chapters have spontaenously appeared. These new chapters offer new fantastical rituals and properties that can be tapped into."
+ story.2900.option.1: "Host a grand summoning ritual"
+ story.2900.option.1.tooltip: "Brings forth Cthulhu, Dagon, Hastur, Nyarlathotep, Yog-Sothoth, The Elder Things, and the Yith."
+ story.2900.option.2: "Host a large summoning ritual"
+ story.2900.option.2.tooltip: "Brings forth up to five cosmic horrors."
+ story.2900.option.3: "Host a small summoning ritual"
+ story.2900.option.3.tooltip: "Brings forth up to three cosmic horrors."
+ story.2900.option.4: "Host a small vigil"
+ story.2900.option.4.tooltip: "Cosmic Horror events will play out in the future, but none of the Old Ones or Outer Gods will arise as nations."
+ story.2900.option.5: "Destroy it"
+ story.2900.option.5.tooltip: "Nothing happens... for now."
+ story.2900.option.6: "Hold another ritual"
+ story.2900.option.6.tooltip: "Enables Cosmic Horror Events."
+ story.2900.option.7: "Destroy the book"
+ story.2900.option.7.tooltip: "Nothing happens... for now."
+
+#STORY DISCOVERY
+# story.1.oldone_name: "Contact Report: Simple Forms of Life"
+ story.1.desc.oldone: "The microscopic lifeforms sprout wings, grow luminous eyes, and then suddenly shrivel and burn as [Root.GetLeaderName] glares with the intensity of a star at the insignificant form of life. [Root.GetName] have begun to see simplistic organisms in extraterrestrial studies, however, the Old One among them creates an aura that makes all species, including [Root.GetName] feel equally as infinitely insignificant for such small studies."
+
+# story.2.oldone_name: "Contact Report: Deep Space Dwellers"
+ story.2.desc.oldone: "From the abyss, other species call out in the vacuum of deep space. [Root.GetRulerTitle] [Root.GetRulerName] senses their vitae churning in alien carapaces, and upon gazing at their ability to sail through the cosmos, [Root.GetRulerName] recalls a memory of flying through the stars, and with that memory several of your species have grown solar sailing wings and their lungs have twisted into extraterrestrial organs capable of unfathomable processes. "
+ story.2.desc.oldone.followup: "When your solar sailors attempted to fly into space, they had done so at their own peril. Their glassed remains now orbit the skies of [Root.Capital.GetName] at night. [Root.GetRulerTitle] [Root.GetRulerName] has forgotten them. Despite this dark turn, the following night, their remains had attracted the space dwellers, and [Root.GetName] tranquilized and apprehended \"living\" specimens for research as the cracked glass eyes of their once-kin drifted aimlessly amongst the stars."
+
+#### WIP
+story.3.oldone_name: "Contact Report: Planetary Animalia"
+story.3.desc.oldone: "The [Root.GetName] is abuzz with news of the alien life found by the [From.GetName].\n\nWhile hardly intelligent by [Root.GetSpeciesAdj] standards, the fascinating beings defy easy classification and hint at the immense complexities and possibilities of the universe."
+story.3.desc.oldone.followup: "Following previous reports on alien life, [Root.GetSpeciesAdj] xeno-biologists are pleased to learn to complex life forms that appear not too different from what we would find on [Root.Capital.GetName].\n\nThe beings still defy easy classification and hardly possess anything more than purely animal instincts, but their existence does indicate that some patterns of life are indeed universal."
+
+story.4.oldone_name: "Contact Report: Pre-Sentient Beings"
+story.4.desc.oldone: "The [Root.GetName] is abuzz with news of the alien beings encountered by the [From.GetName] some time ago.\n\nTheir near-intelligence is fascinating, and it is sobering to realize that while the [Root.GetName] may only just have made its entrance on the galactic stage, we have already come a long way."
+story.4.desc.oldone.followup: "Following previous discoveries of lower forms of life, the [Root.GetSpeciesAdj] capital receives news of the [From.GetFleetName]'s observations of beings with impressive, if latent, cognitive capabilities and great evolutionary potential.\n\nScience Officer [From.GetLeaderName]'s report is received with marked enthusiasm."
+
+story.5.oldone_name: "Contact Report: Remnants"
+story.5.desc.oldone: "The [Root.GetName] is abuzz with news of the alien remnants studied by the [From.GetFleetName].\n\nThese leavings are considered definitive proof of intelligent, purposeful alien activity at some point in the past - we may still be alone now, but we are at least not the first to be so."
+story.5.desc.oldone.followup: ""Intelligent life taunts with pointed absence" reads a popular newsnet post on [Root.Capital.GetName]. The people of the [Root.GetName] are apparently finding some humor in the fact that lower forms of alien life are now a matter of public record, but potential equals from other stars continue to elude us.\n\nScience Officer [From.GetLeaderName]'s report on the traces found on [From.From.GetName] seemingly only add an ironic twist to the situation."
+
+story.6.oldone_name: "Contact Report: Primitives"
+story.6.desc.oldone: "The [Root.GetName] is abuzz with news of the primitive alien civilization found by our fleets.\n\nThey may not be capable of space-flight, but the aliens of the [From.From.GetName] are quantifiably intelligent and their society shows all the hallmarks of a moderately advanced culture."
+story.6.desc.oldone.followup5: "The scientific community on [Root.Capital.GetName] is excited to receive the report on intelligent alien life.\n\nThey may not be capable of space-flight, but the aliens of the [From.From.GetName] are quantifiably intelligent and their society shows all the hallmarks of a moderately advanced culture. Prominent xenologists note that this is an excellent opportunity to study a society perhaps not unlike the ones we have previously only found ancient remains of."
+story.6.desc.oldone.followup4: "The report on a primitive culture is welcomed by [Root.GetSpeciesAdj] researchers, following previous discoveries relating to pre-sentient species.\n\nAs far as we are aware the [Root.GetName] is the first civilization to take to the stars, but it is fascinating to learn that some other cultures may only be a few millennia, or possibly even centuries, behind."
+story.6.desc.oldone.followup123: "Effectively capping off previous discoveries of lower forms of life, the report on the primitive aliens, the [From.From.GetName], encountered by our fleets has reignited interest in the xenological sciences on [Root.Capital.GetName], previously considered a largely theoretical field."
+
+#The Old Ones discover other races
+ story.7.desc.oldone: "Morbid appendages beyond count begin to quiver in darkness. Eyes pop and bulge in discord to catch light of long-dead stars. Suddenly they focus with gushing awareness. Grotesque horrors of [Root.Capital.GetName] taste the fear of plyable-minded creatures from across the void in a shared instant of violent clarity. These are the first mortals to meet the [Root.GetName]. Yet [Root.GetRulerTitle] [Root.GetRulerName] looms over all in dreams to come."
+ story.7.desc.oldonefollowup6: "Cancerous intelligence streaks across stars that belong only to [Root.GetName].\n\n. Shadows gather around [Root.Capital.GetName]. Saliva drools from puss-ridden terrors. [Root.GetRulerTitle] [Root.GetRulerName] worshippers prepare their heinous instruments in anticipation of sacrifices to come."
+ story.7.desc.oldonefollowup12345: "At once, a strong vision floods our people with streams of colors and vibrations of a foreign starship with sophisticated engines wailing on foreign worlds. An ordinary pilot panics mid-flight. Throwing open its cockpit door, in an instant, their blood and eyes turn to glass in the abyss."
+ 
+#Another race discovers an Old One
+ action.1.desc_6969: "[Root.GetName] have known hideous things, yet to gaze upon this creature hints at a constitution of unknown infinities. It identifies itself by projecting a burning symbol into the minds of all present in your diplomacy room. [contact_empire.GetSpeciesName]. This ambassadorial abomination of the abyss' visage lies under a shadow of a far greater -thing- looming. Ancient syllables fall from this queer chasm between dimensions. You and all your diplomats mouth the name, '[contact_empire.GetRulerName]'."
+ 
+ ###############
+ # Setup Strings
+ ###############
+ 
+ azathoth_tiny: "Azathoth (Tiny)"
+ azathoth_small: "Azathoth (Small)"
+ azathoth_medium: "Azathoth (M)"
+ azathoth_large: "Azathoth (L)"
+ azathoth_huge: "Azathth (XL)"
+ 
+ ###############
+ # Misc
+ ###############
+ 
+ god_azathoth: "Unknown"
+ god_azathoth_plural: "Unknown"
+ chr_color_out_of_space: "Colour Out of Space" 
+ chr_color_out_of_space_plural: "Colours Out of Space"
+ chr_color_out_of_space_pc: "Colour Out of Space"
+ chr_color_out_of_space_pc_plural: "Colour Out of Space"
+CHR_INSULT_ACCEPT_HOSTILE: "$CHR_SILENCE$"
+AI_STRIKE_CRAFT_1: "AI Strike Craft"
+OBSERVATORY_1: "Observatory"
+OBSERVATORY_2: "Observatory"
+OBSERVATORY_3: "Observatory"
+OBSERVATORY_4: "Observatory" 
+PLANET_KILLER_1: "Planet Killer"

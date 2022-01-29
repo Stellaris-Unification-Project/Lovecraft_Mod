@@ -1,0 +1,35 @@
+site_effigy = {
+	desc = effigy_digsite_desc
+	picture = GFX_evt_city_ruins
+	stages = 3
+	max_instances = 1
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_F1
+		event = action_strange_effigy.2
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_F2
+		event = action_strange_effigy.3
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_F3
+		event = action_strange_effigy.4
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}

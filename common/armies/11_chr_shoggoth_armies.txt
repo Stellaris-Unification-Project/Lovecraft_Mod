@@ -1,0 +1,73 @@
+# Shoggoth Armies
+
+chr_shoggoth_army = {
+	damage = 1.5
+	morale_damage = 4
+	health = 1.5
+	morale = 1.0
+	war_exhaustion = 1
+	time = 360
+	icon = GFX_army_type_xenomorph
+	has_species = no
+	resources = {
+		category = armies
+		cost = {
+			minerals = 125
+			energy = 25
+		}
+
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	prerequisites = { "chr_tech_shoggoth_warriors" }
+}
+
+chr_worm_army = {
+	damage = 2.5
+	morale_damage = 3
+	health = 3
+	morale = 2
+	war_exhaustion = 1
+	time = 360
+	icon = GFX_army_type_xenomorph
+	has_species = no
+	resources = {
+		category = armies
+		cost = {
+			minerals = 50
+			energy = 70
+		}
+
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	prerequisites = { "chr_tech_weaponized_wormspeak_chants" }
+}
+
+chr_cosmic_worms = {
+	damage = 3
+	morale_damage = 2
+	health = 5
+	morale = 99
+	war_exhaustion = 2
+	time = 360
+	icon = GFX_army_type_xenomorph
+	has_species = no
+	resources = {
+		category = Armies
+		cost = {
+			minerals = 50
+			energy = 25
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+	prerequisites = { 
+		chr_tech_cosmic_worms
+	}
+}

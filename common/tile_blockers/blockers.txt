@@ -1,0 +1,20 @@
+### SPECIAL
+
+tb_blasted_heath = {
+	time = 100
+	cost = {
+		energy = 50
+		minerals = 50
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+	
+	adjacency_bonus = {
+		#resource_society_research_add = 2
+		#resource_physics_research_add = 2
+	}
+}

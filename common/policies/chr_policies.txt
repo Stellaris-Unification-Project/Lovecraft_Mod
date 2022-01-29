@@ -1,0 +1,45 @@
+chr_color_policy = {
+
+	potential = {
+		has_technology = chr_tech_coos_weapon_1
+	}
+
+	option = {
+		name = "color_outlawed"
+
+		potential = { }
+
+		valid = {
+		}
+
+		policy_flags = {
+			color_outlawed
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1
+			}
+		}		
+	}
+
+	option = {
+		name = "color_terrorism"
+
+		potential = { }
+		
+		valid = {		
+		}
+
+		policy_flags = {
+			color_terrorism
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}		
+	}
+}
+

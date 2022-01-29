@@ -1,0 +1,472 @@
+########## POWER CORE
+utility_component_template = {
+	key = "CLOUD_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = 1030
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 148
+			sr_dark_matter = 1
+		}
+		upkeep = {
+			energy = 0.37
+			alloys = 0.037
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+utility_component_template = {
+	key = "CLOUD_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = 800
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 112
+		}
+		upkeep = {
+			energy = 0.28
+			alloys = 0.028
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	upgrades_to = "CLOUD_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+utility_component_template = {
+	key = "CLOUD_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = 620
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 88
+		}
+		upkeep = {
+			energy = 0.22
+			alloys = 0.022
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	upgrades_to = "CLOUD_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+utility_component_template = {
+	key = "CLOUD_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = 480
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 68
+		}
+		upkeep = {
+			energy = 0.17
+			alloys = 0.017
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	upgrades_to = "CLOUD_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+utility_component_template = {
+	key = "CLOUD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = 360
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 52
+		}
+		upkeep = {
+			energy = 1.60
+			alloys = 0.16
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	upgrades_to = "CLOUD_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+utility_component_template = {
+	key = "CLOUD_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = 280
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 40
+		}
+		upkeep = {
+			energy = 1.60
+			alloys = 0.16
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	upgrades_to = "CLOUD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+####THRUSTERS
+@cost1 = 3
+@cost2 = 6
+@cost3 = 9
+@cost4 = 12
+@cost5 = 15
+
+@power_1 = -10
+@power_2 = -15
+@power_3 = -20
+@power_4 = -25
+@power_5 = -30
+utility_component_template = {
+	key = "CLOUD_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost1
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	upgrades_to = "CLOUD_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+utility_component_template = {
+	key = "CLOUD_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost2
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 5
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	upgrades_to = "CLOUD_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+utility_component_template = {
+	key = "CLOUD_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost3
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 10
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	upgrades_to = "CLOUD_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+utility_component_template = {
+	key = "CLOUD_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost4
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 15
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	upgrades_to = "CLOUD_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+utility_component_template = {
+	key = "CLOUD_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @power_5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost4
+			sr_dark_matter = 1
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 20
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+####################
+# 'LINE' COMPUTERS #
+####################
+@cost0 = 0
+@cost1 = 5
+@cost2 = 10
+@cost3 = 20
+
+@power0 = -5
+@power1 = -10
+@power2 = -15
+@power3 = -25
+utility_component_template = {
+	key = "COMBAT_COMPUTER_CLOUD_BASIC"
+	size = small
+	icon = "GFX_ship_part_computer_line_basic"
+	icon_frame = 1
+	power = @power1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost1
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "COMBAT_COMPUTER_LINE_ADVANCED"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_accuracy_add = 5
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_CLOUD_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_line_advanced"
+	icon_frame = 1
+	power = @power2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost2
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	prerequisites = { "tech_combat_computers_2" }
+	upgrades_to = "COMBAT_COMPUTER_LINE_SAPIENT"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_accuracy_add = 10
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_CLOUD_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_computer_line_sapient"
+	icon_frame = 1
+	power = @power3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost3
+		}
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space star_eater }
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	prerequisites = { "tech_combat_computers_3" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_accuracy_add = 20
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_CLOUD_AUTONOMOUS"
+	size = small
+	icon = "GFX_ship_part_computer_line_sapient"
+	icon_frame = 1
+	power = @power3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost3
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	prerequisites = { "tech_combat_computers_autonomous" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_accuracy_add = 20
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_CLOUD_PRECOG"
+	size = small
+	icon = "GFX_ship_part_computer_line_precog"
+	icon_frame = 1
+	power = @power3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost3
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { chr_color_out_of_space_pc chr_color_out_of_space }
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	prerequisites = { "tech_precognition_interface" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_accuracy_add = 15
+		ship_tracking_add = 10
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}

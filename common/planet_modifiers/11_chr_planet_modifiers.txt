@@ -1,0 +1,7 @@
+pm_shoggoth_workers = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	
+	modifier = "shoggoth_workers"
+}

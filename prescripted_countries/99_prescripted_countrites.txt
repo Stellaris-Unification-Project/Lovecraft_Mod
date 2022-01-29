@@ -1,0 +1,519 @@
+## Cosmic Horrors
+"Cthulhi Empire"
+={
+	ship_prefix="ISS"
+	species={
+		class="PLA_CHR"
+		portrait="cthulhu"
+		name="Cthulhi"
+		plural="Cthulhi"
+		adjective="Cthulhian"
+		name_list="PLA_CHR"
+		gender=not_set
+		trait="chr_trait_cosmic_horrors"
+		trait="chr_trait_strange_aeons"
+		trait="trait_slow_breeders"
+		species_bio = "On this planet of space-age intelligent life-forms, Cthulhu, dead and dreaming, awakes. Within hours, the oceans boil. The mentally insane are twisted into blashemic monstrosities, and normal individuals turn to repeatedly attempt suicide over and over again. Within days, as billions lose their sanity, things from graves return to life deformed and muttering ancient words and syllables. Tentacles sprout from the ground, and all they touch are twisted in their influence. Within a week, millions die as the species turns upon itself in its hunger and delerium. As the last of the species transforms into a froathing pool of slime, the non-euclidean architecture of the Great Old Ones rises from the crust of the world and the Star-Spawn rise from the spires."
+	}
+	name="Cthulhi Empire"
+	adjective="Cthulhian"
+	authority="auth_imperial"
+	government="gov_divine_empire"
+	planet_name="Vhoorl"
+	planet_class="pc_continental"
+	system_name="Twenty-Third Nebula"
+	initializer="chr_cthulhu_system"
+	graphical_culture="cosmichorrors_01"
+	city_graphical_culture="cosmichorrors_01"
+	empire_flag={
+		icon={
+			category="cosmichorrors"
+			file="chr_9_flag.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"green"
+			"dark_teal"
+			"black"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Hnarqu"
+		portrait="cthulhu_green1"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="aquatics_room"
+	spawn_enabled=yes
+	ethic="ethic_authoritarian"
+	ethic="ethic_fanatic_spiritualist"
+	civics={
+		"civic_beacon_of_madness"
+		"civic_imperial_cult"
+	}
+	origin="origin_spawn_of_an_old_one"
+}
+"Holy Unspoken Mandate"
+={
+	ship_prefix="ISS"
+	species={
+		class="PLA_CHR"
+		portrait="hastur"
+		name="Unspoken"
+		plural="Unspoken"
+		adjective="Unspoken"
+		name_list="PLA_CHR"
+		gender=not_set
+		trait="chr_trait_cosmic_horrors"
+		trait="trait_traditional"
+		trait="trait_quick_learners"
+		trait="trait_intelligent"
+		species_bio = "From distant, long-dead stars, ripples of violence feed a current in a hidden infinity that is uniquely belonging to old gods. On this occasion, it is the extinction of a vast peaceful civilization transformed into mad cannibals by a weaponized disease. Mangled bodies litter a dozen crumbling worlds. Innocents leap from the tallest spires to meet their landing in the afterlife. Children are ravenously devoured in their beds by their own mothers.These streams of violence flow into entropy personified. This violence now births the Great Old One Hastur's children like a great retching upon the surface of Carcosa. The blood-curdling cries of the space-faring monsters, the Byakhee, reverberate in the air as a new Yellow King is crowned to spread The Yellow Sign."
+	}
+	secondary_species={
+		class="MAM"
+		portrait="mam14"
+		name="Qell'Nudar"
+		plural="Qell'Nudar"
+		adjective="Qell'Nudaran"
+		name_list="PLA_CHR"
+		gender=not_set
+		trait="trait_thrifty"
+		trait="trait_nonadaptive"
+		trait="trait_ingenious"
+	}
+	name="Holy Unspoken Mandate"
+	adjective="Unspoken"
+	authority="auth_democratic"
+	government="gov_theocratic_republic"
+	planet_name="Carcosa"
+	planet_class="pc_continental"
+	system_name="Aldebaran"
+	initializer=""
+	graphical_culture="arthropoid_01"
+	city_graphical_culture="arthropoid_01"
+	empire_flag={
+		icon={
+			category="cosmichorrors"
+			file="flag_chr_5.dds"
+		}
+		background={
+			category="backgrounds"
+			file="horizontal_stripe.dds"
+		}
+		colors={
+			"teal"
+			"green"
+			"black"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Basatan"
+		portrait="hastur_plain"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_evangelizing_zealots_room"
+	spawn_enabled=yes
+	ethic="ethic_xenophile"
+	ethic="ethic_fanatic_spiritualist"
+	civics={
+		"civic_cutthroat_politics"
+		"civic_meritocracy"
+	}
+	origin="origin_carcosa"
+}
+"Deep One Galactic League"
+={
+	ship_prefix="ISS"
+	species={
+		class="PLA_CHR"
+		portrait="dagon"
+		name="Deep One"
+		plural="Deep Ones"
+		adjective="Deep Onan"
+		name_list="AQUATIC3"
+		gender=not_set
+		trait="trait_thrifty"
+		trait="trait_slow_breeders"
+		trait="trait_traditional"
+		trait="trait_strong"
+		species_bio = "Governments of Earth ceaselessly plundered underwater cities and slaughtered the Deep Ones. For centuries their kind had bided their time. Given to their own devices, humans were to destroy themselves.Then that inhuman, defeaning, world-ending crack dyed the world with indigo pools that crashed and swathed over man and monster alike. Countless frantic voices called out as bodies crunched under the weight of unfathomable waves. The last human being's lungs flooded. Alien silence reigned. Black skies stormed. Land vanished. The void below thrived with kingdoms most foul.Father Dagon does not rise, but the world of dead men falls beneath him. The age of the Deep Ones has begun."
+	}
+	name="Deep One Galactic League"
+	adjective="Deep Onan"
+	authority="auth_democratic"
+	government="gov_direct_democracy"
+	planet_name="Earth"
+	planet_class="pc_continental"
+	system_name="Sol"
+	initializer="sol_system_initializer"
+	graphical_culture="cosmichorrors_01"
+	city_graphical_culture="avian_01"
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_2.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripes.dds"
+		}
+		colors={
+			"burgundy"
+			"dark_teal"
+			"black"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Maharsakkun"
+		portrait="dagon_plain"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_migrating_flock_room"
+	spawn_enabled=yes
+	ethic="ethic_fanatic_xenophobe"
+	ethic="ethic_materialist"
+	civics={
+		"civic_environmentalist"
+		"civic_functional_architecture"
+	}
+	origin="origin_humans_defeated"
+}
+"United Elder Thing Assembly"
+={
+	ship_prefix="ISS"
+	species={
+		class="PLA_CHR"
+		portrait="nyarlathotep"
+		name="Elder Thing"
+		plural="Elder Things"
+		adjective="Elder Thing"
+		name_list="PLA_CHR"
+		gender=not_set
+		trait="trait_slow_breeders"
+		trait="trait_decadent"
+		trait="chr_trait_strange_aeons"
+		trait="trait_wasteful"
+		species_bio = "Visions of stone cities scattered to ruin fill the exhibition hall in the old museum. Reflecting upon the past, the Elder Things' numerous appendages hang solemnly in mourning on a day of rememberence. Never again would they attempt to mold life from inorganic matter so carelessly as they had with the shoggoths. Framed poetry depicted how colonization of other worlds through solar sailing had failed as the shoggoths consumed scientists.Carved statues familiarize the visitors with the The Great Resurgence. A massive model of a sort of hole boring technology that pierced the ether looms above. A portrait with a grand epic-quality depicts the few survivors bursting through a cosmic portal only to gape in awe at a new three-sunned skyline. Your ruler paces in the museum with his barrel-shaped consorts, contempating the future of his species."
+	}
+	name="United Elder Thing Assembly"
+	adjective="Elder Thing"
+	authority="auth_oligarchic"
+	government="gov_executive_committee"
+	planet_name="Dead Shores"
+	planet_class="pc_continental"
+	system_name="White Waves"
+	initializer=""
+	graphical_culture="fungoid_01"
+	city_graphical_culture="cosmichorrors_01"
+	empire_flag={
+		icon={
+			category="cosmichorrors"
+			file="flag_chr_3.dds"
+		}
+		background={
+			category="backgrounds"
+			file="horizontal.dds"
+		}
+		colors={
+			"grey"
+			"dark_purple"
+			"black"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Nctolhu"
+		portrait="nyarlathotep_blue"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_spiritual_seekers_room"
+	spawn_enabled=yes
+	ethic="ethic_egalitarian"
+	ethic="ethic_fanatic_materialist"
+	civics={
+		"civic_efficient_bureaucracy"
+		"civic_mining_guilds"
+	}
+	origin="origin_galactic_doorstep"
+}
+"Empire of Yith"
+={
+	ship_prefix="ISS"
+	species={
+		class="PLA_CHR"
+		portrait="yith"
+		name="Yith"
+		plural="Yith"
+		adjective="Yith"
+		name_list="PLA_CHR"
+		gender=not_set
+		trait="trait_repugnant"
+		trait="chr_trait_shadows_out_of_time"
+		species_bio = "A deluge of amnesia has recently washed the collective minds of the Yith, leaving a large gap of memory between the Polyp Wars and the Great Migration. How the councils cleared the path to the new world will forever remain a mystery to the common Yith.What is clear, however, is the severe limitation of powers that has come with these recent events. The ability to possess other minds has become limited and clunky. As researchers frantically search for the root of the problem, the Great Race of Yith faces its greatest challenge yet -- survival."
+	}
+	name="Empire of Yith"
+	adjective="Yith"
+	authority="auth_imperial"
+	government="gov_martial_empire"
+	planet_name="Pnakotus"
+	planet_class="pc_arctic"
+	system_name="Yith"
+	initializer=""
+	graphical_culture="avian_01"
+	city_graphical_culture="cosmichorrors_01"
+	empire_flag={
+		icon={
+			category="ornate"
+			file="flag_ornate_17.dds"
+		}
+		background={
+			category="backgrounds"
+			file="double_hemispheres.dds"
+		}
+		colors={
+			"light_orange"
+			"burgundy"
+			"black"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Lexur'iga-serr'roth"
+		portrait="yith_grey"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="gilded_room"
+	spawn_enabled=yes
+	ethic="ethic_fanatic_militarist"
+	ethic="ethic_spiritualist"
+	civics={
+		"civic_functional_architecture"
+		"civic_warrior_culture"
+	}
+	origin="origin_far_future"
+}
+"Vhixh Republic"
+={
+	ship_prefix="ISS"
+	species={
+		class="PLA_CHR"
+		portrait="elderthing"
+		name="Vhixh"
+		plural="Vhixhes"
+		adjective="Vhixh"
+		name_list="PLA_CHR"
+		gender=not_set
+		trait="trait_extremely_adaptive"
+		trait="chr_trait_cosmic_horrors"
+		species_bio = "The Vhixh had toiled tirelessly after achieving independence from their creators, and through their many-limbed protoplasmic spantaneous organ-spawning forms, they also freed the last endevour of their founding species -- an imprisoned summoned Avatar. Upon its arrival, the form so resembled the Vhixh that they took it as their personal savior for the times to come. It welcomed them to the Gate. The Vhixh understood that it was the Key to all things."
+	}
+	name="Vhixh Republic"
+	adjective="Vhixh"
+	authority="auth_democratic"
+	government="gov_theocratic_republic"
+	planet_name="Pnakotus"
+	planet_class="pc_continental"
+	system_name="Solarius"
+	initializer=""
+	graphical_culture="arthropoid_01"
+	city_graphical_culture="cosmichorrors_01"
+	empire_flag={
+		icon={
+			category="cosmichorrors"
+			file="flag_chr_5.dds"
+		}
+		background={
+			category="backgrounds"
+			file="inverted_v.dds"
+		}
+		colors={
+			"light_orange"
+			"brown"
+			"orange"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Byatis"
+		portrait="elderthing"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="default_room"
+	spawn_enabled=yes
+	ethic="ethic_xenophile"
+	ethic="ethic_fanatic_spiritualist"
+	civics={
+		"civic_acolytes_to_the_worms"
+		"civic_unethical_scientists"
+	}
+	origin="origin_default"
+}
+"Hunting Horror Star Authority"
+={
+	ship_prefix="ISS"
+	species={
+		class="PLA_CHR"
+		portrait="migo"
+		name="Hunting Horror"
+		plural="Hunting Horrors"
+		adjective="Hunting Horroran"
+		name_list="PLA_CHR"
+		gender=not_set
+		trait="chr_trait_cosmic_horrors"
+		trait="trait_adaptive"
+		trait="trait_rapid_breeders"
+		species_bio = "After losing so many to the great line that followed in the wake of Nyarlathotep, witchhunts ensued to destroy the great pharoah. Upon losing one of his avatars to the machinations of the native species, Nyarlathotep rose up from its own ruin a returned deity.Bored of the creatures that inhabited the world, within the hour Nyarlathotep summoned the hunting horrors from across time and space. Teeth, wings, and serpentine fury tore into the innocents and guilty alike -- tearing the world's population asunder."
+	}
+	name="Hunting Horror Star Authority"
+	adjective="Hunting Horroran"
+	authority="auth_dictatorial"
+	government="gov_military_dictatorship"
+	planet_name="Sharnoth"
+	planet_class="pc_tundra"
+	system_name="Beyond"
+	initializer=""
+	graphical_culture="cosmichorrors_01"
+	city_graphical_culture="cosmichorrors_01"
+	empire_flag={
+		icon={
+			category="ornate"
+			file="flag_ornate_10.dds"
+		}
+		background={
+			category="backgrounds"
+			file="pattern_01.dds"
+		}
+		colors={
+			"pink"
+			"dark_green"
+			"black"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Nctosa"
+		portrait="migo"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_fanatic_purifier_room"
+	spawn_enabled=yes
+	ethic="ethic_fanatic_militarist"
+	ethic="ethic_spiritualist"
+	civics={
+		"civic_distinguished_admiralty"
+		"civic_cutthroat_politics"
+	}
+	origin="origin_spawn_of_an_old_one"
+}
+"Empire of Hydra Pyxidis"
+={
+	ship_prefix="ISS"
+	species={
+		class="PLA_CHR"
+		portrait="yog-sothoth"
+		name="Mi-Go"
+		plural="Mi-Go"
+		adjective="Mi-Go"
+		name_list="PLA_CHR"
+		gender=not_set
+		trait="trait_natural_physicists"
+		trait="chr_trait_abnormal_matter"
+		trait="chr_trait_disguised_horrors"
+		trait="trait_unruly"
+		species_bio = "Outwardly, the MiGo appear unknowable. Through otherwordly matter, they permeate into this galaxy and can, through great strain, modify their own coporeal structure to inhabit many worlds. As a ruler of this galactic colony, you understand the great purpose. Your species is but a small branch of the great outer dimensional empire. Prove your worth by exploiting the species of this galaxy. Their biology, minerals, and knowledge must be collected for the masters. Go forth and take sovereignty in their name."
+	}
+	name="Empire of Hydra Pyxidis"
+	adjective="Hydra Pyxidan"
+	authority="auth_imperial"
+	government="gov_theocratic_monarchy"
+	planet_name="Argo"
+	planet_class="pc_tropical"
+	system_name="Hydra Pyxidis"
+	initializer=""
+	graphical_culture="cosmichorrors_01"
+	city_graphical_culture="cosmichorrors_01"
+	empire_flag={
+		icon={
+			category="spherical"
+			file="flag_spherical_22.dds"
+		}
+		background={
+			category="backgrounds"
+			file="sinus.dds"
+		}
+		colors={
+			"indigo"
+			"purple"
+			"black"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Lloigor"
+		portrait="yog-sothoth_red"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_federation_builders_room"
+	spawn_enabled=yes
+	ethic="ethic_xenophile"
+	ethic="ethic_fanatic_spiritualist"
+	civics={
+		"civic_efficient_bureaucracy"
+		"civic_environmentalist"
+	}
+	origin="origin_spawn_of_an_old_one"
+}

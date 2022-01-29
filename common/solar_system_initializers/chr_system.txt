@@ -1,0 +1,2931 @@
+@distance = 50
+@base_moon_distance = 10
+
+#####################
+# PLAYER SYSTEMS
+#####################
+
+
+## Black Hole System
+chr_cthulhu_system = {
+	name = "Twenty Third Nebula"
+	class = "sc_black_hole"
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 50
+	}
+	
+	flags = { cthulhu_system cosmichorror_system }
+
+	usage = custom_empire
+	
+	planet = {
+		name = "The Wanderer"
+		count = 1
+		class = pc_black_hole
+		orbit_distance = 10
+		orbit_angle = 1
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	change_orbit = 10
+	
+	#Binary Black Hole
+	planet = {
+		name = "Infernal Twin"
+		count = 1
+		class = pc_black_hole
+		orbit_distance = -10
+		orbit_angle = 180
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Vhoorl"
+			class = ideal_planet_class
+			orbit_distance = 60
+			orbit_angle = 340
+			size = 20
+			starting_planet = yes
+			has_ring = no
+			entity = "continental_planet_01_entity"	
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			moon = {
+				name = "Vulis"
+				class = "pc_frozen"
+				size = 5
+				orbit_distance = 18
+				orbit_angle = 100
+				has_ring = no
+			}
+	}
+	
+	planet = {
+		count = { min = 3 max = 3 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1_first_colony"
+	}
+}
+
+## Hastur System
+chr_hastur_system = {
+	name = "Aldebaran"
+	class = "sc_m"
+	
+	usage = custom_empire
+	
+	flags = { hastur_system cosmichorror_system }
+	
+	planet = {
+		count = 1
+		class = pc_m_star
+		orbit_angle = 1
+		size = { min = 300 max = 300 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Carcosa"
+			class = ideal_planet_class
+			orbit_distance = 130
+			orbit_angle = 340
+			size = 20
+			starting_planet = yes
+			has_ring = no
+			entity = "continental_planet_01_entity"	
+			deposit_blockers = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			moon = {
+				name = "Damhe"
+				class = "pc_frozen"
+				size = 5
+				orbit_distance = 18
+				orbit_angle = 100
+				has_ring = no
+			}
+			moon = {
+				name = "Hali"
+				class = "pc_frozen"
+				size = 5
+				orbit_distance = 23
+				orbit_angle = 90
+				has_ring = no
+			}			
+				
+	}
+	
+	planet = {
+		count = { min = 3 max = 3 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1_first_colony"
+	}
+}
+
+## Elder Thing System
+chr_elderthing_system = {
+	name = "Hydra Pyxidis"
+	class = "rl_standard_stars"
+	
+	flags = { elderthing_system cosmichorror_system }
+	
+	usage = custom_empire
+	
+	planet = {
+		name = "Balaenoptera Pyxidis"
+		count = 1
+		class = pc_b_star
+		orbit_angle = 1
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	#change_orbit 30
+	
+	planet = {
+		name = "Asteroidea Pyxidis"
+		count = 1
+		class = pc_g_star
+		orbit_angle = 99
+		orbit_distance = 30
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	#change_orbit 40
+		
+	planet = {
+		name = "O'Rubescens Pyxidis"
+		count = 1
+		class = pc_m_star
+		orbit_angle = 120
+		orbit_distance = 30
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	planet = {
+		count = { min = 2 max = 2 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Ward"
+			class = ideal_planet_class
+			orbit_distance = 15
+			orbit_angle = 340
+			size = 20
+			starting_planet = yes
+			has_ring = no
+			entity = "continental_planet_01_entity"	
+			deposit_blockers = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+	
+	planet = {
+		count = { min = 1 max = 1 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1_first_colony"
+	}
+}
+
+#################
+# NPC Initializers
+#################
+
+## Black Hole System
+chr_cthulhu_system_npc = {
+	name = "Twenty Third Nebula"
+	class = "sc_black_hole"
+	flags = { cthulhu_system cosmichorror_system}
+	
+	max_instances = 1
+	usage_odds = 0	
+	
+	planet = {
+		name = "The Wanderer"
+		count = 1
+		class = pc_black_hole
+		orbit_distance = 10
+		orbit_angle = 1
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	change_orbit = 10
+	
+	#Binary Black Hole
+	planet = {
+		name = "Infernal Twin"
+		count = 1
+		class = pc_black_hole
+		orbit_distance = -10
+		orbit_angle = 180
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Vhoorl"
+			class = pc_continental
+			orbit_distance = 60
+			orbit_angle = 340
+			size = 20
+			has_ring = no
+			entity = "continental_planet_01_entity"	
+			deposit_blockers = none
+			modifiers = none
+			init_effect = {
+					create_species = {
+						name = "Cthulhi"
+						plural = "Cthulhi"
+						adjective = "Cthuvian"
+						class = "PLA_CHR"
+						portrait = "cthulhu"
+						homeworld = THIS
+						traits = {
+							trait = "chr_trait_cosmic_horrors"
+							trait = "chr_trait_strange_aeons"	
+						}
+					}
+					create_country = {
+						name = "Star-Spawn of Cthulhu"
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"
+							ethic = "ethic_xenophobe"	
+						}
+						name_list = "PLA_CHR"
+						ship_prefix = ""
+						type = default
+						#ftl = warp
+						#weapon = "tech_lasers_1"						
+						flag = {
+							icon={
+								category = "cosmichorrors"
+								file = "flag_chr_1.dds"
+								}
+								background={
+								category = "backgrounds"
+								file = "new_dawn.dds"
+								}
+							colors={
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+					}
+					last_created_country = {
+						set_graphical_culture = cosmichorrors_01
+						set_country_flag = cthulhu_1
+						set_country_flag = cosmichorrors_flag_1
+						set_country_flag = add_cthulhu
+					}
+					create_colony = {
+						owner = owner
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"
+							ethic = "ethic_xenophobe"
+						}
+					}
+					
+					#Defensive armies
+					create_army = {
+						name = random
+						owner = planet_owner
+						species = owner
+						type = "defense_army"					}
+					
+					create_army = {
+						name = random
+						owner = planet_owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = planet_owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = planet_owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = planet_owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = planet_owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = planet_owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = planet_owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = planet_owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					#Science Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = owner
+						create_ship = {
+							name = random
+							design = last_created_design
+							}
+						set_location = PREV							
+					}
+
+					#Construction Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = owner
+						create_ship = {
+							name = random
+							design = last_created_design
+							}
+						set_location = PREV							
+					}					
+					
+					#Defensive Fleet
+					create_fleet = {
+						name = "Legless Horrors" 
+					}
+					last_created_fleet = {
+						set_owner = owner
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}						
+						set_location = PREV
+					}
+					
+					#Spaceport
+					create_starbase = {
+						owner = contact_country
+						size = starbase_starport		
+					}
+
+					create_pop = {
+						species = owner
+						ethos = owner
+					}
+					create_pop = {
+						species = owner
+						ethos = owner
+					}
+					create_pop = {
+						species = owner
+						ethos = owner
+					}
+					create_pop = {
+						species = owner
+						ethos = owner
+					}
+						create_pop = {
+						species = owner
+						ethos = owner				
+				}
+			}		
+			}
+	}
+	
+	create_planet = {
+		class = rl_all_stars
+	}
+	
+	
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1"
+	#}
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1_first_colony"
+	#}
+
+
+## Hastur System
+chr_hastur_system_npc = {
+	name = "Aldebaran"
+	class = "sc_m"
+	
+	flags = { hastur_system cosmichorror_system }
+	max_instances = 1
+	usage_odds = 0	
+	
+	planet = {
+		count = 1
+		class = pc_m_star
+		orbit_angle = 1
+		size = { min = 300 max = 300 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Carcosa"
+			class = pc_continental
+			orbit_distance = 130
+			orbit_angle = 340
+			size = 20
+			#starting_planet = yes
+			has_ring = no
+			entity = "continental_planet_01_entity"	
+			deposit_blockers = none
+			modifiers = none
+
+			init_effect = {
+					create_species = {
+						name = "Unspoken"
+						plural = "Unspoken"
+						adjective = "Unspeakable"
+						class = "PLA_CHR"
+						portrait = "hastur_pop"
+						homeworld = THIS
+						traits = {
+							trait = "chr_trait_cosmic_horrors"
+							trait = "chr_trait_strange_aeons"	
+						}
+					}
+					prevent_anomaly = yes
+					create_country = {
+						name = "The Yellow Kingdom"
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"
+							ethic = "ethic_xenophobe"	
+						}
+						name_list = PLA_CHR
+						ship_prefix = ""
+						type = default
+						#ftl = warp
+						#weapon = "tech_lasers_1"						
+						flag = {
+							icon={
+								category = "cosmichorrors"
+								file = "flag_chr_4.dds"
+								}
+								background={
+								category = "backgrounds"
+								file = "new_dawn.dds"
+								}
+							colors={
+								"orange"
+								"orange"
+								"null"
+								"null"
+							}
+						}
+					}
+					last_created_country = {
+						set_graphical_culture = cosmichorrors_01
+						set_country_flag = hastur_1
+						set_country_flag = cosmichorrors_flag_1
+						set_country_flag = add_hastur
+					}
+					create_colony = {
+						owner = planet_owner
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"
+							ethic = "ethic_xenophobe"
+						}
+					}
+					
+					#Defensive armies
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					#Science Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = last_created_design
+							}
+						set_location = PREV							
+					}
+
+					#Construction Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV							
+					}					
+					
+					#Defensive Fleet
+					create_fleet = {
+						name = "Legless Horrors" 
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}						
+						set_location = PREV
+					}
+					
+					#Spaceport
+					create_starbase = {
+						owner = solar_system
+						size = starbase_starport				
+					}	
+					
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+				}
+			
+			moon = {
+				name = "Damhe"
+				class = "pc_frozen"
+				size = 5
+				orbit_distance = 18
+				orbit_angle = 100
+				has_ring = no
+			}
+			moon = {
+				name = "Hali"
+				class = "pc_frozen"
+				size = 5
+				orbit_distance = 23
+				orbit_angle = 90
+				has_ring = no
+			}			
+				
+	}
+	
+	#planet = {
+	#	count = { min = 3 max = 3 }
+	#	orbit_distance = 25
+	#	class = random_non_colonizable
+	#	orbit_angle = { min = 90 max = 270 }
+	#}
+	
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1"
+	#}
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1_first_colony"
+	#}
+}
+
+
+## Elder Thing System
+chr_elderthing_system_npc = {
+	name = "Hydra Pyxidis"
+	class = "rl_standard_stars"
+	
+	flags = { elderthing_system cosmichorror_system }
+	max_instances = 1
+	usage_odds = 0	
+	planet = {
+		name = "Balaenoptera Pyxidis"
+		count = 1
+		class = pc_b_star
+		orbit_angle = 1
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	#change_orbit 30
+	
+	planet = {
+		name = "Asteroidea Pyxidis"
+		count = 1
+		class = pc_g_star
+		orbit_angle = 99
+		orbit_distance = 30
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	#change_orbit 40
+		
+	planet = {
+		name = "O'Rubescens Pyxidis"
+		count = 1
+		class = pc_m_star
+		orbit_angle = 120
+		orbit_distance = 30
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	planet = {
+		count = { min = 2 max = 2 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Ward"
+			class = pc_ocean
+			orbit_distance = 15
+			orbit_angle = 340
+			size = 20
+			#starting_planet = yes
+			has_ring = no
+			entity = "ocean_planet_01_entity"	
+			deposit_blockers = none
+			modifiers = none
+			
+			init_effect = {
+					create_species = {
+						name = "Elder Thing"
+						plural = "Elder Things"
+						adjective = "Elder"
+						class = "PLA_CHR"
+						portrait = "elderthing"
+						homeworld = THIS
+						traits = {
+							
+							trait = "trait_slow_breeders"
+							trait = "trait_decadent"
+							trait = "chr_trait_strange_aeons"						
+						}
+					}
+					prevent_anomaly = yes
+					create_country = {
+						name = "The Society of Elder Things"
+						species = owner
+						ethos = {
+							ethic = "ethic_egalitarian"
+							ethic = "ethic_materialist"	
+						}
+						name_list = PLA_CHR
+						ship_prefix = ""
+						type = default
+						#ftl = warp
+						#weapon = "tech_lasers_1"						
+						flag = {
+							icon={
+								category = "cosmichorrors"
+								file = "flag_chr_8.dds"
+								}
+								background={
+								category = "backgrounds"
+								file = "circle.dds"
+								}
+							colors={
+								"red"
+								"dark_brown"
+								"null"
+								"null"
+							}
+						}
+					}
+					last_created_country = {
+						set_graphical_culture = fungoid_01
+						set_country_flag = elderthing_1
+						set_country_flag = cosmichorrors_flag_1
+						set_country_flag = add_elderthing
+					}
+					create_colony = {
+						owner = planet_owner
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"
+							ethic = "ethic_xenophobe"
+						}
+					}
+
+					#Defensive armies
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					#Science Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV
+					}
+
+					#Construction Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV
+					}					
+					
+					#Defensive Fleet
+					create_fleet = {
+						name = "Legless Horrors" 
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}						
+						set_location = PREV
+					}
+					
+					#Spaceport
+					create_starbase = {
+						owner = space_owner
+						size = starbase_starport			
+					}					
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+					}
+				}		
+			
+			moon = {
+				name = "Littlewit"
+				class = "pc_frozen"
+				size = 5
+				orbit_distance = 18
+				orbit_angle = 100
+				has_ring = no
+			}
+			moon = {
+				name = "Softly"
+				class = "pc_frozen"
+				size = 5
+				orbit_distance = 23
+				orbit_angle = 90
+				has_ring = no
+			}			
+				
+	}
+	
+	planet = {
+		count = { min = 1 max = 1 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1"
+	#}
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1_first_colony"
+	#}
+}
+
+
+### Dagon Sol System
+chr_dagon_system_npc = {
+	name = "Drowned Sol"
+	class = "sc_g"
+	flags = { dagon_system }
+	
+	max_instances = 1
+	usage_odds = 0
+
+	planet = {
+		name = "Sol"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Mercury"
+		class = "pc_molten"
+		orbit_distance = 40
+		orbit_angle = 15
+		size = 10
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Venus"
+		class = "pc_toxic"
+		orbit_distance = 20
+		orbit_angle = 125
+		size = 20
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Mouth of Dagon"
+		class = "pc_ocean"
+		orbit_distance = 20
+		orbit_angle = 120
+		size = 16
+		#starting_planet = yes
+		has_ring = no
+		entity = "ocean_planet"
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+					create_species = {
+						name = "Deep One"
+						plural = "Deep Ones"
+						adjective = "Deep"
+						class = "PLA_CHR"
+						portrait = "dagon"
+						homeworld = THIS
+						traits = {
+							
+							trait = "chr_trait_cosmic_horrors"
+							trait = "chr_trait_strange_aeons"						
+						}
+					}
+					prevent_anomaly = yes
+					create_country = {
+						name = "The Esoteric Order of Dagon"
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"
+							ethic = "ethic_xenophobe"	
+						}
+						type = default
+						name_list = PLA_CHR
+						ship_prefix = ""
+						#ftl = warp
+						#weapon = "tech_lasers_1"						
+						flag = {
+							icon={
+								category = "cosmichorrors"
+								file = "flag_chr_10.dds"
+								}
+								background={
+								category = "backgrounds"
+								file = "new_dawn.dds"
+								}
+							colors={
+								"indigo"
+								"dark_blue"
+								"null"
+								"null"
+							}
+						}
+					}
+					last_created_country = {
+						set_graphical_culture = cosmichorrors_01
+						set_country_flag = dagon_1
+						set_country_flag = cosmichorrors_flag_1
+						set_country_flag = add_dagon
+					}
+					create_colony = {
+						owner = planet_owner
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"
+							ethic = "ethic_xenophobe"
+						}
+					}
+
+					#Defensive armies
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					#Science Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV
+					}
+
+					#Construction Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV
+					}					
+					
+					#Defensive Fleet
+					create_fleet = {
+						name = "Legless Horrors" 
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}						
+						set_location = PREV
+					}
+					
+					#Spaceport
+					create_starbase = {
+						owner = space_owner
+						size = starbase_starport			
+					}						
+
+						create_pop = {
+							species = owner
+							ethos = owner
+											}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+					}
+				}
+	
+	planet = {
+		name = "Mars"
+		class = "pc_barren"
+		orbit_distance = 20
+		orbit_angle = 60
+		size = 15
+		has_ring = no
+		entity = "barren_planet_mars_entity"
+	}
+	
+	planet = {
+		name = "1 Ceres"
+		class = "pc_asteroid"
+		orbit_distance = 20
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		name = "2 Pallas"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		name = "3 Juno"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		name = "4 Vesta"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Jupiter"
+		class = "pc_gas_giant"
+		orbit_distance = 30
+		orbit_angle = -160
+		size = 35
+		has_ring = no
+		entity = "gas_giant_jupiter_entity"
+		change_orbit = 6
+		
+		moon = {
+			name = "Io"
+			class = "pc_molten"
+			size = 6
+			orbit_distance = 10
+			orbit_angle = 110
+			has_ring = no
+		}
+		moon = {
+			name = "Europa"
+			class = "pc_frozen"
+			size = 6
+			orbit_distance = 2.5
+			orbit_angle = 10
+			has_ring = no
+		}
+		moon = {
+			name = "Ganymede"
+			class = "pc_frozen"
+			size = 9
+			orbit_distance = 2.5
+			orbit_angle = 80
+			has_ring = no
+		}
+		moon = {
+			name = "Callisto"
+			class = "pc_frozen"
+			size = 7
+			orbit_distance = 2.5
+			orbit_angle = -155
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		name = "Saturn"
+		class = "pc_gas_giant"
+		orbit_distance = 20
+		orbit_angle = 170
+		size = 30
+		has_ring = yes
+		entity = "gas_giant_05_entity"
+		change_orbit = 7
+		
+		moon = {
+			name = "Titan"
+			class = "pc_frozen"
+			size = 8
+			orbit_distance = 12
+			orbit_angle = 320
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		name = "Uranus"
+		class = "pc_gas_giant"
+		orbit_distance = 20
+		orbit_angle = 125
+		size = 20
+		has_ring = no
+		entity = "gas_giant_03_entity"
+	}
+	
+	planet = {
+		name = "Neptune"
+		class = "pc_gas_giant"
+		orbit_distance = 20
+		orbit_angle = -195
+		size = 20
+		has_ring = no
+		entity = "gas_giant_02_entity"
+		change_orbit = 4
+		
+		moon = {
+			name = "Triton"
+			class = "pc_frozen"
+			size = 6
+			orbit_distance = 7
+			orbit_angle = 115
+			has_ring = no
+		}
+	}
+	
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }	
+	#	initializer = "sol_neighbor_t1"
+	#}
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }	
+	#	initializer = "sol_neighbor_t1_first_colony"
+	#}
+}
+
+
+## Yith System
+chr_yith_system_npc = {
+	name = "Yith"
+	class = "sc_a"
+	flags = { yith_system cosmichorror_system }
+	
+	max_instances = 1
+	usage_odds = 0	
+	
+	planet = {
+		count = 1
+		class = pc_a_star
+		orbit_angle = 1
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	change_orbit = 10
+	planet = {
+		count = 1
+		class = pc_a_star
+		orbit_distance = 10
+		orbit_angle = 1
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Pnakotus"
+		class = "pc_ocean"
+		orbit_distance = 20
+		orbit_angle = 120
+		size = 16
+		#starting_planet = yes
+		has_ring = no
+		entity = "ocean_planet"
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+					create_species = {
+						name = "Yith"
+						plural = "Yith"
+						adjective = "Yithian"
+						class = "PLA_CHR"
+						portrait = "yith"
+						homeworld = THIS
+						traits = {
+							
+							trait = "chr_trait_shadows_out_of_time"
+							trait = "trait_weak"
+							trait = "trait_repugnant"
+							trait = "trait_deviants"
+						}
+					}
+					create_country = {
+						name = "The Great Race of Yith"
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_materialist"							
+							ethic = "ethic_xenophile"
+						}
+						name_list = PLA_CHR
+						type = default
+						ship_prefix = ""
+						#ftl = warp
+						#weapon = "tech_lasers_1"						
+						flag = {
+							icon={
+								category = "cosmichorrors"
+								file = "flag_chr_11.dds"
+								}
+								background={
+								category = "backgrounds"
+								file = "new_dawn.dds"
+								}
+							colors={
+								"black"
+								"black"
+								"null"
+								"null"
+							}
+						}
+					}
+					last_created_country = {
+						set_graphical_culture = molluscoid_01
+						set_country_flag = yith_1
+						set_country_flag = cosmichorrors_flag_1
+						set_country_flag = add_yith
+					}
+					create_colony = {
+						owner = owner
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"
+							ethic = "ethic_xenophobe"
+						}
+					}
+
+					#Defensive armies
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					#Science Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV
+					}
+
+					#Construction Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV							
+					}					
+					
+					#Defensive Fleet
+					create_fleet = {
+						name = "Legless Horrors" 
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}						
+						set_location = PREV
+					}
+					
+					#Spaceport
+					create_starbase = {
+						owner = space_owner
+						size = starbase_starport				
+					}	
+
+						create_pop = {
+							species = owner
+							ethos = owner
+											}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+				}		
+			}
+	
+	planet = {
+		count = { min = 3 max = 3 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1"
+	#}
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1_first_colony"
+	#}
+}
+
+
+## Nyarlathotep
+chr_nyarlathotep_system_npc = {
+	name = "Sharnoth"
+	class = "sc_a"
+	flags = { yith_system cosmichorror_system }
+	
+	max_instances = 1
+	usage_odds = 0	
+	
+	planet = {
+		count = 1
+		class = pc_a_star
+		orbit_angle = 1
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Ebony Palace"
+		class = "pc_continental"
+		orbit_distance = 20
+		orbit_angle = 120
+		size = 16
+		#starting_planet = yes
+		has_ring = yes
+		entity = "cold_barren_planet"
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+					create_species = {
+						name = "Hunting Horror"
+						plural = "Hunting Horrors"
+						adjective = "Horror"
+						class = "PLA_CHR"
+						portrait = "huntinghorror"
+						homeworld = THIS
+						traits = {
+							
+							trait = "chr_trait_strange_aeons"
+							trait = "chr_trait_cosmic_horrors"
+						}
+					}
+					create_country = {
+						name = "The Crawling Chaos"
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"							
+							ethic = "ethic_xenophobe"
+						}
+						name_list = PLA_CHR
+						ship_prefix = ""
+						type = default
+						#ftl = warp
+						#weapon = "tech_lasers_1"						
+						flag = {
+							icon={
+								category = "cosmichorrors"
+								file = "flag_chr_13.dds"
+								}
+								background={
+								category = "backgrounds"
+								file = "new_dawn.dds"
+								}
+							colors={
+								"red"
+								"black"
+								"null"
+								"null"
+							}
+						}
+					}
+					last_created_country = {
+						set_graphical_culture = cosmichorrors_01
+						set_country_flag = nyarlathotep_1
+						set_country_flag = cosmichorrors_flag_1
+						set_country_flag = add_nyarlathotep
+					}
+					create_colony = {
+						owner = planet_owner
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"
+							ethic = "ethic_xenophobe"
+						}
+					}
+
+					#Defensive armies
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+
+					#Science Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV							
+					}
+
+					#Construction Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV							
+					}					
+					
+					#Defensive Fleet
+					create_fleet = {
+						name = "Legless Horrors" 
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}						
+						set_location = PREV
+					}
+					
+					#Spaceport
+					create_starbase = {
+						owner = space_owner
+						size = starbase_starport				
+					}						
+
+						create_pop = {
+							species = owner
+							ethos = owner
+											}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+		}
+	}
+	
+	planet = {
+		count = { min = 3 max = 3 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1"
+	#}
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1_first_colony"
+	#}
+}
+
+
+## Yog-Sothoth System
+chr_yog-sothoth_system_npc = {
+	name = "The Gate"
+	class = "sc_m"
+	flags = { yog-sothoth_system cosmichorror_system }	
+	max_instances = 1
+	usage_odds = 0
+	
+	planet = {
+		count = 1
+		class = pc_m_star
+		orbit_angle = 1
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "The Key"
+		class = "pc_continental"
+		orbit_distance = 20
+		orbit_angle = 120
+		size = 16
+		#starting_planet = yes
+		has_ring = yes
+		entity = "molten_planet"
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+					create_species = {
+						name = "Shoggoth"
+						plural = "Shoggoths"
+						adjective = "Shoggoth"
+						class = "PLA_CHR"
+						portrait = "shoggoth"
+						homeworld = THIS
+						traits = {
+							trait = "chr_trait_strange_aeons"
+							trait = "chr_trait_cosmic_horrors"
+						}
+					}
+					create_country = {
+						name = "The Gatekeepers of Yog-Sothoth"
+						type = default
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"							
+							ethic = "ethic_xenophobe"
+						}
+						name_list = PLA_CHR
+						ship_prefix = ""
+						#ftl = warp
+						#weapon = "tech_lasers_1"						
+						flag = {
+							icon={
+								category = "cosmichorrors"
+								file = "flag_chr_12.dds"
+								}
+								background={
+								category = "backgrounds"
+								file = "new_dawn.dds"
+								}
+							colors={
+								"black"
+								"black"
+								"null"
+								"null"
+							}
+						}
+					}
+					last_created_country = {
+						set_graphical_culture = cosmichorrors_01
+						set_country_flag = yog-sothoth_1
+						set_country_flag = cosmichorrors_flag_1
+						set_country_flag = add_yog-sothoth
+					}
+					create_colony = {
+						owner = planet_owner
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_spiritualist"
+							ethic = "ethic_xenophobe"
+						}
+					}
+
+					#Defensive armies
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					#Science Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV							
+					}
+
+					#Construction Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV							
+					}					
+					
+					#Defensive Fleet
+					create_fleet = {
+						name = "Legless Horrors" 
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}						
+						set_location = PREV
+					}
+					
+					#Spaceport
+					create_starbase = {
+						owner = space_owner
+						size = starbase_starport			
+					}					
+
+						create_pop = {
+							species = owner
+							ethos = owner
+											}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+					}
+			moon = {
+				count = { min = 0 max = 3 }
+				orbit_distance = 10
+				class = random_non_colonizable
+				orbit_angle = { min = 90 max = 270}
+			}
+				
+	}
+	
+	planet = {
+		count = { min = 3 max = 3 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1"
+	#}
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1_first_colony"
+	#}
+}
+
+## Mi-Go System
+chr_migo_system_npc = {
+	name = "Yeti"
+	class = "sc_g"
+	flags = { migo_system cosmichorror_system }	
+	max_instances = 1
+	usage_odds = 0
+	
+	planet = {
+		count = 1
+		class = pc_g_star
+		orbit_angle = 1
+		size = { min = 20 max = 20 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Migou"
+		class = "pc_continental"
+		orbit_distance = 20
+		orbit_angle = 120
+		size = 20
+		#starting_planet = yes
+		has_ring = yes
+		entity = "infested_planet"
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+					create_species = {
+						name = "Mi-Go"
+						plural = "Mi-Go"
+						adjective = "Mi-Go"
+						class = "PLA_CHR"
+						portrait = "migo"
+						homeworld = THIS
+						traits = {
+							trait = "chr_trait_disguised_horrors"
+							trait = "chr_trait_cosmic_horrors"
+						}
+					}
+					create_country = {
+						name = "Intergalactic Mi-Go Empire"
+						type = default
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_materialist"							
+							ethic = "ethic_xenophile"
+						}
+						name_list = PLA_CHR
+						ship_prefix = ""
+						#ftl = warp
+						#weapon = "tech_lasers_1"						
+						flag = {
+							icon={
+								category = "cosmichorrors"
+								file = "flag_chr_15.dds"
+								}
+								background={
+								category = "backgrounds"
+								file = "new_dawn.dds"
+								}
+							colors={
+								"black"
+								"black"
+								"null"
+								"null"
+							}
+						}
+					}
+					last_created_country = {
+						set_graphical_culture = cosmichorrors_01
+						set_country_flag = migo_1
+						set_country_flag = cosmichorrors_flag_1
+					}
+					create_colony = {
+						owner = planet_owner
+						species = owner
+						ethos = {
+							ethic = "ethic_fanatic_materialist"
+							ethic = "ethic_xenophile"
+						}
+					}
+
+					#Defensive armies
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					create_army = {
+						name = random
+						owner = owner
+						species = owner
+						type = "defense_army"
+					}
+					
+					#Science Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV							
+					}
+
+					#Construction Ship
+					create_fleet = {
+						name = random
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random
+							design = "last_created_design"
+							}
+						set_location = PREV							
+					}					
+					
+					#Defensive Fleet
+					create_fleet = {
+						name = "Legless Horrors" 
+					}
+					last_created_fleet = {
+						set_owner = space_owner
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}
+						create_ship = {
+							name = random 
+							design = last_created_design
+						}						
+						set_location = PREV
+					}
+					
+					#Spaceport
+					create_starbase = {
+						owner = space_owner
+						size = starbase_starport			
+					}					
+
+						create_pop = {
+							species = owner
+							ethos = owner
+											}
+						create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+											create_pop = {
+							species = owner
+							ethos = owner
+						}
+			}
+			
+			moon = {
+				count = { min = 0 max = 3 }
+				orbit_distance = 10
+				class = random_non_colonizable
+				orbit_angle = { min = 90 max = 270}
+			}
+				
+	}
+	
+	planet = {
+		count = { min = 3 max = 3 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1"
+	#}
+	#neighbor_system = {
+	#	distance = { min = 10 max = @distance }
+	#	initializer = "neighbor_t1_first_colony"
+	#}
+}
+
+#Oh shit
+azathoth_system_npc = {
+
+	name = "Azathoth"
+	class = "sc_black_hole"
+	#class = "sc_azathoth"
+	#asteroids_distance = 50	
+	
+	flags = { azathoth_home_system cosmichorror_system }
+
+	usage = misc_system_init
+	usage_odds = 0
+	max_instances = 1
+	
+	planet = {
+		name = "Dream World Kadath"
+		count = 1
+		class = pc_continental
+		orbit_distance = 1
+		orbit_angle = 1
+		size = 20
+		#starting_planet = yes
+		has_ring = yes
+		entity = "infested_planet_01_entity"
+		deposit_blockers = none
+		modifiers = none
+	}
+	
+	init_effect = {
+		create_ambient_object = {
+			type = "abandoned_ship_2_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "abandoned_ship_2_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "abandoned_ship_2_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "abandoned_ship_2_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "abandoned_ship_2_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "abandoned_ship_2_object"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+		create_ambient_object = {
+			type = "ancient_battlefield_object_nonselect"
+			location = solar_system
+		}
+	}
+
+	init_effect = {
+		create_azathoth_country = yes
+		random_system_planet = {
+			#limit = { is_planet_class = pc_gas_giant }
+			save_event_target_as = kadeth
+			event_target:azathoth_country = {
+				save_event_target_as = azathoth_country2
+				create_fleet = { name = "The Blind Idiot God" }
+				last_created_fleet = {
+					set_owner = event_target:azathoth_country
+					set_fleet_stance = aggressive
+					set_fleet_flag = azathoth_fleet
+					set_aggro_range_measure_from = return_point
+					set_aggro_range = 0
+					create_ship = {
+						name = "Primal Chaos"
+						design = "Avatar of Azathoth"
+					}
+					set_location = event_target:kadeth
+					queue_actions = {
+						repeat = {
+							wait = {
+								duration = 999
+								random = 10
+							}
+						}
+					}
+					#queue_actions = {
+					#	repeat = {
+					#		find_random_system = {
+					#			trigger = {
+					#				id = azathoth.1.trigger.1
+					#				NOT = {
+					#					has_star_flag = hostile_system
+					#					has_star_flag = sanctuary_system
+					#				}
+					#				any_planet = {
+					#					is_planet_class = pc_gas_giant
+					#				}
+					#			}
+					#			found_system = {
+					#				move_to = this
+					#			}
+					#		}
+					#		find_closest_planet = {
+					#			trigger = {
+					#				id = azathoth.1.trigger.2
+					#				is_planet_class = pc_gas_giant
+					#			}
+					#			found_planet = {
+					#				move_to = this
+					#				orbit_planet = this
+					#				wait = {
+					#					duration = 20
+					#					random = 10
+					#				}
+					#			}
+					#		}
+					#	}
+					#}
+				}
+			}
+		}
+	}
+
+	
+}
+
+#Oh shit
+azathoth_destroyed_system = {
+
+	name = "Void"
+	class = sc_black_hole
+	#class = "sc_azathoth"
+	#asteroids_distance = 50	
+	
+	flags = { azathoth_destroyed_system }
+
+	usage = misc_system_init
+	usage_odds = 0
+
+}
+
+#Colour Out Of Space System
+colors_system_npc = {
+
+	name = "Luminous Nebula"
+
+	class = "rl_standard_stars"
+	
+	usage = misc_system_init
+	usage_odds = 0
+	max_instances = 1
+	flags = { color_system cosmichorror_system hostile_system }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}	
+	
+	planet = {
+		class = random_asteroid
+		orbit_distance = 0
+		count = { min = 5 max = 8 }
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2}
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5			
+		}
+	}
+	
+	change_orbit = 60
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = "pc_barren_cold"
+		size = { min = 10 max = 20 }
+	}
+
+	init_effect = {
+		create_color_country = yes
+		random_system_planet = {
+			limit = { is_star = yes }
+			save_event_target_as = colorhome_star
+			event_target:color_country = {
+				save_event_target_as = colorhome_owner
+				create_fleet = { name = "Stygian Spectrum" }
+				last_created_fleet = {
+					set_owner = event_target:color_country
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = return_point
+					set_aggro_range = 150
+					create_ship = {
+						name = "Stygian Blue"
+						design = "Color Entity"
+					}
+					create_ship = {
+						name = "Stygian Red"
+						design = "Color Entity"
+					}
+					create_ship = {
+						name = "Stygian Orange"
+						design = "Color Entity"
+					}
+					create_ship = {
+						name = "Self-Luminous Green"
+						design = "Color Entity"
+					}
+					set_location = event_target:colorhome_star
+				}
+				create_fleet = { name = "Hyperbolic Hues" }
+				last_created_fleet = {
+					set_owner = event_target:color_country
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = return_point
+					set_aggro_range = 150
+					create_ship = {
+						name = "Hyperbolic Red"
+						design = "Color Entity"
+					}
+					create_ship = {
+						name = "Hyperbolic Green"
+						design = "Color Entity"
+					}
+					create_ship = {
+						name = "Hyperbolic Yellow"
+						design = "Color Entity"
+					}
+					create_ship = {
+						name = "Self-Luminous Blue"
+						design = "Color Entity"
+					}
+					set_location = event_target:colorhome_star
+				}
+			}
+		}
+	}
+}
+
+
+## Polaris System
+chr_polaris_system = {
+	name = "Polaris"
+	class = sc_f
+	flags = { cosmichorror_system polaris_system }
+	usage = misc_system_init
+	max_instances = 1	
+	usage_odds = 0
+	
+	planet = {
+		name = "Polaris"
+		count = 1
+		class = pc_infernal_star
+		orbit_angle = 1
+		orbit_distance = 0
+		size = { min = 50 max = 50 }
+		has_ring = no
+	}
+		
+#	planet = {
+#		name = "Lomar"
+#		count = 1
+#		class = pc_black_hole
+#		orbit_distance = 10
+#		orbit_angle = 1
+#		size = { min = 20 max = 20 }
+#		has_ring = no
+#	}
+		
+#	planet = {
+#		name = "Olathoë"
+#		count = 1
+#		class = pc_black_hole
+#		orbit_distance = 10
+#		orbit_angle = 1
+#		size = { min = 20 max = 20 }
+#		has_ring = no
+#	}
+	
+	change_orbit = 60
+	
+#	#Binary Black Hole
+#	planet = {
+#		name = "Infernal Twin"
+#		count = 1
+#		class = pc_black_hole
+#		orbit_distance = -10
+#		orbit_angle = 180
+#		size = { min = 20 max = 20 }
+#		has_ring = no
+#	}
+	
+	planet = {
+		name = "Vhoorl"
+			class = ideal_planet_class
+			orbit_distance = 60
+			orbit_angle = 340
+			size = 20
+			starting_planet = yes
+			has_ring = no
+			entity = "continental_planet_01_entity"	
+			deposit_blockers = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				}		
+			moon = {
+				name = "Vulis"
+				class = "pc_frozen"
+				size = 5
+				orbit_distance = 18
+				orbit_angle = 100
+				has_ring = no
+			}
+	}
+	
+	planet = {
+		count = { min = 3 max = 3 }
+		orbit_distance = 25
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1_first_colony"
+	}
+}

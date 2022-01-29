@@ -1,0 +1,77 @@
+PLA_CHR = {
+	cthulhu = {
+		name = "Cthulhi"
+		plural = "Cthulhi"
+		home_planet = "Vhoorl"
+		home_system = "Twenty-Third Nebula"
+		name_list = "PLA_CHR"
+	}
+	hastur = {
+		name = "The Yellow Sign"
+		plural = "The Yellow Sign"
+		home_planet = "Carcosa"
+		home_system = "Aldebaran"
+		name_list = "PLA_CHR"
+	}
+	dagon = {
+		name = "Deep One"
+		plural = "Deep Ones"
+		home_planet = "Earth"
+		home_system = "Sol"
+		name_list = "PLA_CHR"
+	}
+	elderthing = {
+		name = "Elder Thing"
+		plural = "Elder Things"
+		home_planet = "Argo"
+		home_system = "Hydra Pyxidis"
+		name_list = "PLA_CHR"
+	}
+	shoggoth = {
+		name = "Shoggoth"
+		plural = "Shoggoths"
+		home_planet = "Earth"
+		home_system = "Sol"
+		name_list = "PLA_CHR"
+	}
+	yith = {
+		name = "Yith"
+		plural = "Yith"
+		home_planet = "Pnakotus"
+		home_system = "Solarius"
+		name_list = "PLA_CHR"
+	}
+	nyarlathotep = {
+		name = "Nyarlathotepite"
+		plural = "Nyarlathotepites"
+		home_planet = "Iltzarian"
+		home_system = "Evensided Circle"
+		name_list = "PLA_CHR"
+	}
+
+	migo = {
+		name = "Mi-Go"
+		plural = "Mi-Go"
+		home_planet = "Dead Shores"
+		home_system = "White Waves"
+		name_list = "PLA_CHR"
+	}
+	
+	huntinghorror = {
+		name = "Hunting Horror"
+		plural = "Hunting Horrors"
+		home_planet = "Carcosa"
+		home_system = "Aldebaran"
+		name_list = "PLA_CHR"
+	}	
+	
+	yog-sothoth = {
+		name = "Yog-Sothoth"
+		plural = "Yog-Sothoth"
+		home_planet = "Itztekian"
+		home_system = "Vilviarian"
+		name_list = "PLA_CHR"
+	}
+	
+	
+}

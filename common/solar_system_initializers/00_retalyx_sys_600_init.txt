@@ -1,0 +1,10 @@
+sys_600_init = {
+    name = "Azathoth"
+    class = rl_all_stars
+
+    planet = {
+        class = star
+        orbit_distance = 0
+        size = 20
+    }
+}

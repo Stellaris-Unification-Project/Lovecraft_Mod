@@ -1,0 +1,37 @@
+objectTypes = {
+
+	pdxparticle = {
+		name = "chr_infernal_star_entity_center_particle"
+		type = "chr_infernal_star_entity_center_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "chr_color_out_of_space_entity_center_particle"
+		type = "chr_color_out_of_space_entity_center_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "cloud_entity_death_particle"
+		type = "cloud_entity_death_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "chr_color_out_of_space_entity_arm_big_particle"
+		type = "chr_color_out_of_space_entity_arm_big_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "chr_color_out_of_space_entity_arm_small_particle"
+		type = "chr_color_out_of_space_entity_arm_big_effect"
+		
+		scale = 0.75
+	}		
+}

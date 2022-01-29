@@ -1,0 +1,325 @@
+###Globals from V1.2.1
+
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 240
+@tier1cost2 = 360
+@tier1cost3 = 480
+@tier1cost4 = 600
+
+@tier2cost1 = 900
+@tier2cost2 = 1200
+@tier2cost3 = 1500
+@tier2cost4 = 1800
+
+@tier3cost1 = 2320
+@tier3cost2 = 2840
+@tier3cost3 = 3360
+@tier3cost4 = 3880
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+
+#Shoggoth Workers
+chr_tech_shoggoth_workers = {
+	cost = @tier1cost3
+	area = society
+	tier = 1
+	category = { biology }
+	icon = "gfx/interface/icons/technologies/chr_tech_shoggoth_workers"	
+	prerequisites = { tech_powered_exoskeletons }
+	weight = @tier1weight3
+		
+	## unlock shoggoth POP
+	## Prereqfor shoggoth ARMY
+	
+	weight_modifier = {
+		factor = 1.5
+		#modifier = {
+		#	factor = 0.2
+		#	has_ethic = "ethic_spiritualist"
+		#}
+		#modifier = {
+		#	factor = 0.1
+		#	has_ethic = "ethic_fanatic_spiritualist"
+		#}			
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = leader_trait_expertise_biology
+			}			
+		}
+	}
+	
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 2
+			OR = { has_ai_personality_behaviour = attack_neutrals }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = leader_trait_expertise_biology
+			}
+		}
+	}
+}
+
+#Shoggoth Warriors
+chr_tech_shoggoth_warriors = {
+	cost = @tier1cost3
+	area = society
+	tier = 2
+	category = { biology }
+	icon =  "gfx/interface/icons/technologies/chr_tech_shoggoth_warriors.dds"
+	weight = @tier2weight2
+	prerequisites = { "chr_tech_shoggoth_workers" }		
+		
+	## unlock shoggoth ARMY	
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 0.2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 0.1
+			has_ethic = "ethic_fanatic_spiritualist"
+		}			
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = leader_trait_expertise_biology
+			}			
+		}
+	}
+	
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 2
+			OR = { has_ai_personality_behaviour = conqueror }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = leader_trait_expertise_biology
+			}
+		}
+	}
+}
+
+chr_tech_cosmic_worms = {
+	cost = @tier1cost3
+	area = society
+	tier = 2
+	category = { biology }
+	icon = gfx/interface/icons/technologies/cosmic_worms.dds
+	weight = @tier2weight2	
+	potential = {
+		has_origin = origin_spawn_of_an_old_one
+	}
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = leader_trait_expertise_biology
+			}			
+		}
+	}
+	
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = leader_trait_expertise_biology
+		}
+	}
+}
+}
+
+#Color Out of Space Terrorist Weapon
+chr_tech_coos_weapon_1 = {
+	area = physics
+	cost = @tier2cost2
+	tier = 3
+	icon = gfx/interface/icons/technologies/chr_tech_coos_weapon_1.dds
+	category = { particles }
+	ai_update_type = military	
+	prerequisites = { tech_lasers_4 }
+	weight = @tier3weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}	
+	}
+	
+	ai_weight = {
+		factor = 2		#weapons are good
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+#Weaponized Wormspeak
+chr_tech_weaponized_wormspeak_chants = {
+	cost = @tier2cost3
+	area = society
+	tier = 3
+	category = { biology }
+	icon = gfx/interface/icons/technologies/weaponizedwormspeak_chants.dds
+	weight = @tier2weight3
+	prerequisites = { chr_tech_wormspeak_chants }		
+		
+	## unlock Wormspeak ARMY	
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 0.2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 0.1
+			has_ethic = "ethic_fanatic_spiritualist"
+		}			
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = leader_trait_expertise_biology
+			}			
+		}
+	}
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 2
+			OR = { has_ai_personality_behaviour = conqueror }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = leader_trait_expertise_biology
+			}
+		}
+	}
+	potential = {  }
+}
+
+#Wormspeak
+chr_tech_wormspeak_chants = {
+	cost = @tier1cost3
+	area = society
+	tier = 1
+	category = { biology }
+	icon = "gfx/interface/icons/technologies/wormspeak_chants.dds"
+	weight = @tier1weight3
+
+	prereqfor_desc = {
+        ship = {
+            title = "chr_tech_weaponized_wormspeak_chants"
+            desc = " chr_tech_weaponized_wormspeak_chants_desc"
+        }
+    }
+
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 2
+		country_unity_produces_mult = 0.5
+		army_attack_damage_mult = 0.5
+		ship_hull_damage_mult = 0.25
+	}
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 0.2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 0.1
+			has_ethic = "ethic_fanatic_spiritualist"
+			}			
+		}
+	
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 2
+			OR = { has_ai_personality_behaviour = attack_neutrals }
+		}
+	}
+	potential = { }
+}

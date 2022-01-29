@@ -1,0 +1,20 @@
+azathoth_pilgrimage_chain = {
+	picture = GFX_evt_azathoth_1
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	
+	counter = {
+		found = {
+			max = 1
+		}
+	}
+}
+color_chain = {
+	picture = GFX_evt_coos_1
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	
+	counter = {
+		found = {
+			max = 1
+		}
+	}
+}

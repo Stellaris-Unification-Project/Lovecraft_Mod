@@ -1,0 +1,16 @@
+objectTypes = {
+
+	##################################################################
+	######														######
+	######						Stars							######
+	######														######
+	##################################################################
+	
+	pdxmesh = {
+		name = "infernal_star_mesh"
+		file = "gfx/models/planets/infernal_base_star.mesh"
+		animation = { id = "idle"	type = "base_star_idle_animation" }
+		scale = 1
+		cull_distance = 99999999.0f
+	}
+}

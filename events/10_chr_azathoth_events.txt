@@ -1,0 +1,221 @@
+namespace = azathothawakens
+
+#Destruction of a system
+country_event = {
+	id = azathothawakens.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_galaxy_planet = {
+			limit = {
+				is_same_value = event_target:azathoth_destroys
+			}
+			# Opinion modifiers for destroying star
+			change_pc = "pc_broken"
+		}
+			solar_system = {
+				set_name = "Void"
+				random_system_planet = {
+					limit = {
+						is_star = no
+					}
+
+					if = {
+						limit = {
+							is_colony = yes
+							exists = owner
+							owner = { is_ai = yes }
+						}
+							destroy_colony = yes
+						if = {
+							limit = {
+								has_deposit = yes
+							}
+							clear_deposits = yes
+						}
+					}
+					#This destroys worlds
+					change_pc = "pc_broken"	
+				}
+
+				every_fleet_in_system = {
+					destroy_fleet = THIS
+				}
+			}
+		}
+	}
+
+# First Contact Azathoth
+# Originally action.25
+country_event = {
+	id = azathothawakens.2
+	title = "azathoth.2.title"
+	desc = "azathoth.2.desc"
+	#picture = GFX_evt_star_chart
+	picture = GFX_evt_azathoth_2
+	show_sound = advisor_notification_alien_vessel_encountered
+	location = FROMFROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = azathoth }
+		is_country_type = default
+		is_ai = no
+		NOT = { is_country_type = azathoth }
+		NOT = { has_country_flag = azathoth_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = azathoth_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_AZATHOTH"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = progress.4.a #This changes everything.
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_AZATHOTH"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+
+
+### Azathoth Investigation Trigger
+# Triggered by special_project = INVESTIGATE_AZATHOTH
+# Formerly story.500
+country_event = {
+	id = azathothawakens.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { is_country_type = azathoth }
+			establish_communications_no_message = ROOT
+		}
+		country_event = { id = azathothawakens.4 days = 5 }
+	}
+}
+
+### Azathoth Investigation Result Event Window
+# Triggered by azathothawakens.3
+# Formerly story.501
+country_event = {
+	id = azathothawakens.4
+	title = azathoth.4.title
+	# Horrors
+	desc = {
+		trigger = {
+			OR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
+		}
+		text = azathoth.4.desc.1
+	}
+	# Investigators
+	desc = {
+		trigger = {
+			NOT = { has_government = chr_govt_old_one }
+			NOT = { has_government = chr_govt_outer_god }
+		}
+		text = azathoth.4.desc.2
+	}
+	picture = GFX_evt_azathoth_2
+	show_sound = event_alien_nature
+	location = from
+
+	is_triggered_only = yes
+	#Your cult rejoices
+	option = {
+		trigger = {
+			OR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
+		}	
+		name = "azathoth.4.a"
+		random_owned_pop = {
+			limit = {
+				is_enslaved = no
+				NOR = {
+					is_species = "ROBOT_POP_SPECIES_1"
+					is_species = "ROBOT_POP_SPECIES_2"
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				is_enslaved = no
+				NOR = {
+					is_species = "ROBOT_POP_SPECIES_1"
+					is_species = "ROBOT_POP_SPECIES_2"
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				is_enslaved = no
+				NOR = {
+					is_species = "ROBOT_POP_SPECIES_1"
+					is_species = "ROBOT_POP_SPECIES_2"
+				}
+			}
+			kill_pop = yes
+		}
+	}
+	
+	#Three pops kills themselves
+	option = {
+		trigger = { 
+			NOT = { has_government = chr_govt_old_one } 
+			NOT = { has_government = chr_govt_outer_god }
+		}	
+		name = "azathoth.4.b"
+		random_owned_pop = {
+			limit = {
+				is_enslaved = no
+				NOR = {
+					is_species = "ROBOT_POP_SPECIES_1"
+					is_species = "ROBOT_POP_SPECIES_2"
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				is_enslaved = no
+				NOR = {
+					is_species = "ROBOT_POP_SPECIES_1"
+					is_species = "ROBOT_POP_SPECIES_2"
+				}
+			}
+			kill_pop = yes
+		}
+		random_owned_pop = {
+			limit = {
+				is_enslaved = no
+				NOR = {
+					is_species = "ROBOT_POP_SPECIES_1"
+					is_species = "ROBOT_POP_SPECIES_2"
+				}
+			}
+			kill_pop = yes
+		}		
+	}
+}

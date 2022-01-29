@@ -1,0 +1,86 @@
+particle={
+	name="chr_infernal_star_entity_center_effect"
+	subsystem={
+		name="Surface_fire"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		life = 0
+		texture={
+			file="gfx/particles/eye.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255.000
+			y=255.000
+			z=255.000
+			alpha=255.000
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		start=0.000
+		duration=-1.000
+		#emitter_yaw={ 0.000 0.000 }
+		#emitter_pitch={ 0.000 0.000 }
+		#velocity_pitch={ 0.000 180.000 }
+		#velocity_yaw={ 0.000 180.000 }
+		#velocity={ 0.000 0.000 }
+		#life={ 0.000 0.000 }
+		#emission=700.000
+		#size={ 0.540,size_grow 0.160 }
+		size={ 5.00, 5.00 }
+		#rotation={ 0.000 180.000 }
+		#rotation_speed={ 0.000 0.000 }
+	}
+
+#	subsystem={
+#		name="shroud"
+#		max_amount=1
+#		slave_particles=0
+#		emitter_type="point"
+#		sort="depth"
+#		#sphere_emitter_radius={ 0.100 0.200 }
+#		#sphere_emitter_yaw={ 0.000 180.000 }
+#		#sphere_emitter_pitch={ 0.000 180.000 }
+#		invert=no
+#		trail=no
+#		local_space=yes
+#		billboard=yes
+#		hide=no
+#		texture={
+#			file="gfx/particles/eye.dds"
+#			x=1
+#			y=1
+#			shader="ParticleAdditive"
+#		}
+#		color={
+#			x=255.000
+#			y=255.000
+#			z=255.000
+#			alpha=255.000
+#			#,fade_alpha
+#		}
+#		position={
+#			x=0.000
+#			y=-1.000
+#			z=0.000
+#		}
+#		duration=-1.000
+#		life={ 8.000 3.000 }
+#		emission=100.000
+#		size={ 20.000 0.000 }
+#		#rotation={ 0.000 180.000 }
+#		#force=orbit,weak_point
+#	}
+}

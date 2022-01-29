@@ -1,0 +1,127 @@
+# Investigate Azathoth
+special_project = {
+	key = "INVESTIGATE_AZATHOTH"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_nomicon.dds"
+	cost = 0
+	tech_department = society_technology
+	days_to_research = 180
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+		#OR = {
+		#	NOT = { exists = FROMFROM }
+		#	has_communications = FROMFROM
+		#}
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = azathothawakens.3 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Investigate Color Out of Space
+special_project = {
+	key = "INVESTIGATE_COLOR"
+	picture = GFX_evt_coos_5
+	icon = "gfx/interface/icons/situation_log/situation_log_nomicon.dds"
+	cost = 0
+	tech_department = physics_technology
+	days_to_research = 180
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+		#OR = {
+		#	NOT = { exists = FROMFROM }
+		#	has_communications = FROMFROM
+		#}
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = cosmichorror.13 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# Color Error 01 - Only 1 ship
+special_project = {
+	key = "COLOR_ERROR_01"
+	timelimit=45
+	cost = 0
+	days_to_research = 0
+	location = no	
+	#tech_department = engineering_technology
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = governor
+		skill = 10
+	}
+
+	on_success = {
+
+	}
+	
+	abort_trigger = {
+
+	}
+
+	on_fail = {
+
+	}
+}
+
+
+# Color Out of Space Manual
+special_project = {
+	key = "COLOR_MANUAL"
+	#timelimit=300
+	cost = 0
+	days_to_research = 0
+	icon = "gfx/interface/icons/situation_log/situation_log_nomicon_2.dds"	
+	location = no	
+	#tech_department = engineering_technology
+
+	event_scope = planet_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = governor
+		skill = 10
+	}
+
+	on_success = {
+
+	}
+	
+	abort_trigger = {
+
+	}
+
+	on_fail = {
+
+	}
+}

@@ -1,0 +1,63 @@
+
+# Checks if Tiyanki country (global event target) exists
+# Creates the country and saves it if it does not
+create_azathoth_country = {
+	if = {
+		limit = { NOT = { exists = event_target:azathoth_country } }
+		create_country = {
+			name = "The Blind Idiot God"
+			type = azathoth
+			flag = {
+				icon = {
+					category = "cosmichorrors"
+					file = "flag_chr_14.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+			}
+		}
+		last_created_country = {
+			save_global_event_target_as = azathoth_country
+		}
+	}
+}
+
+
+# Checks if Color Cloud country (global event target) exists
+# Creates the country and saves it if it does not
+create_color_country = {
+	if = {
+		limit = { NOT = { exists = event_target:color_country } }
+		create_country = {
+			name = "Colour Out of Space"
+			type = color
+			flag = {
+				icon = {
+					category = "spherical"
+					file = "flag_spherical_15.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+			}
+		}
+		last_created_country = {
+			save_global_event_target_as = color_country
+		}
+	}
+}

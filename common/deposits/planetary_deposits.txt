@@ -1,0 +1,74 @@
+@blocker_low = 10
+tb_blasted_heath = {
+	time = 100
+	category = deposit_cat_blockers
+	is_for_colonizeable = yes
+	potential = {
+	NOT = {
+		planet = {
+			is_planet = no_scope
+		}
+	}
+}
+	resources = {
+		category = deposit_blockers
+		cost = {
+			minerals = 50
+			energy = 50
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -2
+
+	} 
+
+	on_cleared = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = owner
+					owner = {
+						has_civic = civic_hive_devouring_swarm
+					}
+				}
+				owner = { add_resource = { food = 200 } }
+			}
+		}
+	}
+
+	drop_weight = {
+		weight = @blocker_low
+		modifier = {
+			factor = 0.5
+			planet_size < 15
+		}
+		modifier = {
+			factor = 0
+			num_free_districts = {
+				type = district_city
+				value < 2
+			}
+		}
+	}
+}
+d_carcosa = {
+	category = deposit_cat_rare
+	is_for_colonizeable = yes
+	should_swap_deposit_on_terraforming = no
+	icon = "gfx/portraits/deposits/carcosa_sky"
+	
+	triggered_planet_modifier = {
+			planet_max_districts_add = 4
+			pop_citizen_happiness = 0.2
+			trade_value_mult = 0.2
+	}
+
+	drop_weight = {
+		weight = @blocker_low
+		modifier = {
+			factor = 0.5
+			planet_size < 15
+		}
+	}
+}

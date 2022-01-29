@@ -1,0 +1,59 @@
+# Old Ones Cult
+chr_govt_old_one = {
+	use_regnal_names = no
+	dynastic_last_names = no
+	weight = {
+		base = 1
+	}
+	possible = {
+		hidden_trigger = { NOT = { is_country_type = fallen_empire } }
+	
+		NOT = { has_ethic = "ethic_spiritualist" }
+		NOT = { has_ethic = "ethic_fanatic_spiritualist" }
+		NOT = {	has_ethic = "ethic_pacifist" }
+		NOT = {	has_ethic = "ethic_fanatic_pacifist" }
+		OR = { has_trait = "chr_trait_strange_aeons" has_trait = "chr_trait_cosmic_horrors" }
+		has_authority = auth_democratic
+	}
+	election_candidates = {
+		modifier = {
+			add = 1
+			#country_leader_pool_size = -1
+			#edict_influence_cost = -0.25
+			#edict_length_mult = 0.25
+		}	
+	}
+	
+	ruler_title = "Great"
+	ruler_title_female = "Great"
+	heir_title = "Elder"
+}
+
+#Outer God
+chr_govt_outer_god = {
+	use_regnal_names = no
+	dynastic_last_names = no
+	weight = {
+		base = 1
+	}
+
+	possible = {
+		hidden_trigger = { NOT = { is_country_type = fallen_empire } }
+		has_authority = auth_imperial
+		has_ethic = ethic_fanatic_militarist
+		has_ethic = ethic_xenophile
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 1
+			#country_leader_pool_size = -1
+			#edict_influence_cost = -0.25
+			#edict_length_mult = 0.25
+		}	
+	}
+	
+	ruler_title = "Avatar of"
+	ruler_title_female = "Avatar of"
+	heir_title = "Spawn of "
+}
