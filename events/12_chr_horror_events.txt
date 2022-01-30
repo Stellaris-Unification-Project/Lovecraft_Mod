@@ -118,8 +118,8 @@ country_event = {
 		NOR = {
 			has_country_flag = azathoth_home_system_visited
 			has_country_flag = finished_azathoth_pilgrimage_chain
+			has_country_flag = azathoth_pilgrimage_seen
 		}
-		NOT = { has_country_flag = azathoth_pilgrimage_seen }
 	}
 	
 	immediate = {
@@ -432,8 +432,8 @@ country_event = {
 		NOR = {
 			has_country_flag = color_home_system_visited
 			has_country_flag = finished_color_chain
-		}
-		NOT = { has_country_flag = color_seen }		
+			has_country_flag = color_seen
+		}		
 	}
 	
 	immediate = {

@@ -89,12 +89,10 @@ country_event = {
 			NOR = {
 				has_country_flag = Story2900
 				has_global_flag = CosmicHorrors_ON
-			}
-			NOR = {
 				has_global_flag = CosmicHorrors_OFF
 				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
 			}
-			NOT = { has_government = chr_govt_outer_god }
 		}
 		text = story.2900.desc.1
 	}
@@ -103,8 +101,8 @@ country_event = {
 			NOR = {
 				has_country_flag = Story2900
 				has_global_flag = CosmicHorrors_ON
+				has_global_flag = CosmicHorrors_OFF
 			}
-			NOT = { has_global_flag = CosmicHorrors_OFF }
 			has_government = chr_govt_old_one
 			has_government = chr_govt_outer_god
 		}
