@@ -22,7 +22,7 @@ event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		every_country = {
+		every_playable_country = {
 			limit = {
 				is_ai = no
 			}
@@ -105,16 +105,20 @@ country_event = {
 	}
 	desc = {
 		trigger = { 
-			NOT = { has_government = chr_govt_old_one }
-			NOT = { has_government = chr_govt_outer_god }
+			NOR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
 		}
 		text = cosmichorror.3.desc.2
 	}
 	
 	trigger = {
 		is_ai = no
-		NOT = { has_country_flag = azathoth_home_system_visited }
-		NOT = { has_country_flag = finished_azathoth_pilgrimage_chain }
+		NOR = {
+			has_country_flag = azathoth_home_system_visited
+			has_country_flag = finished_azathoth_pilgrimage_chain
+		}
 		NOT = { has_country_flag = azathoth_pilgrimage_seen }
 	}
 	
@@ -212,8 +216,10 @@ country_event = {
 	}
 	desc = {
 		trigger = { 
-			NOT = { has_government = chr_govt_old_one } 
-			NOT = { has_government = chr_govt_outer_god }
+			NOR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
 		}
 		text = cosmichorror.5.desc.2
 	}
@@ -259,8 +265,10 @@ country_event = {
 	option = {
 		name = cosmichorror.5.b
 		trigger = {
-			NOT = { has_government = chr_govt_old_one }
-			NOT = { has_government = chr_govt_outer_god }
+			NOR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
 		}
 		if = {
 			limit = {
@@ -324,8 +332,10 @@ country_event = {
 	#It was all a dream of the blind god
 	option = {
 		trigger = { 
-				NOT = { has_government = chr_govt_old_one } 
-				NOT = { has_government = chr_govt_outer_god }
+				NOR = {
+					has_government = chr_govt_old_one
+					has_government = chr_govt_outer_god
+				}
 		}	
 		name = "cosmichorror.6.b"
 		set_country_flag = azathoth_awakens
@@ -409,16 +419,20 @@ country_event = {
 	}
 	desc = {
 		trigger = { 
-			NOT = { has_government = chr_govt_old_one }
-			NOT = { has_government = chr_govt_outer_god }
+			NOR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
 		}
 		text = cosmichorror.9.desc.2
 	}
 	
 	trigger = {
 		is_ai = no
-		NOT = { has_country_flag = color_home_system_visited }
-		NOT = { has_country_flag = finished_color_chain }
+		NOR = {
+			has_country_flag = color_home_system_visited
+			has_country_flag = finished_color_chain
+		}
 		NOT = { has_country_flag = color_seen }		
 	}
 	
@@ -620,16 +634,20 @@ country_event = {
 	}
 	desc = {
 		trigger = { 
-			NOT = { has_government = chr_govt_old_one } 
-			NOT = { has_government = chr_govt_outer_god }
+			NOR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
 		}
 		text = cosmichorror.11.desc.2
 	}
 	
 	trigger = {
 		is_ai = no
-		NOT = { has_country_flag = color_home_system_visited }
-		NOT = { has_country_flag = finished_color_chain }
+		NOR = {
+			has_country_flag = color_home_system_visited
+			has_country_flag = finished_color_chain
+		}
 	}
 	
 	immediate = {
@@ -789,7 +807,7 @@ ship_event = {
 				limit = {
 					is_colony = yes
 					owner = {
-						NOT = { is_same_value = root.owner }
+						NOT = { is_same_empire = root.owner }
 					}
 				}
 			save_event_target_as = color_terror_target
@@ -1133,8 +1151,10 @@ country_event = {
 	}
 	desc = {
 		trigger = { 
-			NOT = { has_government = chr_govt_old_one } 
-			NOT = { has_government = chr_govt_outer_god }
+			NOR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
 		}
 		text = cosmichorror.19.desc.2
 	}

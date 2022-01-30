@@ -2683,7 +2683,7 @@ azathoth_system_npc = {
 					#					has_star_flag = hostile_system
 					#					has_star_flag = sanctuary_system
 					#				}
-					#				any_planet = {
+					#				any_system_planet = {
 					#					is_planet_class = pc_gas_giant
 					#				}
 					#			}
@@ -2776,8 +2776,7 @@ colors_system_npc = {
 
 	init_effect = {
 		create_color_country = yes
-		random_system_planet = {
-			limit = { is_star = yes }
+		star = {
 			save_event_target_as = colorhome_star
 			event_target:color_country = {
 				save_event_target_as = colorhome_owner

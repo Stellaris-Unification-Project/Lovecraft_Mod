@@ -2,7 +2,7 @@
 tb_blasted_heath = {
 	time = 100
 	category = deposit_cat_blockers
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	potential = {
 	NOT = {
 		planet = {
@@ -54,7 +54,7 @@ tb_blasted_heath = {
 }
 d_carcosa = {
 	category = deposit_cat_rare
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	should_swap_deposit_on_terraforming = no
 	icon = "gfx/portraits/deposits/carcosa_sky"
 	

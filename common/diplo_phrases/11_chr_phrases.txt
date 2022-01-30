@@ -1578,15 +1578,14 @@ action_insult = {
 	propose = {
 		01_INSULT_PROPOSE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				NOT = {
 					FROM = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
+						is_xenophobe = yes
+						NOR = {
+							is_same_species = ROOT
+							is_subspecies = ROOT
 						}
-						NOT = { is_same_species = ROOT }
-						NOT = { is_subspecies = ROOT }
 					}
 				}
 			}
@@ -1595,15 +1594,14 @@ action_insult = {
 	propose = {
 		02_INSULT_PROPOSE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				NOT = {
 					FROM = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
+						is_xenophobe = yes
+						NOR = {
+							is_same_species = ROOT
+							is_subspecies = ROOT
 						}
-						NOT = { is_same_species = ROOT }
-						NOT = { is_subspecies = ROOT }
 					}
 				}
 			}
@@ -1612,15 +1610,14 @@ action_insult = {
 	propose = {
 		03_INSULT_PROPOSE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				NOT = {
 					FROM = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
+						is_xenophobe = yes
+						NOR = {
+							is_same_species = ROOT
+							is_subspecies = ROOT
 						}
-						NOT = { is_same_species = ROOT }
-						NOT = { is_subspecies = ROOT }
 					}
 				}
 			}
@@ -1629,15 +1626,14 @@ action_insult = {
 	propose = {
 		04_INSULT_PROPOSE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				NOT = {
 					FROM = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
+						is_xenophobe = yes
+						NOR = {
+							is_same_species = ROOT
+							is_subspecies = ROOT
 						}
-						NOT = { is_same_species = ROOT }
-						NOT = { is_subspecies = ROOT }
 					}
 				}
 			}
@@ -1646,15 +1642,14 @@ action_insult = {
 	propose = {
 		05_INSULT_PROPOSE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				NOT = {
 					FROM = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
+						is_xenophobe = yes
+						NOR = {
+							is_same_species = ROOT
+							is_subspecies = ROOT
 						}
-						NOT = { is_same_species = ROOT }
-						NOT = { is_subspecies = ROOT }
 					}
 				}
 			}
@@ -1663,15 +1658,14 @@ action_insult = {
 	propose = {
 		06_INSULT_PROPOSE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				NOT = {
 					FROM = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
+						is_xenophobe = yes
+						NOR = {
+							is_same_species = ROOT
+							is_subspecies = ROOT
 						}
-						NOT = { is_same_species = ROOT }
-						NOT = { is_subspecies = ROOT }
 					}
 				}
 			}
@@ -1683,14 +1677,13 @@ action_insult = {
 	propose = {
 		01_INSULT_PROPOSE_XENOPHOBE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
+					is_xenophobe = yes
+					NOR = {
+						is_same_species = ROOT
+						is_subspecies = ROOT
 					}
-					NOT = { is_same_species = ROOT }
-					NOT = { is_subspecies = ROOT }
 				}
 			}
 		}
@@ -1698,12 +1691,9 @@ action_insult = {
 	propose = {
 		02_INSULT_PROPOSE_XENOPHOBE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 					NOT = { is_same_species_class = ROOT }
 				}
 			}
@@ -1712,14 +1702,13 @@ action_insult = {
 	propose = {
 		03_INSULT_PROPOSE_XENOPHOBE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
+					is_xenophobe = yes
+					NOR = {
+						is_same_species = ROOT
+						is_subspecies = ROOT
 					}
-					NOT = { is_same_species = ROOT }
-					NOT = { is_subspecies = ROOT }
 				}
 			}
 		}
@@ -1727,14 +1716,13 @@ action_insult = {
 	propose = {
 		04_INSULT_PROPOSE_XENOPHOBE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
+					is_xenophobe = yes
+					NOR = {
+						is_same_species = ROOT
+						is_subspecies = ROOT
 					}
-					NOT = { is_same_species = ROOT }
-					NOT = { is_subspecies = ROOT }
 				}
 			}
 		}
@@ -1742,12 +1730,9 @@ action_insult = {
 	propose = {
 		05_INSULT_PROPOSE_XENOPHOBE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 					NOT = { is_same_species_class = ROOT }
 				}
 			}
@@ -1756,12 +1741,9 @@ action_insult = {
 	propose = {
 		06_INSULT_PROPOSE_XENOPHOBE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 					NOT = { is_same_species_class = ROOT }
 				}
 			}
@@ -1770,12 +1752,9 @@ action_insult = {
 	propose = {
 		07_INSULT_PROPOSE_XENOPHOBE = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 					NOT = { is_same_species = ROOT }
 					is_subspecies = ROOT
 				}
@@ -1786,16 +1765,10 @@ action_insult = {
 	propose = {
 		01_INSULT_PROPOSE_PAC_MIL = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_militarist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 			}
 		}
@@ -1803,16 +1776,10 @@ action_insult = {
 	propose = {
 		02_INSULT_PROPOSE_PAC_MIL = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_militarist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 			}
 		}
@@ -1820,16 +1787,10 @@ action_insult = {
 	propose = {
 		03_INSULT_PROPOSE_PAC_MIL = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_militarist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 			}
 		}
@@ -1837,16 +1798,10 @@ action_insult = {
 	propose = {
 		04_INSULT_PROPOSE_PAC_MIL = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_militarist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = yes
 				}
 			}
 		}
@@ -1855,16 +1810,10 @@ action_insult = {
 	propose = {
 		01_INSULT_PROPOSE_MIL_PAC = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_pacifist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 			}
 		}
@@ -1872,16 +1821,10 @@ action_insult = {
 	propose = {
 		02_INSULT_PROPOSE_MIL_PAC = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_pacifist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 			}
 		}
@@ -1889,16 +1832,10 @@ action_insult = {
 	propose = {
 		03_INSULT_PROPOSE_MIL_PAC = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_pacifist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 			}
 		}
@@ -1906,16 +1843,10 @@ action_insult = {
 	propose = {
 		04_INSULT_PROPOSE_MIL_PAC = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_pacifist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 			}
 		}
@@ -1924,16 +1855,10 @@ action_insult = {
 	propose = {
 		01_INSULT_PROPOSE_MAT_SPI = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_spiritualist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 			}
 		}
@@ -1941,16 +1866,10 @@ action_insult = {
 	propose = {
 		02_INSULT_PROPOSE_MAT_SPI = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_spiritualist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 			}
 		}
@@ -1958,16 +1877,10 @@ action_insult = {
 	propose = {
 		03_INSULT_PROPOSE_MAT_SPI = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_spiritualist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 			}
 		}
@@ -1975,16 +1888,10 @@ action_insult = {
 	propose = {
 		04_INSULT_PROPOSE_MAT_SPI = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_spiritualist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
-					}
+					is_materialist = yes
 				}
 			}
 		}
@@ -1993,16 +1900,10 @@ action_insult = {
 	propose = {
 		01_INSULT_PROPOSE_SPI_MAT = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_materialist
-					has_ethic = ethic_fanatic_materialist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_materialist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2010,16 +1911,10 @@ action_insult = {
 	propose = {
 		02_INSULT_PROPOSE_SPI_MAT = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_materialist
-					has_ethic = ethic_fanatic_materialist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_materialist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2027,16 +1922,10 @@ action_insult = {
 	propose = {
 		03_INSULT_PROPOSE_SPI_MAT = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_materialist
-					has_ethic = ethic_fanatic_materialist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_materialist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2044,16 +1933,10 @@ action_insult = {
 	propose = {
 		04_INSULT_PROPOSE_SPI_MAT = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_materialist
-					has_ethic = ethic_fanatic_materialist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_materialist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2062,16 +1945,10 @@ action_insult = {
 	propose = {
 		01_INSULT_PROPOSE_COL_IND = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_egalitarian = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2079,16 +1956,10 @@ action_insult = {
 	propose = {
 		02_INSULT_PROPOSE_COL_IND = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_egalitarian = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2096,16 +1967,10 @@ action_insult = {
 	propose = {
 		03_INSULT_PROPOSE_COL_IND = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_egalitarian = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2113,16 +1978,10 @@ action_insult = {
 	propose = {
 		04_INSULT_PROPOSE_COL_IND = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_egalitarian = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2131,16 +1990,10 @@ action_insult = {
 	propose = {
 		01_INSULT_PROPOSE_IND_COL = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_egalitarian
-						has_ethic = ethic_fanatic_egalitarian
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_egalitarian = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2148,16 +2001,10 @@ action_insult = {
 	propose = {
 		02_INSULT_PROPOSE_IND_COL = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_egalitarian = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2165,16 +2012,10 @@ action_insult = {
 	propose = {
 		03_INSULT_PROPOSE_IND_COL = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_spiritualist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2182,16 +2023,10 @@ action_insult = {
 	propose = {
 		04_INSULT_PROPOSE_IND_COL = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_spiritualist = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2200,16 +2035,10 @@ action_insult = {
 	propose = {
 		01_INSULT_PROPOSE_PHO_PHI = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_xenophile = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 			}
 		}
@@ -2217,16 +2046,10 @@ action_insult = {
 	propose = {
 		02_INSULT_PROPOSE_PHO_PHI = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_xenophile = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 			}
 		}
@@ -2234,16 +2057,10 @@ action_insult = {
 	propose = {
 		03_INSULT_PROPOSE_PHO_PHI = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_xenophile = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 			}
 		}
@@ -2251,16 +2068,10 @@ action_insult = {
 	propose = {
 		04_INSULT_PROPOSE_PHO_PHI = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_xenophile = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = yes
 				}
 			}
 		}
@@ -2269,16 +2080,10 @@ action_insult = {
 	propose = {
 		01_INSULT_PROPOSE_PHI_PHO = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_xenophobe = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
+					is_xenophile = yes
 				}
 			}
 		}
@@ -2286,16 +2091,10 @@ action_insult = {
 	propose = {
 		02_INSULT_PROPOSE_PHI_PHO = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_xenophobe = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
+					is_xenophile = yes
 				}
 			}
 		}
@@ -2303,16 +2102,10 @@ action_insult = {
 	propose = {
 		03_INSULT_PROPOSE_PHI_PHO = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_xenophobe = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
+					is_xenophile = yes
 				}
 			}
 		}
@@ -2320,16 +2113,10 @@ action_insult = {
 	propose = {
 		04_INSULT_PROPOSE_PHI_PHO = {
 			weight = { weight = 1000 } trigger = {
-				FROM = { NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } } }
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				FROM = { NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				is_xenophobe = yes
 				FROM = {
-					OR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
+					is_xenophile = yes
 				}
 			}
 		}
@@ -2423,10 +2210,7 @@ action_insult = {
 				species_portrait = mam11
 				FROM = {
 					NOT = { species_portrait = mam11 }
-					OR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = yes
 				}
 			}
 		}
@@ -2493,10 +2277,7 @@ action_insult = {
 				species_portrait = mam16
 				FROM = {
 					NOT = { species_portrait = mam16 }
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 				}
 			}
 		}
@@ -2514,7 +2295,7 @@ action_insult = {
 	accept = {
 		01_INSULT_ACCEPT_NEUTRAL = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -2525,7 +2306,7 @@ action_insult = {
 		}
 		02_INSULT_ACCEPT_NEUTRAL = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -2536,7 +2317,7 @@ action_insult = {
 		}
 		03_INSULT_ACCEPT_NEUTRAL = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -2547,7 +2328,7 @@ action_insult = {
 		}
 		04_INSULT_ACCEPT_NEUTRAL = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -2569,7 +2350,7 @@ action_insult = {
 		}
 		01_INSULT_ACCEPT_FRIENDLY = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -2580,7 +2361,7 @@ action_insult = {
 		}
 		02_INSULT_ACCEPT_FRIENDLY = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -2591,7 +2372,7 @@ action_insult = {
 		}
 		03_INSULT_ACCEPT_FRIENDLY = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -2602,7 +2383,7 @@ action_insult = {
 		}
 		04_INSULT_ACCEPT_FRIENDLY = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -2624,7 +2405,7 @@ action_insult = {
 		}
 		01_INSULT_ACCEPT_HOSTILE = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -2635,7 +2416,7 @@ action_insult = {
 		}
 		02_INSULT_ACCEPT_HOSTILE = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -2646,7 +2427,7 @@ action_insult = {
 		}
 		03_INSULT_ACCEPT_HOSTILE = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -2657,7 +2438,7 @@ action_insult = {
 		}
 		04_INSULT_ACCEPT_HOSTILE = {
 			weight = { weight = 1000 } trigger = {
-				NOT = { OR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors } }
+				NOR = { has_ai_personality = chr_cosmic_indifference has_ai_personality = chr_cosmic_terrors }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM

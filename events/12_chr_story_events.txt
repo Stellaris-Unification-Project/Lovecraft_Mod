@@ -86,18 +86,24 @@ country_event = {
 	
 	desc = {
 		trigger = {
-			NOT = { has_country_flag = Story2900 }
-			NOT = { has_global_flag = CosmicHorrors_ON }
-			NOT = { has_global_flag = CosmicHorrors_OFF }
-			NOT = { has_government = chr_govt_old_one }
+			NOR = {
+				has_country_flag = Story2900
+				has_global_flag = CosmicHorrors_ON
+			}
+			NOR = {
+				has_global_flag = CosmicHorrors_OFF
+				has_government = chr_govt_old_one
+			}
 			NOT = { has_government = chr_govt_outer_god }
 		}
 		text = story.2900.desc.1
 	}
 	desc = {
 		trigger = {
-			NOT = { has_country_flag = Story2900 }
-			NOT = { has_global_flag = CosmicHorrors_ON }
+			NOR = {
+				has_country_flag = Story2900
+				has_global_flag = CosmicHorrors_ON
+			}
 			NOT = { has_global_flag = CosmicHorrors_OFF }
 			has_government = chr_govt_old_one
 			has_government = chr_govt_outer_god
@@ -109,8 +115,10 @@ country_event = {
 	desc = {
 		trigger = {
 			has_country_flag = Story2900
-			NOT = { has_global_flag = CosmicHorrors_ON }
-			NOT = { has_global_flag = CosmicHorrors_OFF }
+			NOR = {
+				has_global_flag = CosmicHorrors_ON
+				has_global_flag = CosmicHorrors_OFF
+			}
 		}
 		text = story.2900.desc.3
 	}
@@ -316,8 +324,10 @@ country_event = {
 		
 		trigger = {
 			has_country_flag = CosmicSpawnComplete
-			NOT = { has_global_flag = CosmicHorrors_ON }
-			NOT = { has_global_flag = CosmicHorrors_OFF }
+			NOR = {
+				has_global_flag = CosmicHorrors_ON
+				has_global_flag = CosmicHorrors_OFF
+			}
 		}
 
 		hidden_effect = { country_event = { id = buildempire.8 } } #Azathoth System			
@@ -334,8 +344,10 @@ country_event = {
 		
 		trigger = {
 			has_country_flag = CosmicSpawnComplete
-			NOT = { has_global_flag = CosmicHorrors_ON }
-			NOT = { has_global_flag = CosmicHorrors_OFF }
+			NOR = {
+				has_global_flag = CosmicHorrors_ON
+				has_global_flag = CosmicHorrors_OFF
+			}
 		}
 		
 		set_global_flag = CosmicHorrors_OFF

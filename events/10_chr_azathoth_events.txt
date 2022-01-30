@@ -129,8 +129,10 @@ country_event = {
 	# Investigators
 	desc = {
 		trigger = {
-			NOT = { has_government = chr_govt_old_one }
-			NOT = { has_government = chr_govt_outer_god }
+			NOR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
 		}
 		text = azathoth.4.desc.2
 	}
@@ -183,8 +185,10 @@ country_event = {
 	#Three pops kills themselves
 	option = {
 		trigger = { 
-			NOT = { has_government = chr_govt_old_one } 
-			NOT = { has_government = chr_govt_outer_god }
+			NOR = {
+				has_government = chr_govt_old_one
+				has_government = chr_govt_outer_god
+			}
 		}	
 		name = "azathoth.4.b"
 		random_owned_pop = {
